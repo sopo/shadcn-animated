@@ -6,7 +6,7 @@ const Introduction = () => {
       <h1 className="text-2xl font-medium">Introduction</h1>
       <div className="">
         <p className="font-medium text-secondary-foreground text-lg leading-[150%]">
-          <span className="font-medium">Mouvement is a growing collection of <span className="text-foreground">animated shadcn/ui components</span>,
+          <span className="font-medium">shadcn animated is a growing collection of <span className="text-foreground">animated shadcn/ui components</span>,
           crafted by hand.</span> Every interaction and motion is designed to feel
           natural, refined, and effortless—bringing more life to interfaces.
           <br></br><span className="text-foreground">Copy and paste</span> the components directly into your project, or install
