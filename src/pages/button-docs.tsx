@@ -2,6 +2,10 @@ import DocsSection from "@/components/domain/docs-section";
 import DocsShell from "@/components/domain/docs-shell";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import InstallationShell from "./components/command-tab";
+import CommandTab from "./components/command-tab";
+import ManualTab from "./components/manual-tab";
+import UsageShell from "./components/usage-shell";
 
 const ButtonDocs = () => {
   return (
@@ -21,29 +25,16 @@ const ButtonDocs = () => {
               <TabsTrigger value="manual">Manual</TabsTrigger>
             </TabsList>
 
-            <TabsContent value="command">
-              <div className="w-full h-75 rounded-2xl bg-white">command</div>
-            </TabsContent>
-            <TabsContent value="manual">
-              <div className="w-full h-75 rounded-2xl bg-card"></div>
-            </TabsContent>
+            <CommandTab>ASD</CommandTab>
+
+            <ManualTab>mnl</ManualTab>
           </Tabs>
         </div>
       </DocsSection>
 
-      <DocsSection>
-        <h2 className="text-xl">Usage</h2>
-        <div className="w-full h-150 rounded-2xl bg-white">
-          <p>
-            {`              
-        import { Button } from "@/components/ui/button"
-        <Button variant="outline">Button</Button>
-        
-        
-        `}
-          </p>
-        </div>
-      </DocsSection>
+
+        <UsageShell>asd</UsageShell>
+   
     </div>
   );
 };
