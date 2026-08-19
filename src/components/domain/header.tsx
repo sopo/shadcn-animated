@@ -1,6 +1,5 @@
 import { NavLink } from "react-router"
-import { Button } from "./ui/button"
-import { MoveUpRight } from "lucide-react"
+import { Button } from "../ui/button"
 
 const Header=()=>{
     return(
@@ -8,7 +7,7 @@ const Header=()=>{
             <section className="max-w-4xl mx-auto flex p-4 justify-between">
             <nav className="flex gap-4  items-center">
                 <NavLink to={"/"} className="text-secondary-foreground text-sm hover:text-primary">Home</NavLink>
-                <NavLink to={"/button"} className="text-secondary-foreground text-sm hover:text-primary">Docs</NavLink>
+                <NavLink to={"/introduction"} className="text-secondary-foreground text-sm hover:text-primary">Docs</NavLink>
                 <NavLink to={"/button"} className="text-secondary-foreground text-sm hover:text-primary">Components</NavLink>
 
             </nav>

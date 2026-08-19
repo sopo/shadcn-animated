@@ -10,13 +10,13 @@ const SidenavLayout:React.FC=()=>{
                 : "text-secondary-foreground hover:bg-black/3"
         }`
     return(
-        <div className="grid grid-cols-4 gap-6 max-w-4xl mx-auto mt-20 font-flex ">
+        <div className="grid grid-cols-4 gap-6 max-w-4xl mx-auto mt-20 font-flex">
             <aside className="">
                 <nav className="flex flex-col gap-4">
                     <div className="flex flex-col">
                     <h2 className="text-xs text-secondary-foreground px-4 py-2">DOCS</h2>
-                    <NavLink to={"docs"} className={navClass}>Overview</NavLink>
-                    <NavLink to={"docs"} className={navClass}>Installation</NavLink>
+                    <NavLink to={"introduction"} className={navClass}>Intorduction</NavLink>
+                    <NavLink to={"installation"} className={navClass}>Installation</NavLink>
                     </div>
                     <div className="flex flex-col">
                     <h2 className="text-xs text-secondary-foreground px-4 py-2">COMPONENTS</h2>

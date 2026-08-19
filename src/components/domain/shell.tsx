@@ -1,10 +1,11 @@
 import type { PropsWithChildren } from "react";
-import { Button } from "./ui/button";
-import {  Copy, Plus } from "lucide-react";
+
+import { Copy, Plus } from "lucide-react";
+import { Button } from "../ui/button";
 
 const Shell: React.FC<PropsWithChildren> = ({ children }) => {
   return (
-    <div className="relative h-100 bg-card shadow-xs rounded-3xl flex items-center justify-center flex-col">
+    <div className="relative h-100 bg-card rounded-3xl flex items-center justify-center flex-col">
       <div>
         <Button
           size="icon-lg"
@@ -14,15 +15,19 @@ const Shell: React.FC<PropsWithChildren> = ({ children }) => {
           <Copy strokeWidth={2.5} />
         </Button>
       </div>
-      <div>
-      {children}
-      </div>
-   
+      <div>{children}</div>
+
       <div className="flex items-center gap-2 w-full justify-between absolute bottom-0 p-4">
         {/* <div>
         <Button className="" variant="secondary">View Docs</Button>
       </div> */}
-        <Button size="icon-lg" variant="outline" className="rounded-full text-secondary-foreground"><Plus strokeWidth={2.5} /></Button>
+        <Button
+          size="icon-lg"
+          variant="outline"
+          className="rounded-full text-secondary-foreground"
+        >
+          <Plus strokeWidth={2.5} />
+        </Button>
       </div>
     </div>
   );

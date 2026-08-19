@@ -1,5 +1,5 @@
 import "./App.css";
-import Shell from "./components/shell";
+
 import { Button } from "./components/ui/button";
 
 import {
@@ -8,7 +8,8 @@ import {
   AnimatedTabsList,
   AnimatedTabsTrigger,
 } from "./components/animated-tabs";
-import Hero from "./components/landing/hero";
+import Hero from "./components/domain/hero";
+import Shell from "./components/domain/shell";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             Click me
           </Button>
         </Shell>
+
 
         <Shell>
           <div className="flex gap-4 items-center flex-col">
