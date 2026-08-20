@@ -1,11 +1,8 @@
 import "./App.css";
-
 import { Button } from "./components/ui/button";
-
 import Hero from "./components/domain/hero";
 import Shell from "./components/domain/shell";
-
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "./components/ui/tabs";
+import { Tabs, TabsList, TabsTrigger } from "./components/ui/tabs";
 
 function App() {
   return (
@@ -14,43 +11,24 @@ function App() {
         <Hero />
         <section className=" grid grid-cols-1 md:grid-cols-2 gap-2">
           <Shell>
-            <Tabs defaultValue="account" className="w-[400px] ">
+            <Button
+              variant="default"
+              className="rounded-full h-10 px-6 hover:bg-primary "
+            >
+              Click me
+            </Button>
+          </Shell>
+          <Shell>
+            <Tabs defaultValue="account" className="w-full ">
               <TabsList className="rounded-full">
-                <TabsTrigger value="account" className="rounded-full" >Account</TabsTrigger>
-                <TabsTrigger value="password"  className="rounded-full">Password</TabsTrigger>
-                
+                <TabsTrigger value="account" className="rounded-full">
+                  Account
+                </TabsTrigger>
+                <TabsTrigger value="password" className="rounded-full">
+                  Password
+                </TabsTrigger>
               </TabsList>
-              <TabsContent value="account">
-                Make changes to your account here.
-              </TabsContent>
-              <TabsContent value="password">
-                Change your password here.
-              </TabsContent>
-        
             </Tabs>
-          </Shell>
-
-          <Shell>
-            <Button className="bg-white text-black hover:bg-white rounded-full py-6 px-8 shadow-[2px_4px_12px_0_rgba(0,0,20,0.08)]">
-              Click me
-            </Button>
-          </Shell>
-
-          <Shell>
-            <Button variant="default" className="rounded-full h-12 px-6">
-              Click me
-            </Button>
-          </Shell>
-
-          <Shell>
-            <Button className="bg-white text-black rounded-full py-6 px-8 shadow-[2px_4px_12px_0_rgba(0,0,20,0.08)]">
-              Click me
-            </Button>
-          </Shell>
-          <Shell>
-            <Button className="bg-white text-black rounded-full py-6 px-8 shadow-[2px_4px_12px_0_rgba(0,0,20,0.08)]">
-              Click me
-            </Button>
           </Shell>
         </section>
       </div>

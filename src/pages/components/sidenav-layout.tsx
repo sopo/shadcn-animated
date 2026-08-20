@@ -2,7 +2,6 @@
 import { NavLink, Outlet } from "react-router"
 
 const SidenavLayout:React.FC=()=>{
-    // const navClass=`text-sm text-secondary-foreground py-2 px-4 rounded-lg hover:bg-neutral-200`
        const navClass = ({ isActive }: { isActive: boolean }) =>
         `text-sm py-2 px-4 rounded-lg transition-colors ${
             isActive
@@ -10,7 +9,7 @@ const SidenavLayout:React.FC=()=>{
                 : "text-secondary-foreground hover:bg-black/3"
         }`
     return(
-        <div className="grid grid-cols-4 gap-6 max-w-4xl mx-auto mt-20 font-flex">
+        <div className="grid grid-cols-4 gap-6 max-w-4xl mx-auto mt-20">
             <aside className="">
                 <nav className="flex flex-col gap-4">
                     <div className="flex flex-col">

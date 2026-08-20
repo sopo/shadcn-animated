@@ -2,7 +2,7 @@ import { Link } from "react-router";
 
 const Installation = () => {
   return (
-    <div className=" flex flex-col gap-8 font-flex">
+    <div className=" flex flex-col gap-8">
       <h1 className="text-3xl">Installation</h1>
       <section className="flex flex-col gap-6">
         <div className="flex items-center gap-4">

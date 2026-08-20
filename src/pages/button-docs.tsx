@@ -1,8 +1,7 @@
 import DocsSection from "@/components/domain/docs-section";
 import DocsShell from "@/components/domain/docs-shell";
 import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import InstallationShell from "./components/command-tab";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import CommandTab from "./components/command-tab";
 import ManualTab from "./components/manual-tab";
 import UsageShell from "./components/usage-shell";
@@ -16,11 +15,11 @@ const ButtonDocs = () => {
           <Button>Button</Button>
         </DocsShell>
       </DocsSection>
-      <DocsSection>
+   <div className="flex flex-col gap-4 bg-red-100">
         <h2 className="text-xl">Installation</h2>
-        <div>
+        <div className="bg-green-400">
           <Tabs defaultValue="command">
-            <TabsList variant="line">
+            <TabsList>
               <TabsTrigger value="command">Command</TabsTrigger>
               <TabsTrigger value="manual">Manual</TabsTrigger>
             </TabsList>
@@ -30,10 +29,10 @@ const ButtonDocs = () => {
             <ManualTab>mnl</ManualTab>
           </Tabs>
         </div>
-      </DocsSection>
+</div>
 
 
-        <UsageShell>asd</UsageShell>
+        <div className="bg-yellow-200">esss</div>
    
     </div>
   );
