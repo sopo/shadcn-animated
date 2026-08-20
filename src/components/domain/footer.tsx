@@ -1,47 +1,50 @@
+import { ArrowUpRight } from "lucide-react";
 import { Link } from "react-router";
 
 const Footer = () => {
   return (
-    <footer className="max-w-4xl grid grid-cols-2 mx-auto mt-20 gap-4 w-full px-4">
-      {/* <h2 className="text-xl fomt-medium text-secondary-foreground">Handcrafted motion</h2>
-            <nav className="flex flex-col gap-2">
-                <p className="text-xs font-medium">Links</p>
-                <Link to="/docs" className="text-xs text-secondary-foreground hover:underline">Docs</Link>
-
-                
-            </nav> */}
-
-      <section className="max-w-4xl mx-auto flex p-4 justify-between">
-        <nav className="flex flex-col gap-2">
-            <p className="text-xs font-medium">Sitemap</p>
+    <footer className=" w-full border-t border-neutral-200 mt-20">
+        <nav className="flex flex-col items-start sm:flex-row gap-6 text-xs px-4 lg:px-0 max-w-4xl py-8 mx-auto ">
+            
           <Link
             to={"/"}
-            className="text-secondary-foreground text-sm hover:text-primary"
+            className="text-secondary-foreground text-sm hover:text-primary hover:underline"
           >
             Home
           </Link>
           <Link
             to={"/introduction"}
-            className="text-secondary-foreground text-sm hover:text-primary"
+            className="text-secondary-foreground text-sm hover:text-primary hover:underline"
           >
             Docs
           </Link>
           <Link
             to={"/button"}
-            className="text-secondary-foreground text-sm hover:text-primary"
+            className="text-secondary-foreground text-sm hover:text-primary hover:underline"
           >
             Components
           </Link>
+            <Link
+             target="blank"
+            to={"/button"}
+            className="text-secondary-foreground text-sm hover:text-primary hover:underline flex items-center"
+          >
+            
+            GitHub
+            <ArrowUpRight size={16}/>
+          </Link>
+              <Link
+             target="blank"
+            to={"/button"}
+            className="text-secondary-foreground text-sm hover:text-primary hover:underline flex items-center"
+          >
+            
+            Issues
+            <ArrowUpRight size={16}/>
+          </Link>
         </nav>
-        <div>
-        <Link
-          to={""}
-          className="rounded-full px-4 py-2 text-sm bg-[#3383EF]/5 text-[#3383EF] hover:bg-[#3383EF]/10 font-normal active:scale-99"
-        >
-          GitHub
-        </Link>
-        </div>
-      </section>
+
+
     </footer>
   );
 };

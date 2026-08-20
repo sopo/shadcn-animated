@@ -10,6 +10,7 @@ import {
 } from "./components/animated-tabs";
 import Hero from "./components/domain/hero";
 import Shell from "./components/domain/shell";
+import { CornerDownLeft } from "lucide-react";
 
 function App() {
   return (
@@ -22,6 +23,13 @@ function App() {
             Click me
           </Button>
         </Shell>
+
+              <Shell>
+          <Button variant="default" className="rounded-full h-12 px-6">
+        Click me
+          </Button>
+        </Shell>
+
 
 
         <Shell>
