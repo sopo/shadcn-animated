@@ -15,12 +15,10 @@ function App() {
         <section className=" grid grid-cols-1 md:grid-cols-2 gap-2">
           <Shell>
             <Tabs defaultValue="account" className="w-[400px] ">
-              <TabsList className="">
-                <TabsTrigger value="account" className="" >Account</TabsTrigger>
-                <TabsTrigger value="password"  className="">Password</TabsTrigger>
-                <TabsTrigger value="asd"  className="">
-                tab 3
-                </TabsTrigger>
+              <TabsList className="rounded-full">
+                <TabsTrigger value="account" className="rounded-full" >Account</TabsTrigger>
+                <TabsTrigger value="password"  className="rounded-full">Password</TabsTrigger>
+                
               </TabsList>
               <TabsContent value="account">
                 Make changes to your account here.
@@ -28,9 +26,7 @@ function App() {
               <TabsContent value="password">
                 Change your password here.
               </TabsContent>
-              <TabsContent value="asd">
-                Change your passwosdaasdrd here.
-              </TabsContent>
+        
             </Tabs>
           </Shell>
 
