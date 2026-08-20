@@ -185,3 +185,4 @@
 .scale-default{
   @apply transition-transform duration-180 ease-in-out active:scale-97;
 }
+
