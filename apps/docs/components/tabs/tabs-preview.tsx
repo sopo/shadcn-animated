@@ -2,7 +2,7 @@ import { Tabs, TabsList, TabsTrigger } from "shadcn-animated";
 
 const TabsPreview = () => {
   return (
-    <Tabs defaultValue="account" className="w-full ">
+    <Tabs defaultValue="account" className="w-full">
       <TabsList className="rounded-full">
         <TabsTrigger value="account" className="rounded-full">
           Account

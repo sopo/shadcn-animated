@@ -4,6 +4,7 @@ import ManualTab from "../manual-tab";
 import DocsSection from "../docs-section";
 import DocsShell from "../docs-shell";
 import TabsPreview from "./tabs-preview";
+import Bash from "../bash";
 
 const TabDocs = () => {
   return (
@@ -16,12 +17,14 @@ const TabDocs = () => {
       </DocsSection>
       <div className="flex flex-col gap-4">
         <h2 className="text-xl">Installation</h2>
-        <Tabs defaultValue="command">
+        <Tabs defaultValue="command" className="">
           <TabsList>
             <TabsTrigger value="command">Command</TabsTrigger>
             <TabsTrigger value="manual">Manual</TabsTrigger>
           </TabsList>
-          <CommandTab>cmd</CommandTab>
+          <CommandTab>
+            <Bash code={""} />
+          </CommandTab>
           <ManualTab>mnl</ManualTab>
         </Tabs>
       </div>
