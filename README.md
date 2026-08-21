@@ -38,12 +38,12 @@ The available components are `button`, `checkbox`, `select`, `sheet`, and `tabs`
 
 This repository is a pnpm workspace with two projects:
 
-- `packages/ui` — the publishable `shadcn-animated` package. It contains the CLI and reusable Button, Checkbox, Select, Sheet, and Tabs components, and builds ESM plus TypeScript declarations with tsup.
-- `apps/docs` — the Next.js App Router documentation site. It consumes `shadcn-animated` through the `workspace:*` protocol and contains the landing, introduction, installation, Button, and Tabs pages.
+- `packages/ui` — the publishable `shadcn-animated` package. It contains the CLI and reusable Button, Checkbox, Select, Sheet, and Tabs components, and builds ESM plus TypeScript declarations with tsdown.
+- `apps/docs` — the Next.js App Router documentation site. It consumes `shadcn-animated` source through the `workspace:*` protocol and recompiles when package source changes.
 
 ## Development
 
-Use Node.js 20.9 or newer and pnpm 10.
+Use Node.js 22.18 or newer and pnpm 10.
 
 ```bash
 pnpm install
@@ -62,7 +62,7 @@ pnpm lint
 
 ## Adding a component
 
-Run the shadcn CLI from the library project, then add animation behavior and export the component from `packages/ui/src/index.ts` and `packages/ui/tsup.config.ts`.
+Run the shadcn CLI from the library project, then add animation behavior and export the component from `packages/ui/src/index.ts` and `packages/ui/tsdown.config.ts`.
 
 ```bash
 cd packages/ui

@@ -3,12 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "predev": "pnpm --filter shadcn-animated build",
     "dev": "next dev",
-    "prebuild": "pnpm --filter shadcn-animated build",
     "build": "next build",
     "start": "next start",
-    "pretypecheck": "pnpm --filter shadcn-animated build",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {

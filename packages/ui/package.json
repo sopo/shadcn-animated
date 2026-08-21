@@ -23,35 +23,45 @@
     "shadcn-animated": "bin/shadcn-animated.js"
   },
   "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js"
-    },
-    "./button": {
-      "types": "./dist/button.d.ts",
-      "import": "./dist/button.js"
-    },
-    "./checkbox": {
-      "types": "./dist/checkbox.d.ts",
-      "import": "./dist/checkbox.js"
-    },
-    "./select": {
-      "types": "./dist/select.d.ts",
-      "import": "./dist/select.js"
-    },
-    "./sheet": {
-      "types": "./dist/sheet.d.ts",
-      "import": "./dist/sheet.js"
-    },
-    "./tabs": {
-      "types": "./dist/tabs.d.ts",
-      "import": "./dist/tabs.js"
+    ".": "./src/index.ts",
+    "./button": "./src/components/button.tsx",
+    "./checkbox": "./src/components/checkbox.tsx",
+    "./select": "./src/components/select.tsx",
+    "./sheet": "./src/components/sheet.tsx",
+    "./tabs": "./src/components/tabs.tsx"
+  },
+  "publishConfig": {
+    "exports": {
+      ".": {
+        "types": "./dist/index.d.ts",
+        "import": "./dist/index.js"
+      },
+      "./button": {
+        "types": "./dist/button.d.ts",
+        "import": "./dist/button.js"
+      },
+      "./checkbox": {
+        "types": "./dist/checkbox.d.ts",
+        "import": "./dist/checkbox.js"
+      },
+      "./select": {
+        "types": "./dist/select.d.ts",
+        "import": "./dist/select.js"
+      },
+      "./sheet": {
+        "types": "./dist/sheet.d.ts",
+        "import": "./dist/sheet.js"
+      },
+      "./tabs": {
+        "types": "./dist/tabs.d.ts",
+        "import": "./dist/tabs.js"
+      }
     }
   },
   "scripts": {
-    "build": "tsup",
+    "build": "tsdown",
     "prepack": "pnpm build && pnpm test",
-    "release": "npm publish --access public",
+    "release": "pnpm publish --access public",
     "release:patch": "npm version patch --no-git-tag-version && npm run release",
     "release:minor": "npm version minor --no-git-tag-version && npm run release",
     "release:major": "npm version major --no-git-tag-version && npm run release",
@@ -81,7 +91,7 @@
     "@types/react-dom": "^19.2.3",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
-    "tsup": "^8.5.0",
+    "tsdown": "^0.22.14",
     "typescript": "~6.0.2",
     "vitest": "^4.1.11"
   }
