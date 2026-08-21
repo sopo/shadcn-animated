@@ -13,13 +13,13 @@ const Header = () => {
             Home
           </NavLink>
           <NavLink
-            to={"/introduction"}
+            to={LINKS.DOCS}
             className="text-secondary-foreground text-sm hover:text-primary"
           >
             Docs
           </NavLink>
           <NavLink
-            to={"/button"}
+            to={LINKS.COMPONENTS}
             className="text-secondary-foreground text-sm hover:text-primary"
           >
             Components
