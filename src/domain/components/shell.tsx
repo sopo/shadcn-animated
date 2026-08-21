@@ -9,7 +9,7 @@ import { Plus } from "lucide-react";
 import { Link } from "react-router";
 import Bash from "./bash";
 
-interface ShellProps {
+export interface ShellProps {
   link: string;
   title: string;
   bash: string;
