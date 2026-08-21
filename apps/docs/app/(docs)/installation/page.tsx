@@ -17,7 +17,7 @@ const InstallationPage = () => {
           <div className="w-10 h-10 rounded-full bg-card flex items-center justify-center">
             <p className="font-medium text-secondary-foreground">1</p>
           </div>
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-2 flex-1">
             <p className="font-medium text-lg text-secondary-foreground">
               Install dependencies{" "}
             </p>
