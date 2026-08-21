@@ -1,4 +1,3 @@
-import { Link } from "react-router";
 import NextSection from "../components/next-section";
 import { LINKS } from "../static";
 

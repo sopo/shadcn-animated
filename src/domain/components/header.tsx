@@ -25,10 +25,17 @@ const Header = () => {
             Components
           </NavLink>
         </nav>
-        <a
+        {/* <a
         target="blank"
           href={LINKS.GITHUB}
-          className="scale-default rounded-full px-4 py-2 text-sm bg-[#3383EF]/5 text-[#3383EF] hover:bg-[#3383EF]/10 font-normal active:scale-99"
+          className="scale-default rounded-full px-4 py-2 text-sm bg-[#3383EF]/5 text-[#0068D3] hover:bg-[#3383EF]/10 font-normal active:scale-99"
+        >
+          GitHub
+        </a> */}
+           <a
+        target="blank"
+          href={LINKS.GITHUB}
+          className="btnClass scale-default"
         >
           GitHub
         </a>
