@@ -8,10 +8,12 @@
     "jsx": "react-jsx",
     "ignoreDeprecations": "6.0",
     "noEmit": true,
+    "types": ["node", "react", "react-dom"],
     "verbatimModuleSyntax": true,
     "paths": {
       "@/*": ["./src/*"]
     }
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx"]
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "exclude": ["src/**/*.test.ts"]
 }

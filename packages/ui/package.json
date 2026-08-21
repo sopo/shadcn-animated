@@ -1,12 +1,27 @@
 {
   "name": "shadcn-animated",
   "version": "0.1.0",
-  "description": "Animated, copy-friendly shadcn/ui components.",
+  "description": "A shadcn-style CLI for animated, copy-friendly UI components.",
+  "keywords": [
+    "shadcn",
+    "react",
+    "components",
+    "animation",
+    "cli"
+  ],
   "type": "module",
   "sideEffects": false,
+  "engines": {
+    "node": ">=20.9.0"
+  },
   "files": [
-    "dist"
+    "bin",
+    "dist",
+    "src/components"
   ],
+  "bin": {
+    "shadcn-animated": "./bin/shadcn-animated.js"
+  },
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -35,6 +50,8 @@
   },
   "scripts": {
     "build": "tsup",
+    "prepack": "pnpm build && pnpm test",
+    "test": "vitest run",
     "typecheck": "tsc --noEmit"
   },
   "peerDependencies": {
@@ -43,18 +60,25 @@
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",
+    "@clack/prompts": "^0.11.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "commander": "^14.0.3",
+    "jsonc-parser": "^3.3.1",
     "lucide-react": "^1.31.0",
     "motion": "^13.1.0",
-    "tailwind-merge": "^3.6.0"
+    "sucrase": "^3.35.1",
+    "tailwind-merge": "^3.6.0",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
+    "@types/node": "^24.13.3",
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "tsup": "^8.5.0",
-    "typescript": "~6.0.2"
+    "typescript": "~6.0.2",
+    "vitest": "^4.1.11"
   }
 }

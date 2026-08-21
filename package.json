@@ -10,6 +10,7 @@
     "dev": "pnpm --filter docs dev",
     "build": "pnpm --filter docs build",
     "lint": "eslint .",
+    "test": "pnpm --recursive --if-present test",
     "typecheck": "pnpm --recursive --if-present typecheck"
   },
   "devDependencies": {

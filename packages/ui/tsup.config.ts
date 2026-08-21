@@ -8,6 +8,7 @@ export default defineConfig({
     select: "src/components/select.tsx",
     sheet: "src/components/sheet.tsx",
     tabs: "src/components/tabs.tsx",
+    "cli/index": "src/cli/index.ts",
   },
   format: ["esm"],
   dts: true,
