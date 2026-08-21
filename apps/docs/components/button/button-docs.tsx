@@ -1,9 +1,8 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "shadcn-animated";
-import CommandTab from "../command-tab";
-import ManualTab from "../manual-tab";
 import DocsSection from "../docs-section";
 import DocsShell from "../docs-shell";
 import ButtonPreview from "./button-preview";
+import Bash from "../bash";
 
 const ButtonDocs = () => {
   return (
@@ -16,18 +15,23 @@ const ButtonDocs = () => {
       </DocsSection>
       <div className="flex flex-col gap-4">
         <h2 className="text-xl">Installation</h2>
-            <Tabs defaultValue="account" className="w-full flex-col">
-      <TabsList className="rounded-full">
-        <TabsTrigger value="account" className="rounded-full">
-          Account
-        </TabsTrigger>
-        <TabsTrigger value="password" className="rounded-full">
-          Password
-        </TabsTrigger>
-      </TabsList>
-      <TabsContent value="password">ad</TabsContent>
-       <TabsContent value="account">sad</TabsContent>
-    </Tabs>
+        <Tabs defaultValue="command" className="w-full gap-4" >
+          <TabsList className="rounded-full">
+            <TabsTrigger value="command" className="rounded-full">
+              Command
+            </TabsTrigger>
+            <TabsTrigger value="manual" className="rounded-full">
+              Manual
+            </TabsTrigger>
+          </TabsList>
+
+          <TabsContent value="command">
+            <Bash code="npx shadcn-animated add button" />
+          </TabsContent>
+          <TabsContent value="manual">
+            <Bash code="" />
+          </TabsContent>
+        </Tabs>
       </div>
 
       <div className="flex flex-col gap-4">
