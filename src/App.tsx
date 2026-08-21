@@ -1,6 +1,5 @@
 import "./App.css";
 import { Button } from "./components/ui/button";
-
 import { Tabs, TabsList, TabsTrigger } from "./components/ui/tabs";
 import Hero from "./domain/components/hero";
 import Shell from "./domain/components/shell";
