@@ -26,6 +26,7 @@ const Header = () => {
           </NavLink>
         </nav>
         <a
+        target="blank"
           href={LINKS.GITHUB}
           className="scale-default rounded-full px-4 py-2 text-sm bg-[#3383EF]/5 text-[#3383EF] hover:bg-[#3383EF]/10 font-normal active:scale-99"
         >

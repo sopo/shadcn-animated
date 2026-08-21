@@ -11,7 +11,7 @@ const Hero = () => {
         </h2>
       </div>
       <div>
-        <a href={LINKS.GITHUB} className="text-[#3383EF] flex items-center hover:underline">GitHub <ChevronRight size={16}/></a>
+        <a target="blank" href={LINKS.GITHUB} className="text-[#3383EF] flex items-center hover:underline">GitHub <ChevronRight size={16}/></a>
       </div>
     </section>
   );
