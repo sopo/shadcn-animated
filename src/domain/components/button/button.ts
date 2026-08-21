@@ -3,4 +3,3 @@ export const buttonProps={
     title: "Button",
     bash: "npm install button"
 }
-

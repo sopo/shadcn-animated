@@ -1,9 +1,11 @@
 import "./App.css";
+import { buttonProps } from "./domain/components/button/button";
 import ButtonPreview from "./domain/components/button/button-preview";
 import Hero from "./domain/components/hero";
 import Shell from "./domain/components/shell";
+import { tabsProps } from "./domain/components/tabs/tabs";
 import TabsPreview from "./domain/components/tabs/tabs-preview";
-import { buttonProps } from "./domain/static.tsx/components";
+
 
 function App() {
   return (
@@ -14,7 +16,7 @@ function App() {
           <Shell props={buttonProps}>
             <ButtonPreview />
           </Shell>
-          <Shell props={buttonProps}>
+          <Shell props={tabsProps}>
            <TabsPreview />
           </Shell>
         </section>
