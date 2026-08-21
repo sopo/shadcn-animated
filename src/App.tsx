@@ -1,6 +1,7 @@
 import "./App.css";
 import { Button } from "./components/ui/button";
 import { Tabs, TabsList, TabsTrigger } from "./components/ui/tabs";
+import ButtonPreview from "./domain/components/button/button-preview";
 import Hero from "./domain/components/hero";
 import Shell from "./domain/components/shell";
 import { buttonProps } from "./domain/static.tsx/components";
@@ -12,12 +13,7 @@ function App() {
         <Hero />
         <section className=" grid grid-cols-1 md:grid-cols-2 gap-2">
           <Shell props={buttonProps}>
-            <Button
-              variant="default"
-              className="rounded-full h-10 px-6 hover:bg-primary "
-            >
-              Click me
-            </Button>
+            <ButtonPreview />
           </Shell>
           <Shell props={buttonProps}>
             <Tabs defaultValue="account" className="w-full ">

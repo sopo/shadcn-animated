@@ -1,9 +1,9 @@
-import { Button } from "@/components/ui/button";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import CommandTab from "../command-tab";
 import ManualTab from "../manual-tab";
 import DocsSection from "../docs-section";
 import DocsShell from "../docs-shell";
+import ButtonPreview from "./button-preview";
 
 const ButtonDocs = () => {
   return (
@@ -11,7 +11,7 @@ const ButtonDocs = () => {
       <DocsSection>
         <h1 className="text-2xl">Button</h1>
         <DocsShell>
-          <Button>Button</Button>
+          <ButtonPreview />
         </DocsShell>
       </DocsSection>
       <div className="flex flex-col gap-4">
