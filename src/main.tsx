@@ -1,6 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { BrowserRouter, Route, Routes } from "react-router";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router";
 import './index.css'
 import App from './App.tsx'
 import SidenavLayout from './domain/components/sidenav-layout.tsx';
@@ -26,6 +26,7 @@ createRoot(document.getElementById('root')!).render(
         <Route path="tabs" element={<TabsDocs />} />
       </Route>
     </Route>
+     <Route path="*" element={<Navigate to="/" replace />} />
   </Routes>
   </BrowserRouter>
   </StrictMode>
