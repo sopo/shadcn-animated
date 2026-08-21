@@ -1,10 +1,11 @@
-import DocsSection from "@/components/domain/docs-section";
-import DocsShell from "@/components/domain/docs-shell";
+
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import CommandTab from "./components/command-tab";
-import ManualTab from "./components/manual-tab";
-import UsageShell from "./components/usage-shell";
+import CommandTab from "../command-tab";
+import ManualTab from "../manual-tab";
+import DocsSection from "../docs-section";
+import DocsShell from "../docs-shell";
+
 
 const ButtonDocs = () => {
   return (

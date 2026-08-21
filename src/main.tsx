@@ -3,12 +3,13 @@ import { createRoot } from 'react-dom/client'
 import { BrowserRouter, Route, Routes } from "react-router";
 import './index.css'
 import App from './App.tsx'
-import SidenavLayout from './pages/components/sidenav-layout.tsx';
-import ButtonDocs from './pages/button-docs.tsx';
-import TabsDocs from './pages/tabs-docs.tsx';
-import AppLayout from './pages/components/app-layout.tsx';
-import Installation from './pages/installation.tsx';
-import Introduction from './pages/introduction.tsx';
+import SidenavLayout from './domain/components/sidenav-layout.tsx';
+
+import TabsDocs from './domain/tabs-docs.tsx';
+import AppLayout from './domain/components/app-layout.tsx';
+import Installation from './domain/installation.tsx';
+import Introduction from './domain/introduction.tsx';
+import ButtonDocs from './domain/components/button/button-docs.tsx';
 
 
 createRoot(document.getElementById('root')!).render(

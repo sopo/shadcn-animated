@@ -1,8 +1,9 @@
 import "./App.css";
 import { Button } from "./components/ui/button";
-import Hero from "./components/domain/hero";
-import Shell from "./components/domain/shell";
+
 import { Tabs, TabsList, TabsTrigger } from "./components/ui/tabs";
+import Hero from "./domain/components/hero";
+import Shell from "./domain/components/shell";
 
 function App() {
   return (
