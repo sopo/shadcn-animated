@@ -5,7 +5,7 @@ import './index.css'
 import App from './App.tsx'
 import SidenavLayout from './domain/components/sidenav-layout.tsx';
 
-import TabsDocs from './domain/tabs-docs.tsx';
+import TabsDocs from './domain/components/tabs/tabs-docs.tsx';
 import AppLayout from './domain/components/app-layout.tsx';
 import Installation from './domain/pages/installation.tsx';
 import Introduction from './domain/pages/introduction.tsx';

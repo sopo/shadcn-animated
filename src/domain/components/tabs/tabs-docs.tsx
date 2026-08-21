@@ -5,11 +5,11 @@ import ManualTab from "../manual-tab";
 import DocsSection from "../docs-section";
 import DocsShell from "../docs-shell";
 
-const ButtonDocs = () => {
+const TabDocs = () => {
   return (
     <div className="flex flex-col gap-12">
       <DocsSection>
-        <h1 className="text-2xl">Button</h1>
+        <h1 className="text-2xl">Tabs</h1>
         <DocsShell>
           <Button>Button</Button>
         </DocsShell>
@@ -33,4 +33,4 @@ const ButtonDocs = () => {
   );
 };
 
-export default ButtonDocs;
+export default TabDocs;
