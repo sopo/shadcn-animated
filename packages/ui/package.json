@@ -20,7 +20,7 @@
     "src/components"
   ],
   "bin": {
-    "shadcn-animated": "./bin/shadcn-animated.js"
+    "shadcn-animated": "bin/shadcn-animated.js"
   },
   "exports": {
     ".": {
@@ -51,6 +51,10 @@
   "scripts": {
     "build": "tsup",
     "prepack": "pnpm build && pnpm test",
+    "release": "npm publish --access public",
+    "release:patch": "npm version patch --no-git-tag-version && npm run release",
+    "release:minor": "npm version minor --no-git-tag-version && npm run release",
+    "release:major": "npm version major --no-git-tag-version && npm run release",
     "test": "vitest run",
     "typecheck": "tsc --noEmit"
   },

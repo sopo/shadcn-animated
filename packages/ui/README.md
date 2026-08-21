@@ -20,3 +20,23 @@ npx shadcn-animated add button --cwd ./apps/web
 ```
 
 Available components: `button`, `checkbox`, `select`, `sheet`, and `tabs`.
+
+## Releasing
+
+From the repository root, publish the current version with:
+
+```bash
+pnpm release
+```
+
+For subsequent releases, bump the package version and publish it with one of:
+
+```bash
+pnpm release:patch
+pnpm release:minor
+pnpm release:major
+```
+
+The release commands build the package and run its tests before npm publishes it.
+They update `packages/ui/package.json` without creating a Git commit or tag, so the
+version change can be reviewed and committed after a successful publish.

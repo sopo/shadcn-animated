@@ -10,6 +10,10 @@
     "dev": "pnpm --filter docs dev",
     "build": "pnpm --filter docs build",
     "lint": "eslint .",
+    "release": "pnpm --filter shadcn-animated release",
+    "release:patch": "pnpm --filter shadcn-animated release:patch",
+    "release:minor": "pnpm --filter shadcn-animated release:minor",
+    "release:major": "pnpm --filter shadcn-animated release:major",
     "test": "pnpm --recursive --if-present test",
     "typecheck": "pnpm --recursive --if-present typecheck"
   },
