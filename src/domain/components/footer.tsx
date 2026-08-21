@@ -1,5 +1,6 @@
 import { ArrowUpRight } from "lucide-react";
 import { Link } from "react-router";
+import { LINKS } from "../static";
 
 const Footer = () => {
   return (
@@ -19,29 +20,29 @@ const Footer = () => {
             Docs
           </Link>
           <Link
-            to={"/button"}
+            to={"/docs"}
             className="text-secondary-foreground text-sm hover:text-primary hover:underline"
           >
             Components
           </Link>
-            <Link
+            <a
              target="blank"
-            to={"/button"}
+            href={LINKS.GITHUB}
             className="text-secondary-foreground text-sm hover:text-primary hover:underline flex items-center"
           >
             
             GitHub
             <ArrowUpRight size={16}/>
-          </Link>
-              <Link
+          </a>
+              <a
              target="blank"
-            to={"/button"}
+            href={LINKS.ISSUES}
             className="text-secondary-foreground text-sm hover:text-primary hover:underline flex items-center"
           >
             
             Issues
             <ArrowUpRight size={16}/>
-          </Link>
+          </a>
         </nav>
 
 

@@ -1,5 +1,5 @@
-import { Link } from "react-router";
 import { ChevronRight } from "lucide-react";
+import { LINKS } from "../static";
 
 const Hero = () => {
   return (
@@ -11,7 +11,7 @@ const Hero = () => {
         </h2>
       </div>
       <div>
-        <Link to="/" className="text-[#3383EF] flex items-center hover:underline">GitHub <ChevronRight size={16}/></Link>
+        <a href={LINKS.GITHUB} className="text-[#3383EF] flex items-center hover:underline">GitHub <ChevronRight size={16}/></a>
       </div>
     </section>
   );
