@@ -7,8 +7,8 @@ import SidenavLayout from './domain/components/sidenav-layout.tsx';
 
 import TabsDocs from './domain/tabs-docs.tsx';
 import AppLayout from './domain/components/app-layout.tsx';
-import Installation from './domain/installation.tsx';
-import Introduction from './domain/introduction.tsx';
+import Installation from './domain/pages/installation.tsx';
+import Introduction from './domain/pages/introduction.tsx';
 import ButtonDocs from './domain/components/button/button-docs.tsx';
 
 
