@@ -1,9 +1,8 @@
 import "./App.css";
-import { Button } from "./components/ui/button";
-import { Tabs, TabsList, TabsTrigger } from "./components/ui/tabs";
 import ButtonPreview from "./domain/components/button/button-preview";
 import Hero from "./domain/components/hero";
 import Shell from "./domain/components/shell";
+import TabsPreview from "./domain/components/tabs/tabs-preview";
 import { buttonProps } from "./domain/static.tsx/components";
 
 function App() {
@@ -16,16 +15,7 @@ function App() {
             <ButtonPreview />
           </Shell>
           <Shell props={buttonProps}>
-            <Tabs defaultValue="account" className="w-full ">
-              <TabsList className="rounded-full">
-                <TabsTrigger value="account" className="rounded-full">
-                  Account
-                </TabsTrigger>
-                <TabsTrigger value="password" className="rounded-full">
-                  Password
-                </TabsTrigger>
-              </TabsList>
-            </Tabs>
+           <TabsPreview />
           </Shell>
         </section>
       </div>
