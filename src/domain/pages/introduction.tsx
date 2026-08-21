@@ -1,4 +1,6 @@
 import { Link } from "react-router";
+import NextSection from "../components/next-section";
+import { LINKS } from "../static";
 
 const Introduction = () => {
   return (
@@ -13,12 +15,7 @@ const Introduction = () => {
           them with the CLI. <br></br><br></br> <span className="text-foreground">New components are added every week.</span>
         </p>
       </div>
-      <div className="flex flex-col gap-4 py-6 border-t border-neutral-200 my-6 ">
-        <p className="text-lg font-medium text-secondary-foreground">Next</p>
-        <div>
-      <Link to={"/installation"}  className="inline-flex items-center justify-center bg-black/3 text-foreground py-4 px-8 rounded-2xl font-normal text-md hover:bg-black/5 hover:scale-101 active:scale-99 transition-transform ease-in">Installation</Link>
-      </div>
-      </div>
+     <NextSection title="Installation" link={LINKS.INSTALLATION}/>
     </div>
   );
 };

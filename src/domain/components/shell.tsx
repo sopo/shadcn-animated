@@ -41,7 +41,7 @@ const Shell = ({
                 <SheetTitle className="text-2xl font-medium">
                   {props.title}
                 </SheetTitle>
-                <Link to={props.link} className="text-blue-500 hover:underline">
+                <Link to={props.link} className="linkClass">
                   View Docs
                 </Link>
               </div>

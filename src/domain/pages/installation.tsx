@@ -1,4 +1,6 @@
 import { Link } from "react-router";
+import NextSection from "../components/next-section";
+import { LINKS } from "../static";
 
 const Installation = () => {
   return (
@@ -12,7 +14,7 @@ const Installation = () => {
           <p className="font-medium text-lg text-secondary-foreground">
             Install{" "}
             <Link
-            target="blank"
+              target="blank"
               to={"https://tailwindcss.com/docs/installation/using-vite"}
               className="underline text-primary"
             >
@@ -28,7 +30,7 @@ const Installation = () => {
           <p className="font-medium text-lg text-secondary-foreground">
             Install{" "}
             <Link
-            target="blank"
+              target="blank"
               to={"https://ui.shadcn.com/docs/installation"}
               className="underline text-foreground"
             >
@@ -41,24 +43,19 @@ const Installation = () => {
           <div className="w-10 h-10 rounded-full bg-card flex items-center justify-center">
             <p className="font-medium text-secondary-foreground">3</p>
           </div>
-          <p className="font-medium text-lg text-secondary-foreground">Install</p>
+          <p className="font-medium text-lg text-secondary-foreground">
+            Install
+          </p>
         </div>
 
-              <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4">
           <div className="w-10 h-10 rounded-full bg-card flex items-center justify-center">
             <p className="font-medium text-secondary-foreground">4</p>
           </div>
           <p className="font-medium text-lg text-secondary-foreground">Use</p>
         </div>
-              <div className="flex flex-col gap-4 py-6 border-t border-neutral-200 my-6 ">
-        <p className="text-lg font-medium text-secondary-foreground">Next</p>
-        <div>
-      <Link to={"/button"}  className="inline-flex items-center justify-center bg-black/3 text-foreground py-4 px-8 rounded-2xl font-normal text-md hover:bg-black/5 hover:scale-101 active:scale-99 transition-transform ease-in">Components</Link>
-      </div>
-      </div>
+        <NextSection title="Components" link={LINKS.COMPONENTS}/>
       </section>
-
-  
     </div>
   );
 };
