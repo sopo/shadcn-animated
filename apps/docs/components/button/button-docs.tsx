@@ -4,6 +4,8 @@ import DocsSection from "../docs-section";
 import DocsShell from "../docs-shell";
 import ButtonPreview from "./button-preview";
 import Bash from "../bash";
+import Code from "../code-block";
+import NextSection from "../next-section";
 
 const ButtonDocs = () => {
   return (
@@ -22,11 +24,11 @@ const ButtonDocs = () => {
               Command
             </TabsTrigger>
             <TabsTrigger value="manual" className="rounded-full">
-              Manualadsadadasda
+              Manual
             </TabsTrigger>
           </TabsList>
-
-          <TabsContent value="command">
+          <TabsContent value="command" className="flex flex-col gap-4">
+            <h2></h2>
             <Bash code="npx shadcn-animated add button" />
           </TabsContent>
           <TabsContent value="manual">
@@ -37,7 +39,13 @@ const ButtonDocs = () => {
 
       <div className="flex flex-col gap-4">
         <h2 className="text-xl">Usage</h2>
+<div className="flex flex-col gap-4">
+    <Code code={`import { Button } from "shadcn-animated";`}/>
+    <Code code={`<Button>Button</Button>`} />
+    </div>
       </div>
+
+      <NextSection title="Tabs" link="/tabs" />
     </div>
   );
 };
