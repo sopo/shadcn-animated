@@ -11,9 +11,7 @@ const TabsDocs = () => {
   return (
     <div className="flex flex-col gap-12">
       <DocsSection>
-        <h1 className="text-2xl">
-          Tabs<span className="text-secondary-foreground">*</span>
-        </h1>
+        <h1 className="text-2xl">Tabs</h1>
         <DocsShell>
           <TabsPreview />
         </DocsShell>
@@ -21,7 +19,7 @@ const TabsDocs = () => {
       <div className="flex flex-col gap-8">
         <h2 className="text-xl">Installation</h2>
 
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-3">
           <h2 className=" font-medium">1. Install dependencies</h2>
           <Bash code="npm install motion" />
         </div>

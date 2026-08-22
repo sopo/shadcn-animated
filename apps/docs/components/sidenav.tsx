@@ -15,7 +15,7 @@ const sections = [
     title: "Components",
     links: [
       { href: "/button", label: "Button" },
-      { href: "/tabs", label: "Tabs*" },
+      { href: "/tabs", label: "Tabs" },
     ],
   },
 ];
