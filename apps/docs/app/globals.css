@@ -27,6 +27,7 @@
   --color-ring: var(--ring);
   --color-input: var(--input);
   --color-border: var(--border);
+  --color-brand: var(--brand);
   --color-destructive: var(--destructive);
   --color-accent-foreground: var(--accent-foreground);
   --color-accent: var(--accent);
@@ -56,7 +57,7 @@
   --background: #f8f8f8;
   /* #1d1c1f stone-800 */
   --foreground: oklch(26.8% 0.007 34.298);
-
+--brand: oklch(0.509 0.184 256.4);
   --secondary: oklch(100% 0 0);
   /* #6E6E73*/
   --secondary-foreground: oklch(53.99% 0.008 286.14);
