@@ -74,7 +74,7 @@ function TabsTrigger({ className, ...props }: TabsPrimitive.Tab.Props) {
             {state.active && (
               <motion.div
                 layoutId={"active-tab"}
-                className="absolute inset-0 rounded-[inherit] shadow-sm group-data-[variant=line]/tabs-list:bg-foreground group-data-[variant=line]/tabs-list:h-0.5 group-data-[variant=line]/tabs-list:left-0 group-data-[variant=line]/tabs-list:right-0 group-data-[variant=line]/tabs-list:-bottom-2 group-data-[variant=line]/tabs-list:top-auto"
+                className="absolute inset-0 bg-background rounded-[inherit] shadow-sm group-data-[variant=line]/tabs-list:bg-foreground group-data-[variant=line]/tabs-list:h-0.5 group-data-[variant=line]/tabs-list:left-0 group-data-[variant=line]/tabs-list:right-0 group-data-[variant=line]/tabs-list:-bottom-2 group-data-[variant=line]/tabs-list:top-auto"
                 transition={{
                   duration: 0.18,
                 }}
