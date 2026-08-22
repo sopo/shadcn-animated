@@ -1,5 +1,4 @@
-// import { Tabs, TabsContent, TabsList, TabsTrigger } from "shadcn-animated";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "../../../../packages/ui/src/components/tabs";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "shadcn-animated";
 import DocsSection from "../docs-section";
 import DocsShell from "../docs-shell";
 import ButtonPreview from "./button-preview";
@@ -31,7 +30,7 @@ const ButtonDocs = () => {
             <Bash code="npx shadcn-animated add button" />
           </TabsContent>
           <TabsContent value="manual">
-            <Code code={manualCode} expandable filename="components/ui/button.tsx"/>
+            <Code code={manualCode} expandable filename="@/components/ui/button.tsx"/>
           </TabsContent>
         </Tabs>
       </div>
