@@ -23,12 +23,12 @@ const Shell = ({
   props: ShellProps;
 }) => {
   return (
-    <div className="relative h-100 bg-card rounded-3xl flex items-center justify-center flex-col">
+    <div className="relative h-100 bg-primary/3 rounded-3xl flex items-center justify-center flex-col">
       <div>{children}</div>
       <div className="flex items-center gap-2 w-full justify-between absolute bottom-0 p-4">
         <Sheet>
           <SheetTrigger>
-            <div className="rounded-full text-secondary-foreground p-3 hover:bg-black/5 cursor-pointer scale-default">
+            <div className="rounded-full text-secondary-foreground p-3 hover:bg-primary/5 cursor-pointer scale-default">
               <Plus strokeWidth={2.5} />
             </div>
           </SheetTrigger>
