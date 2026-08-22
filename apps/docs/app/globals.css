@@ -56,13 +56,12 @@
   --background: #f8f8f8;
   /* #1d1c1f stone-800 */
   --foreground: oklch(26.8% 0.007 34.298);
-  /*F5F5F7*/
-  --secondary: oklch(97.07% 0.003 286.35);
+
+  --secondary: oklch(100% 0 0);
   /* #6E6E73*/
   --secondary-foreground: oklch(53.99% 0.008 286.14);
-  /* #E8E8ED */
-  /* #D0D0D0 was is E0E0E0 is F6F6F6*/
-  --border: oklch(0.9731 0 0);
+
+  --border: oklch(92.2% 0 none);
   /* #221E1F */
   --primary: oklch(0.205 0 0);
   /* #FFFFFF */
