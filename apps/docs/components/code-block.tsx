@@ -2,11 +2,21 @@
 
 import { CodeBlock } from "react-code-block";
 import { Check, Copy, ChevronDown, ChevronUp } from "lucide-react";
+import Image from "next/image";
+
 import { useState } from "react";
 import { Button } from "shadcn-animated/button";
 import { themes } from "prism-react-renderer";
+import { cn } from "../../../packages/ui/src/lib/utils";
 
-const Code = ({ code }: { code: string }) => {
+
+type CodeProps = {
+  code: string;
+  expandable?: boolean;
+  filename?: string;
+};
+
+const Code = ({ code, expandable = false, filename }: CodeProps) => {
   const [copied, setCopied] = useState(false);
   const [expanded, setExpanded] = useState(false);
 
@@ -25,12 +35,37 @@ const Code = ({ code }: { code: string }) => {
 
   return (
     <CodeBlock code={code} language="tsx" theme={themes.vsLight}>
-      <div className="relative overflow-hidden rounded-xl">
-        <CodeBlock.Code
-          className={`bg-primary/3 rounded-xl p-6 shadow-lg overflow-x-auto transition-[max-height] duration-300 ${
-            expanded ? "max-h-none" : "max-h-50"
-          }`}
+      <div className={`relative overflow-hidden rounded-xl bg-primary/3 `}>
+      {filename && (
+      <div className="flex items-center gap-1 p-2 pl-4 border-b border-border">
+
+<Image
+  src="/assets/Typescript_logo_2020.svg.webp"
+  alt="Icon"
+  width={16}
+  height={16}
+/>
+         <div className="text-sm text-secondary-foreground font-code pt-1">{filename}</div>
+
+        <Button
+          size="icon-lg"
+          variant="ghost"
+          className="ml-auto bg-background hover:bg-background"
+          onClick={copyCode}
         >
+          {copied ? <Check /> : <Copy />}
+        </Button>
+
+        </div>
+      )} 
+           
+        <CodeBlock.Code
+          className={cn(
+            "relative overflow-x-auto p-4",
+            expandable && !expanded && "max-h-50 overflow-y-hidden",
+          )}
+        >
+              
           <div className="table-row">
             <CodeBlock.LineNumber className="table-cell pr-4 text-right text-sm text-secondary-foreground select-none" />
 
@@ -39,33 +74,32 @@ const Code = ({ code }: { code: string }) => {
             </CodeBlock.LineContent>
           </div>
         </CodeBlock.Code>
+          {expandable && !expanded && (
+    <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-linear-to-t from-background to-transparent" />
+  )}
+      
 
-        <Button
+        {expandable && (
+          <Button
+            variant="outline"
+            className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-secondary hover:bg-secondary rounded-full px-4"
+            onClick={() => setExpanded((value) => !value)}
+          >
+            {expanded ? "Collapse" : "Expand"}
+          </Button>
+        )}
+{!expandable && (
+         <Button
           size="icon-lg"
-          variant="outline"
-          className="absolute top-4 right-4 bg-background hover:bg-background"
+          variant="ghost"
+          className="absolute top-2 right-2 bg-background hover:bg-background"
           onClick={copyCode}
         >
           {copied ? <Check /> : <Copy />}
         </Button>
+)}
 
-        <Button
-          variant="outline"
-          className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-background"
-          onClick={() => setExpanded((value) => !value)}
-        >
-          {expanded ? (
-            <>
-              <ChevronUp />
-              Collapse
-            </>
-          ) : (
-            <>
-              <ChevronDown />
-              Expand
-            </>
-          )}
-        </Button>
+
       </div>
     </CodeBlock>
   );
