@@ -54,7 +54,7 @@ const Header = () => {
                         key={link.href}
                         href={link.href}
                         aria-current={isActive ? "page" : undefined}
-                        className={`text-sm transition-colors ${
+                        className={`text-sm transition-colors  ${
                           isActive
                             ? "text-foreground"
                             : "text-secondary-foreground hover:text-foreground"
