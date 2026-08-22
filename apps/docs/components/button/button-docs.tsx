@@ -1,4 +1,5 @@
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "shadcn-animated";
+// import { Tabs, TabsContent, TabsList, TabsTrigger } from "shadcn-animated";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "../../../../packages/ui/src/components/tabs";
 import DocsSection from "../docs-section";
 import DocsShell from "../docs-shell";
 import ButtonPreview from "./button-preview";
@@ -16,12 +17,12 @@ const ButtonDocs = () => {
       <div className="flex flex-col gap-4">
         <h2 className="text-xl">Installation</h2>
         <Tabs defaultValue="command" className="w-full gap-4" >
-          <TabsList className="rounded-full">
+          <TabsList className="rounded-full" variant="line">
             <TabsTrigger value="command" className="rounded-full">
               Command
             </TabsTrigger>
             <TabsTrigger value="manual" className="rounded-full">
-              Manual
+              Manualadsadadasda
             </TabsTrigger>
           </TabsList>
 
