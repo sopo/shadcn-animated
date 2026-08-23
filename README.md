@@ -1,70 +1,43 @@
 # shadcn animated
 
-A growing collection of handcrafted, animated [shadcn/ui](https://ui.shadcn.com/) components, distributed through a shadcn-style CLI.
+**Expanding collection of animated [shadcn/ui](https://ui.shadcn.com/) components, crafted by hand** 
 
-## CLI
+## Installation
 
-Initialize shadcn/ui in your application so it has a `components.json`, then add a component:
+### Install dependencies
 
-```bash
+1. [Tailwind](https://tailwindcss.com/docs/installation/using-vite)
+
+2. [shadcn/ui](https://ui.shadcn.com/docs/installation)
+
+3. [motion](https://motion.dev/docs/quick-start) - optional; used by some components, as noted in their documentation.
+
+### Install shadcn animated
+
+```jsx
+npm i shadcn-animated
+```
+
+### Install components
+
+```jsx
 npx shadcn-animated add button
 ```
 
-The CLI reads `aliases.ui` from `components.json`, resolves it through `tsconfig.json`, `jsconfig.json`, or `package.json#imports`, copies the component, and installs missing runtime dependencies. If a destination file already exists, the CLI asks before replacing it.
+## **Usage**
 
-```bash
-# Add several components.
-npx shadcn-animated add button checkbox tabs
+Use the components just like you would use shadcn/ui components:
 
-# Preview without writing files or installing packages.
-npx shadcn-animated add sheet --dry-run
+```jsx
+import { Button } from "shadcn-animated"
 
-# Replace existing files without prompting.
-npx shadcn-animated add button --overwrite
+export default function App() {
+  return (
+    <Button>Button</Button>
+  )
+}
 
-# Copy source files without installing dependencies.
-npx shadcn-animated add button --no-install
-
-# Run against another project directory.
-npx shadcn-animated add button --cwd ./apps/web
-
-# Show every available component.
-npx shadcn-animated list
 ```
+## Issues
 
-The available components are `button`, `checkbox`, `select`, `sheet`, and `tabs`. Adding `sheet` also adds its `button` dependency when needed. TypeScript and JavaScript shadcn projects are supported through the `tsx` setting in `components.json`.
-
-## Workspace
-
-This repository is a pnpm workspace with two projects:
-
-- `packages/ui` — the publishable `shadcn-animated` package. It contains the CLI and reusable Button, Checkbox, Select, Sheet, and Tabs components, and builds ESM plus TypeScript declarations with tsdown.
-- `apps/docs` — the Next.js App Router documentation site. It consumes `shadcn-animated` source through the `workspace:*` protocol and recompiles when package source changes.
-
-## Development
-
-Use Node.js 22.18 or newer and pnpm 10.
-
-```bash
-pnpm install
-pnpm dev
-```
-
-The docs app is available at [http://localhost:3000](http://localhost:3000).
-
-## Checks
-
-```bash
-pnpm build
-pnpm typecheck
-pnpm lint
-```
-
-## Adding a component
-
-Run the shadcn CLI from the library project, then add animation behavior and export the component from `packages/ui/src/index.ts` and `packages/ui/tsdown.config.ts`.
-
-```bash
-cd packages/ui
-pnpm dlx shadcn@latest add button
-```
+If you encounter a problem, please open an issue on [GitHub](https://github.com/sopo/shadcn-animated/issues).
