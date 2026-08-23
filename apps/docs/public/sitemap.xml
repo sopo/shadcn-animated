@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://shadcn-animated-docs.vercel.app/</loc>
+  </url>
+
+  <url>
+    <loc>https://shadcn-animated-docs.vercel.app/introduction</loc>
+  </url>
+
+  <url>
+    <loc>https://shadcn-animated-docs.vercel.app/installation</loc>
+  </url>
+
+  <url>
+    <loc>https://shadcn-animated-docs.vercel.app/button</loc>
+  </url>
+
+  <url>
+    <loc>https://shadcn-animated-docs.vercel.app/tabs</loc>
+  </url>
+
+</urlset>
