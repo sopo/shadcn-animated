@@ -39,7 +39,7 @@ const Header = () => {
                 <div className="flex flex-col gap-4">
                   <Link
                     href={"/"}
-                    className={`text-sm text-secondary-foreground`}
+                    className={`text-sm`}
                     onClick={() => setOpen(false)}
                   >
                     {`Home`}
@@ -60,11 +60,7 @@ const Header = () => {
                             key={link.href}
                             href={link.href}
                             aria-current={isActive ? "page" : undefined}
-                            className={`text-sm transition-colors  ${
-                              isActive
-                                ? "text-foreground"
-                                : "text-secondary-foreground hover:text-foreground"
-                            }`}
+                            className={`text-sm`}
                             onClick={() => setOpen(false)}
                           >
                             {link.label}
