@@ -16,6 +16,18 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.svg",
   },
+  openGraph: {
+    title: "Your Site",
+    description: "Your site description",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Your Site",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
