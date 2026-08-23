@@ -9,6 +9,15 @@
     "animation",
     "cli"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sopo/shadcn-animated.git",
+    "directory": "packages/ui"
+  },
+  "homepage": "https://github.com/sopo/shadcn-animated#readme",
+  "bugs": {
+    "url": "https://github.com/sopo/shadcn-animated/issues"
+  },
   "type": "module",
   "sideEffects": false,
   "engines": {
@@ -31,6 +40,9 @@
     "./tabs": "./src/components/tabs.tsx"
   },
   "publishConfig": {
+    "access": "public",
+    "provenance": true,
+    "registry": "https://registry.npmjs.org/",
     "exports": {
       ".": {
         "types": "./dist/index.d.ts",
@@ -61,10 +73,6 @@
   "scripts": {
     "build": "tsdown",
     "prepack": "pnpm build && pnpm test",
-    "release": "pnpm publish --access public",
-    "release:patch": "npm version patch --no-git-tag-version && npm run release",
-    "release:minor": "npm version minor --no-git-tag-version && npm run release",
-    "release:major": "npm version major --no-git-tag-version && npm run release",
     "test": "vitest run",
     "typecheck": "tsc --noEmit"
   },
