@@ -1,12 +1,12 @@
-import { access, readFile } from "node:fs/promises"
-import { fileURLToPath, pathToFileURL } from "node:url"
+import { access, readFile } from "node:fs/promises";
+import { fileURLToPath, pathToFileURL } from "node:url";
 
-import { transform } from "sucrase"
+import { transform } from "sucrase";
 
 export interface RegistryItem {
-  dependencies: string[]
-  registryDependencies: string[]
-  source: string
+  dependencies: string[];
+  registryDependencies: string[];
+  source: string;
 }
 
 export const registry = {
@@ -21,32 +21,17 @@ export const registry = {
     source: "button.tsx",
   },
   checkbox: {
-    dependencies: [
-      "@base-ui/react",
-      "clsx",
-      "lucide-react",
-      "tailwind-merge",
-    ],
+    dependencies: ["@base-ui/react", "clsx", "lucide-react", "tailwind-merge"],
     registryDependencies: [],
     source: "checkbox.tsx",
   },
   select: {
-    dependencies: [
-      "@base-ui/react",
-      "clsx",
-      "lucide-react",
-      "tailwind-merge",
-    ],
+    dependencies: ["@base-ui/react", "clsx", "lucide-react", "tailwind-merge"],
     registryDependencies: [],
     source: "select.tsx",
   },
   sheet: {
-    dependencies: [
-      "@base-ui/react",
-      "clsx",
-      "lucide-react",
-      "tailwind-merge",
-    ],
+    dependencies: ["@base-ui/react", "clsx", "lucide-react", "tailwind-merge"],
     registryDependencies: ["button"],
     source: "sheet.tsx",
   },
@@ -61,35 +46,35 @@ export const registry = {
     registryDependencies: [],
     source: "tabs.tsx",
   },
-} as const satisfies Record<string, RegistryItem>
+} as const satisfies Record<string, RegistryItem>;
 
-export type ComponentName = keyof typeof registry
+export type ComponentName = keyof typeof registry;
 
-export const componentNames = Object.keys(registry) as ComponentName[]
+export const componentNames = Object.keys(registry) as ComponentName[];
 
 export function resolveRegistryItems(names: string[]): ComponentName[] {
-  const resolved: ComponentName[] = []
-  const visited = new Set<ComponentName>()
+  const resolved: ComponentName[] = [];
+  const visited = new Set<ComponentName>();
 
   const visit = (name: string) => {
     if (!(name in registry)) {
       throw new Error(
         `Unknown component "${name}". Available components: ${componentNames.join(", ")}.`,
-      )
+      );
     }
 
-    const componentName = name as ComponentName
-    if (visited.has(componentName)) return
+    const componentName = name as ComponentName;
+    if (visited.has(componentName)) return;
 
-    visited.add(componentName)
+    visited.add(componentName);
     for (const dependency of registry[componentName].registryDependencies) {
-      visit(dependency)
+      visit(dependency);
     }
-    resolved.push(componentName)
-  }
+    resolved.push(componentName);
+  };
 
-  for (const name of names) visit(name)
-  return resolved
+  for (const name of names) visit(name);
+  return resolved;
 }
 
 export async function loadComponentSource(
@@ -98,46 +83,46 @@ export async function loadComponentSource(
   useTypescript: boolean,
   sourceDirectory?: string,
 ): Promise<string> {
-  const directory = sourceDirectory ?? (await findSourceDirectory())
+  const directory = sourceDirectory ?? (await findSourceDirectory());
   const sourcePath = fileURLToPath(
     new URL(registry[componentName].source, pathToDirectoryUrl(directory)),
-  )
-  let source = await readFile(sourcePath, "utf8")
+  );
+  let source = await readFile(sourcePath, "utf8");
 
   source = source.replace(
     /from\s+(["'])\.\.\/lib\/utils\1/g,
     `from "${utilsAlias}"`,
-  )
+  );
 
   if (!useTypescript) {
     source = transform(source, {
       jsxRuntime: "preserve",
       transforms: ["typescript", "jsx"],
-    }).code
+    }).code;
   }
 
-  return source
+  return source;
 }
 
 async function findSourceDirectory(): Promise<string> {
   const candidates = [
     fileURLToPath(new URL("../components/", import.meta.url)),
     fileURLToPath(new URL("../../src/components/", import.meta.url)),
-  ]
+  ];
 
   for (const candidate of candidates) {
     try {
-      await access(candidate)
-      return candidate
+      await access(candidate);
+      return candidate;
     } catch {
       // Try the packaged source location next.
     }
   }
 
-  throw new Error("The packaged component sources could not be found.")
+  throw new Error("The packaged component sources could not be found.");
 }
 
 function pathToDirectoryUrl(directory: string): URL {
-  const normalized = directory.endsWith("/") ? directory : `${directory}/`
-  return pathToFileURL(normalized)
+  const normalized = directory.endsWith("/") ? directory : `${directory}/`;
+  return pathToFileURL(normalized);
 }

@@ -11,13 +11,16 @@ export const metadata: Metadata = {
     default: "shadcn animated",
     template: "%s | shadcn animated",
   },
-  description: "A growing collection of handcrafted animated shadcn/ui components.",
+  description:
+    "A growing collection of handcrafted animated shadcn/ui components.",
   icons: {
     icon: "/favicon.svg",
   },
 };
 
-export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
+export default function RootLayout({
+  children,
+}: Readonly<{ children: ReactNode }>) {
   return (
     <html lang="en">
       <body>

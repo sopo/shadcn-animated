@@ -17,7 +17,7 @@ const ButtonDocs = () => {
       </DocsSection>
       <div className="flex flex-col gap-4">
         <h2 className="text-xl">Installation</h2>
-        <Tabs defaultValue="command" className="w-full gap-4" >
+        <Tabs defaultValue="command" className="w-full gap-4">
           <TabsList className="rounded-full" variant="line">
             <TabsTrigger value="command" className="rounded-full">
               Command
@@ -30,17 +30,21 @@ const ButtonDocs = () => {
             <Bash code="npx shadcn-animated add button" />
           </TabsContent>
           <TabsContent value="manual">
-            <Code code={manualCode} expandable filename="@/components/ui/button.tsx"/>
+            <Code
+              code={manualCode}
+              expandable
+              filename="@/components/ui/button.tsx"
+            />
           </TabsContent>
         </Tabs>
       </div>
 
       <div className="flex flex-col gap-4">
         <h2 className="text-xl">Usage</h2>
-<div className="flex flex-col gap-4">
-    <Code code={`import { Button } from "shadcn-animated"`}/>
-    <Code code={`<Button>Button</Button>`} />
-    </div>
+        <div className="flex flex-col gap-4">
+          <Code code={`import { Button } from "shadcn-animated"`} />
+          <Code code={`<Button>Button</Button>`} />
+        </div>
       </div>
 
       <NextSection title="Tabs" link="/tabs" />
@@ -50,7 +54,7 @@ const ButtonDocs = () => {
 
 export default ButtonDocs;
 
-const manualCode=`
+const manualCode = `
 import { Button as ButtonPrimitive } from "@base-ui/react/button"
 import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "../lib/utils"
@@ -108,4 +112,4 @@ function Button({
 }
 
 export { Button, buttonVariants }
-`
+`;

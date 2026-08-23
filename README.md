@@ -1,6 +1,6 @@
 # shadcn animated
 
-**Expanding collection of animated [shadcn/ui](https://ui.shadcn.com/) components, crafted by hand** 
+**Expanding collection of animated [shadcn/ui](https://ui.shadcn.com/) components, crafted by hand**
 
 ## Installation
 
@@ -29,15 +29,13 @@ npx shadcn-animated add button
 Use the components just like you would use shadcn/ui components:
 
 ```jsx
-import { Button } from "shadcn-animated"
+import { Button } from "shadcn-animated";
 
 export default function App() {
-  return (
-    <Button>Button</Button>
-  )
+  return <Button>Button</Button>;
 }
-
 ```
+
 ## Issues
 
 If you encounter a problem, please open an issue on [GitHub](https://github.com/sopo/shadcn-animated/issues).

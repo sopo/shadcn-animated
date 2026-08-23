@@ -1,9 +1,4 @@
-import {
-  Sheet,
-  SheetContent,
-  SheetTitle,
-  SheetTrigger,
-} from "shadcn-animated";
+import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "shadcn-animated";
 import type { ReactNode } from "react";
 import { Plus } from "lucide-react";
 import Link from "next/link";
