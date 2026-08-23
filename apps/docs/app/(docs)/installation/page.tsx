@@ -12,10 +12,10 @@ const InstallationPage = () => {
   return (
     <div className=" flex flex-col gap-8">
       <h1 className="text-3xl">Installation</h1>
-      <section className="flex flex-col gap-6">
-        <div className="flex gap-6">
+      <section className="flex flex-col gap-8">
+     
          
-          <div className="flex flex-col gap-2 flex-1">
+          <div className="flex flex-col gap-4 flex-1">
             <p className="font-medium text-lg">
               1. Install dependencies{" "}
             </p>
@@ -57,13 +57,13 @@ const InstallationPage = () => {
               </li>
             </ul>
           </div>
-        </div>
+       
 
-        <div className="flex gap-6">
+        <div className="flex gap-4">
     
-          <div className="flex flex-col gap-4 flex-1">
+          <div className="flex flex-col gap-6 flex-1">
           <p className="font-medium text-lg">
-            Install shadcn animated
+            2. Install shadcn animated
           </p>
           <div className="w-full flex-1">
           <Bash code="npm i shadcn-animated"/>

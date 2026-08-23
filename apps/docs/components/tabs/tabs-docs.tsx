@@ -68,7 +68,7 @@ const TabsDocs = () => {
         </div>
       </div>
 
-      <NextSection title="Tabs" link="/tabs" />
+      {/* <NextSection title="Tabs" link="/tabs" /> */}
     </div>
   );
 };
