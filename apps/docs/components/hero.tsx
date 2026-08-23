@@ -6,7 +6,7 @@ const Hero = () => {
     <section className="mt-40 flex flex-col gap-4 items-center">
       <div className="max-w-2xl mx-auto text-center flex flex-col gap-2 items-center">
         <Alpha />
-        <h1 className="text-4xl sm:text-6xl font-medium">shadcn animated</h1>
+        <h1 className="text-5xl sm:text-6xl font-medium">shadcn animated</h1>
         <h2 className="text-lg sm:text-2xl font-medium leading-[140%] text-secondary-foreground">
           Expanding collection of{" "}
           <span className="text-foreground">animated shadcn components</span>,
