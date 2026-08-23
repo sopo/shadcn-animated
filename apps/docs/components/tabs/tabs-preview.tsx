@@ -3,7 +3,7 @@ import { Tabs, TabsList, TabsTrigger } from "shadcn-animated";
 const TabsPreview = () => {
   return (
     <Tabs defaultValue="account" className="w-full">
-      <TabsList className="rounded-full bg-black/5">
+      <TabsList className="rounded-full bg-black/5 h-10!">
         <TabsTrigger value="account" className="rounded-full">
           Account
         </TabsTrigger>
