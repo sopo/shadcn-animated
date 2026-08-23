@@ -21,7 +21,7 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 z-100 w-full backdrop-blur-md ${open ? "bg-background" : "bg-background/20"}`}
+      className={`fixed top-0 left-0 z-100 sm:z-20 w-full backdrop-blur-md ${open ? "bg-background" : "bg-background/20"}`}
     >
       <section className="max-w-4xl mx-auto flex p-4 justify-between items-center">
         <div className="sm:hidden">
@@ -39,7 +39,7 @@ const Header = () => {
                 <div className="flex flex-col gap-4">
                   <Link
                     href={"/"}
-                    className={`text-sm text-secondary-foreground`}
+                    className={`text-sm`}
                     onClick={() => setOpen(false)}
                   >
                     {`Home`}
@@ -60,11 +60,7 @@ const Header = () => {
                             key={link.href}
                             href={link.href}
                             aria-current={isActive ? "page" : undefined}
-                            className={`text-sm transition-colors  ${
-                              isActive
-                                ? "text-foreground"
-                                : "text-secondary-foreground hover:text-foreground"
-                            }`}
+                            className={`text-sm`}
                             onClick={() => setOpen(false)}
                           >
                             {link.label}

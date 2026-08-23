@@ -33,7 +33,7 @@ const ButtonDocs = () => {
             <Code
               code={manualCode}
               expandable
-              filename="@/components/ui/button.tsx"
+              filename="components/ui/button.tsx"
             />
           </TabsContent>
         </Tabs>
