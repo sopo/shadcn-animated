@@ -8,7 +8,7 @@ const NextSection = ({ title, link }: { title: string; link: string }) => {
       <nav>
         <Link href={link} className="linkClass">
           {title}
-          <ChevronRight size={16}/>
+          <ChevronRight size={16} />
         </Link>
       </nav>
     </section>

@@ -1,10 +1,8 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "shadcn-animated";
 import DocsSection from "../docs-section";
 import DocsShell from "../docs-shell";
-
 import Bash from "../bash";
 import Code from "../code-block";
-import NextSection from "../next-section";
 import TabsPreview from "./tabs-preview";
 
 const TabsDocs = () => {

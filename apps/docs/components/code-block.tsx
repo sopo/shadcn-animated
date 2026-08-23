@@ -3,7 +3,6 @@
 import { CodeBlock } from "react-code-block";
 import { Check, Copy } from "lucide-react";
 import Image from "next/image";
-
 import { useState } from "react";
 import { Button } from "shadcn-animated/button";
 import { themes } from "prism-react-renderer";
