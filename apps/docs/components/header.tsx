@@ -36,35 +36,44 @@ const Header = () => {
               showCloseButton={false}
             >
               <nav className="flex flex-col gap-8 overflow-x-auto px-5 pt-17">
-                {sections.map((section) => (
-                  <div
-                    key={section.title}
-                    className="flex flex-col gap-3 min-w-fit"
+                <div className="flex flex-col gap-4">
+                  <Link
+                    href={"/"}
+                    className={`text-sm text-secondary-foreground`}
+                    onClick={() => setOpen(false)}
                   >
-                    <h2 className="text-xs uppercase text-secondary-foreground">
-                      {section.title}
-                    </h2>
-                    {section.links.map((link) => {
-                      const isActive = pathname === link.href;
+                    {`Home`}
+                  </Link>
+                  {sections.map((section) => (
+                    <div
+                      key={section.title}
+                      className="flex flex-col gap-3 min-w-fit"
+                    >
+                      <h2 className="text-xs uppercase text-secondary-foreground">
+                        {section.title}
+                      </h2>
+                      {section.links.map((link) => {
+                        const isActive = pathname === link.href;
 
-                      return (
-                        <Link
-                          key={link.href}
-                          href={link.href}
-                          aria-current={isActive ? "page" : undefined}
-                          className={`text-sm transition-colors  ${
-                            isActive
-                              ? "text-foreground"
-                              : "text-secondary-foreground hover:text-foreground"
-                          }`}
-                          onClick={() => setOpen(false)}
-                        >
-                          {link.label}
-                        </Link>
-                      );
-                    })}
-                  </div>
-                ))}
+                        return (
+                          <Link
+                            key={link.href}
+                            href={link.href}
+                            aria-current={isActive ? "page" : undefined}
+                            className={`text-sm transition-colors  ${
+                              isActive
+                                ? "text-foreground"
+                                : "text-secondary-foreground hover:text-foreground"
+                            }`}
+                            onClick={() => setOpen(false)}
+                          >
+                            {link.label}
+                          </Link>
+                        );
+                      })}
+                    </div>
+                  ))}
+                </div>
               </nav>
             </SheetContent>
           </Sheet>
