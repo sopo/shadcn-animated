@@ -20,12 +20,12 @@ const TabsDocs = () => {
         <h2 className="text-xl">Installation</h2>
 
         <div className="flex flex-col gap-3">
-          <h2 className=" font-medium">1. Install dependencies</h2>
+          <h2 className="font-medium">1. Install dependencies</h2>
           <Bash code="npm install motion" />
         </div>
 
         <div className="flex flex-col gap-2">
-          <h2 className=" font-medium">2. Install tabs</h2>
+          <h2 className="font-medium">2. Install tabs</h2>
           <Tabs defaultValue="command" className="w-full gap-4">
             <TabsList className="rounded-full" variant="line">
               <TabsTrigger value="command" className="rounded-full">
