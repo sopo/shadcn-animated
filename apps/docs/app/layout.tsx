@@ -17,8 +17,8 @@ export const metadata: Metadata = {
     icon: "/favicon.svg",
   },
   openGraph: {
-    title: "Your Site",
-    description: "Your site description",
+    title: "shadcn animated",
+    description: "A growing collection of handcrafted animated shadcn/ui components.",
     images: [
       {
         url: "/og-image.png",
