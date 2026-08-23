@@ -1,42 +1,41 @@
-# shadcn-animated
+# shadcn animated
 
-Add animated shadcn/ui components directly to your project:
+**Expanding collection of animated [shadcn/ui](https://ui.shadcn.com/) components, crafted by hand**
 
-```bash
+## Installation
+
+### Install dependencies
+
+1. [Tailwind](https://tailwindcss.com/docs/installation/using-vite)
+
+2. [shadcn/ui](https://ui.shadcn.com/docs/installation)
+
+3. [motion](https://motion.dev/docs/quick-start) - optional; used by some components, as noted in their documentation.
+
+### Install shadcn animated
+
+```jsx
+npm i shadcn-animated
+```
+
+### Install components
+
+```jsx
 npx shadcn-animated add button
 ```
 
-The CLI requires an existing shadcn/ui `components.json`. It uses `aliases.ui` to choose the destination, rewrites the utils import to `aliases.utils`, installs missing runtime dependencies, and asks before overwriting an existing file.
+## **Usage**
 
-## Commands
+Use the components just like you would use shadcn/ui components:
 
-```bash
-npx shadcn-animated list
-npx shadcn-animated add button checkbox tabs
-npx shadcn-animated add sheet --dry-run
-npx shadcn-animated add button --overwrite
-npx shadcn-animated add button --no-install
-npx shadcn-animated add button --cwd ./apps/web
+```jsx
+import { Button } from "shadcn-animated";
+
+export default function App() {
+  return <Button>Button</Button>;
+}
 ```
 
-Available components: `button`, `checkbox`, `select`, `sheet`, and `tabs`.
+## Issues
 
-## Releasing
-
-From the repository root, publish the current version with:
-
-```bash
-pnpm release
-```
-
-For subsequent releases, bump the package version and publish it with one of:
-
-```bash
-pnpm release:patch
-pnpm release:minor
-pnpm release:major
-```
-
-The release commands build the package and run its tests before npm publishes it.
-They update `packages/ui/package.json` without creating a Git commit or tag, so the
-version change can be reviewed and committed after a successful publish.
+If you encounter a problem, please open an issue on [GitHub](https://github.com/sopo/shadcn-animated/issues).
