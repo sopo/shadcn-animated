@@ -1,5 +1,5 @@
-import { ChevronRight } from "lucide-react";
 import { LINKS } from "@/lib/links";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -14,26 +14,19 @@ const Hero = () => {
         </h2>
       </div>
       <div>
-        <a
-          target="_blank"
-          href={LINKS.GITHUB}
-          rel="noreferrer"
-          className="linkClass"
-        >
-          GitHub <ChevronRight size={16} />
-        </a>
+        <Link href={LINKS.DOCS} className="btnClass scale-default">
+          Get started
+        </Link>
       </div>
     </section>
   );
 };
 export default Hero;
 
-const Alpha=()=>{
-  return(
-  
+const Alpha = () => {
+  return (
     <div className="flex px-2 py-1 rounded-full bg-linear-to-b from-white to-primary/5 shadow-xs border border-border w-fit ">
       <p className="text-[10px] font-bold text-secondary-foreground ">ALPHA</p>
-      </div>
-     
-  )
-}
+    </div>
+  );
+};
