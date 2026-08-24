@@ -9,7 +9,7 @@ const TabsDocs = () => {
   return (
     <div className="flex flex-col gap-12">
       <DocsSection>
-        <h1 className="text-2xl">Tabs</h1>
+        <h1 className="text-3xl">Tabs</h1>
         <DocsShell>
           <TabsPreview />
         </DocsShell>

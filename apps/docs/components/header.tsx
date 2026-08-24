@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 
 import { LINKS } from "@/lib/links";
 import { Sheet, SheetContent, SheetTrigger } from "shadcn-animated";
-import { Equal, X } from "lucide-react";
+import { ChevronRight, Equal, X } from "lucide-react";
 import { sections } from "./sidenav";
 import { useState } from "react";
 
@@ -97,9 +97,9 @@ const Header = () => {
           target="_blank"
           href={LINKS.GITHUB}
           rel="noreferrer"
-          className="btnClass scale-default"
+          className="text-sm linkClass"
         >
-          GitHub
+          GitHub <ChevronRight size={16} />
         </a>
       </section>
     </header>

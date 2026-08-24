@@ -24,7 +24,7 @@ const Shell = ({
         <Sheet>
           <SheetTrigger>
             <div className="rounded-full text-secondary-foreground p-3 hover:bg-primary/5 cursor-pointer scale-default">
-              <Plus strokeWidth={2.5} />
+              <Plus size={22} strokeWidth={2.5} />
             </div>
           </SheetTrigger>
           <SheetContent

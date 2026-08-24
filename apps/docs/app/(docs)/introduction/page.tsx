@@ -9,8 +9,8 @@ export const metadata: Metadata = {
 
 const IntroductionPage = () => {
   return (
-    <div className=" flex flex-col gap-4">
-      <h1 className="text-3xl font-medium">Introduction</h1>
+    <div className=" flex flex-col gap-8">
+      <h1 className="text-3xl">Introduction</h1>
       <div className="">
         <p className="text-secondary-foreground leading-[150%]">
           <span>
@@ -21,9 +21,9 @@ const IntroductionPage = () => {
             </span>
             , crafted by hand.
           </span>
+          <span className="text-foreground"> Copy and paste</span> the
+          components directly into your project, or install them with the CLI.{" "}
           <br></br>
-          <span className="text-foreground">Copy and paste</span> the components
-          directly into your project, or install them with the CLI. <br></br>
           <br></br>{" "}
           <span className="text-foreground">
             New components are added weekly.
