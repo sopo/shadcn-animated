@@ -170,7 +170,7 @@
 a {
   @apply rounded-xs focus-visible:outline-2 focus-visible:outline-blue-500 focus-visible:ring-2 focus-visible:ring-blue-500/50 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent;
 }
-@theme {
+/* @theme {
   --animate-checkbox-bg: checkbox-bg 180ms ease-out forwards;
 
   @keyframes checkbox-bg {
@@ -197,4 +197,4 @@ a {
       border-color: var(--color-primary);
     }
   }
-}
+} */
