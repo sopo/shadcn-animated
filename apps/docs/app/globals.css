@@ -3,13 +3,14 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "./shadcn.css";
+@import "shadcn/tailwind.css";
 
 @source "../../../packages/ui/src";
 
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-sans);
   --font-code: "Google Sans Code", monospace;
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
@@ -50,34 +51,33 @@
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
+  --font-heading: var(--font-sans);
 }
 
 :root {
-  --background: #f8f8f8;
-  --foreground: oklch(26.8% 0.007 34.298);
   --brand: oklch(0.509 0.184 256.4);
-  --secondary: oklch(100% 0 0);
+  --secondary: oklch(0.97 0 0);
 
-  --secondary-foreground: oklch(53.99% 0.008 286.14);
+  --secondary-foreground: oklch(0.205 0 0);
 
-  --border: oklch(92.2% 0 none);
+  --border: oklch(0.922 0 0);
 
   --primary: oklch(0.205 0 0);
 
-  --primary-foreground: oklch(100% 0 0);
+  --primary-foreground: oklch(0.985 0 0);
 
-  --muted: oklch(93.24% 0.007 286.27);
+  --muted: oklch(0.97 0 0);
 
-  --muted-foreground: oklch(23.16% 0.004 286.1);
+  --muted-foreground: oklch(0.556 0 0);
   --tinted: #f4f2ee;
 
   --tinted-foreground: 37.4% 0.01 67.558;
 
   font-family: var(--font-sans);
 
-  --card: #ededed;
+  --card: oklch(1 0 0);
 
-  --card-foreground: oklch(53.99% 0.008 286.14);
+  --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
 
@@ -87,7 +87,7 @@
 
   --input: oklch(0.922 0 0);
 
-  --ring: oklch(94.1% 0 0);
+  --ring: oklch(0.708 0 0);
   --chart-1: oklch(0.87 0 0);
   --chart-2: oklch(0.556 0 0);
   --chart-3: oklch(0.439 0 0);
@@ -102,20 +102,22 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
 }
 
 .dark {
-  --background: oklch(20.06% 0.002 286.22);
-  --foreground: oklch(93.24% 0.007 286.27);
-  --secondary: oklch(27.72% 0.002 286.28);
-  --secondary-foreground: oklch(70.8% 0 0);
-  --border: oklch(42.5% 0.005 286.19);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(100% 0 0);
-  --muted: oklch(35.27% 0.002 286.31);
-  --muted-foreground: oklch(95.51% 0 0);
-  --card: oklch(98.7% 0.002 106 / 8%);
-  --card-foreground: oklch(86.9% 0.005 56.366);
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --border: oklch(1 0 0 / 10%);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
   --tinted: oklch(96.3% 0.004 85 / 8%);
   --tinted-foreground: oklch(37.4% 0.01 67.558 / 8%);
   --popover: oklch(0.205 0 0);
@@ -167,4 +169,32 @@
 
 a {
   @apply rounded-xs focus-visible:outline-2 focus-visible:outline-blue-500 focus-visible:ring-2 focus-visible:ring-blue-500/50 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent;
+}
+@theme {
+  --animate-checkbox-bg: checkbox-bg 180ms ease-out forwards;
+
+  @keyframes checkbox-bg {
+    0% {
+      background-color: transparent;
+      border-color: transparent;
+    }
+
+    50% {
+      background-color: color-mix(
+        in oklch,
+        var(--color-primary) 5%,
+        transparent
+      );
+      border-color: color-mix(
+        in oklch,
+        var(--color-primary) 0%,
+        transparent
+      );
+    }
+
+    100% {
+      background-color: var(--color-primary);
+      border-color: var(--color-primary);
+    }
+  }
 }

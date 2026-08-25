@@ -1,5 +1,6 @@
 import { buttonProps } from "@/components/button/button";
 import ButtonPreview from "@/components/button/button-preview";
+import CheckboxPreview from "@/components/checkbox/checkbox-preview";
 import Hero from "@/components/hero";
 import Shell from "@/components/shell";
 import { tabsProps } from "@/components/tabs/tabs";
@@ -16,6 +17,9 @@ export default function HomePage() {
           </Shell>
           <Shell props={tabsProps}>
             <TabsPreview />
+          </Shell>
+            <Shell props={tabsProps}>
+            <CheckboxPreview />
           </Shell>
         </section>
       </div>
