@@ -2,6 +2,7 @@ import { buttonProps } from "@/components/button/button";
 import ButtonPreview from "@/components/button/button-preview";
 import CheckboxPreview from "@/components/checkbox/checkbox-preview";
 import Hero from "@/components/hero";
+import RadioGroupPreview from "@/components/radio-group/radio-group-preview";
 import Shell from "@/components/shell";
 import { tabsProps } from "@/components/tabs/tabs";
 import TabsPreview from "@/components/tabs/tabs-preview";
@@ -22,7 +23,7 @@ export default function HomePage() {
             <CheckboxPreview />
           </Shell>
             <Shell props={tabsProps}>
-            <CheckboxPreview />
+            <RadioGroupPreview />
           </Shell>
         </section>
       </div>
