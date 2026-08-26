@@ -15,6 +15,7 @@ export const sections = [
     title: "Components",
     links: [
       { href: "/button", label: "Button" },
+       { href: "/radio-group", label: "Radio group" },
       { href: "/tabs", label: "Tabs" },
     ],
   },
