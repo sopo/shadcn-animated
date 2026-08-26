@@ -21,6 +21,9 @@ export default function HomePage() {
             <Shell props={tabsProps}>
             <CheckboxPreview />
           </Shell>
+            <Shell props={tabsProps}>
+            <CheckboxPreview />
+          </Shell>
         </section>
       </div>
     </div>
