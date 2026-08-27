@@ -43,7 +43,8 @@ const RadioGroupDocs = () => {
       <div className="flex flex-col gap-4">
         <h2 className="text-xl">Usage</h2>
         <div className="flex flex-col gap-4">
-          <Code code={`import { RadioGroup } from "shadcn-animated"`} />
+          <Code code={`import { Label } from "@/components/ui/label"
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"`} />
           <Code
             code={`<RadioGroup defaultValue="option-one">
   <div className="flex items-center gap-3">
