@@ -21,10 +21,10 @@ export default function HomePage() {
           <Shell props={TabsProps}>
             <TabsPreview />
           </Shell>
-            <Shell props={CheckboxProps}>
+          <Shell props={CheckboxProps}>
             <CheckboxPreview />
           </Shell>
-            <Shell props={RadioGroupProps}>
+          <Shell props={RadioGroupProps}>
             <RadioGroupPreview />
           </Shell>
         </section>

@@ -27,34 +27,36 @@ const RadioGroupDocs = () => {
         <div className="flex flex-col gap-2">
           <h2 className="font-medium">2. Install radio group</h2>
 
-        <Tabs defaultValue="command" className="w-full gap-4">
-          <TabsList className="rounded-full" variant="line">
-            <TabsTrigger value="command" className="rounded-full">
-              Command
-            </TabsTrigger>
-            <TabsTrigger value="manual" className="rounded-full">
-              Manual
-            </TabsTrigger>
-          </TabsList>
-          <TabsContent value="command" className="flex flex-col gap-4">
-            <Bash code="npx shadcn-animated add radio-group" />
-          </TabsContent>
-          <TabsContent value="manual">
-            <Code
-              code={manualCode}
-              expandable
-              filename="components/ui/radio-group.tsx"
-            />
-          </TabsContent>
-        </Tabs>
+          <Tabs defaultValue="command" className="w-full gap-4">
+            <TabsList className="rounded-full" variant="line">
+              <TabsTrigger value="command" className="rounded-full">
+                Command
+              </TabsTrigger>
+              <TabsTrigger value="manual" className="rounded-full">
+                Manual
+              </TabsTrigger>
+            </TabsList>
+            <TabsContent value="command" className="flex flex-col gap-4">
+              <Bash code="npx shadcn-animated add radio-group" />
+            </TabsContent>
+            <TabsContent value="manual">
+              <Code
+                code={manualCode}
+                expandable
+                filename="components/ui/radio-group.tsx"
+              />
+            </TabsContent>
+          </Tabs>
         </div>
       </div>
 
       <div className="flex flex-col gap-4">
         <h2 className="text-xl">Usage</h2>
         <div className="flex flex-col gap-4">
-          <Code code={`import { Label } from "@/components/ui/label"
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"`} />
+          <Code
+            code={`import { Label } from "@/components/ui/label"
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"`}
+          />
           <Code
             code={`<RadioGroup defaultValue="option-one">
   <div className="flex items-center gap-3">
