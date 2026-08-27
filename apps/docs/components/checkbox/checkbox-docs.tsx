@@ -48,7 +48,7 @@ const CheckboxDocs = () => {
         </div>
       </div>
 
-      <NextSection title="Tabs" link="/tabs" />
+      <NextSection title="Radio group" link="/radio-group" />
     </div>
   );
 };
