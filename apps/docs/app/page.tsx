@@ -1,5 +1,6 @@
 import { ButtonProps } from "@/components/button/button";
 import ButtonPreview from "@/components/button/button-preview";
+import { CheckboxProps } from "@/components/checkbox/checkbox";
 import CheckboxPreview from "@/components/checkbox/checkbox-preview";
 import Hero from "@/components/hero";
 import { RadioGroupProps } from "@/components/radio-group/radio";
@@ -20,7 +21,7 @@ export default function HomePage() {
           <Shell props={TabsProps}>
             <TabsPreview />
           </Shell>
-            <Shell props={TabsProps}>
+            <Shell props={CheckboxProps}>
             <CheckboxPreview />
           </Shell>
             <Shell props={RadioGroupProps}>

@@ -7,6 +7,6 @@ export const metadata: Metadata = {
   title: "Radio group",
 };
 
-export default function TabsPage() {
+export default function RadioGroupPage() {
   return <RadioGroupDocs />;
 }
