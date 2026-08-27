@@ -13,7 +13,7 @@ const CheckboxPreview = () => {
           />
           <FieldLabel
             htmlFor="terms-checkbox-basic"
-            className="flex-none! text-secodary-foreground font-normal"
+            className="flex-none! font-normal"
           >
             Accept terms and conditions
           </FieldLabel>
@@ -27,7 +27,7 @@ const CheckboxPreview = () => {
           />
           <FieldLabel
             htmlFor="terms-checkbox-basic-2"
-            className="flex-none! text-secodary-foreground font-normal"
+            className="flex-none! font-normal"
           >
             Subscribe to newsletter
           </FieldLabel>
