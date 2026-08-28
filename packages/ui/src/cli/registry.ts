@@ -42,6 +42,16 @@ export const registry = {
     registryDependencies: [],
     source: "radio-group.tsx",
   },
+  select: {
+    dependencies: ["@base-ui/react", "clsx", "lucide-react", "tailwind-merge"],
+    registryDependencies: [],
+    source: "select.tsx",
+  },
+  sheet: {
+    dependencies: ["@base-ui/react", "clsx", "lucide-react", "tailwind-merge"],
+    registryDependencies: ["button"],
+    source: "sheet.tsx",
+  },
   tabs: {
     dependencies: [
       "@base-ui/react",
