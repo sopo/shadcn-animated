@@ -5,6 +5,10 @@ import Footer from "@/components/footer";
 import Header from "@/components/header";
 
 import "./globals.css";
+import { Geist } from "next/font/google";
+import { cn } from "@/lib/utils";
+
+const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
   title: {
@@ -18,7 +22,8 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "shadcn animated",
-    description: "A growing collection of handcrafted animated shadcn/ui components.",
+    description:
+      "A growing collection of handcrafted animated shadcn/ui components.",
     images: [
       {
         url: "/og-image.png",
@@ -34,7 +39,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: ReactNode }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={cn("font-sans", geist.variable)}>
       <body>
         <main className="flex min-h-screen flex-col">
           <Header />

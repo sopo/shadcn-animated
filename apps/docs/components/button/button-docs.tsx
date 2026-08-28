@@ -47,7 +47,7 @@ const ButtonDocs = () => {
         </div>
       </div>
 
-      <NextSection title="Tabs" link="/tabs" />
+      <NextSection title="Checkbox" link="/checkbox" />
     </div>
   );
 };

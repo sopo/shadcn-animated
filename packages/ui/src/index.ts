@@ -31,3 +31,4 @@ export {
   TabsTrigger,
   tabsListVariants,
 } from "./components/tabs";
+export { RadioGroup, RadioGroupItem } from "./components/radio-group";
