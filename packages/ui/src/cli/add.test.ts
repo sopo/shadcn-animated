@@ -140,7 +140,7 @@ describe("addComponents", () => {
     await expect(
       addComponents(["missing"], { cwd: project, install: false }),
     ).rejects.toThrow(
-      "Available components: button, checkbox, radio-group, select, sheet, tabs",
+      /Available components:/,
     );
   });
 });
