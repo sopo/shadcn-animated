@@ -9,7 +9,7 @@ const CheckboxPreview = () => {
           <Checkbox
             id="terms-checkbox-basic"
             name="terms-checkbox-basic"
-            className=""
+            className="rounded"
           />
           <FieldLabel
             htmlFor="terms-checkbox-basic"
@@ -23,7 +23,7 @@ const CheckboxPreview = () => {
           <Checkbox
             id="terms-checkbox-basic-2"
             name="terms-checkbox-basic-2"
-            className=""
+            className="rounded"
           />
           <FieldLabel
             htmlFor="terms-checkbox-basic-2"
