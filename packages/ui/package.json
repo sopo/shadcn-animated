@@ -14,7 +14,7 @@
     "url": "git+https://github.com/sopo/shadcn-animated.git",
     "directory": "packages/ui"
   },
-  "homepage": "https://github.com/sopo/shadcn-animated#readme",
+  "homepage": "https://shadcn-animated.vercel.app",
   "bugs": {
     "url": "https://github.com/sopo/shadcn-animated/issues"
   },

@@ -21,9 +21,26 @@ export const registry = {
     source: "button.tsx",
   },
   checkbox: {
-    dependencies: ["@base-ui/react", "clsx", "lucide-react", "tailwind-merge"],
+    dependencies: [
+      "@base-ui/react",
+      "clsx",
+      "lucide-react",
+      "tailwind-merge",
+      "motion/react",
+    ],
     registryDependencies: [],
     source: "checkbox.tsx",
+  },
+  "radio-group": {
+    dependencies: [
+      "@base-ui/react",
+      "clsx",
+      "lucide-react",
+      "tailwind-merge",
+      "motion/react",
+    ],
+    registryDependencies: [],
+    source: "radio-group.tsx",
   },
   select: {
     dependencies: ["@base-ui/react", "clsx", "lucide-react", "tailwind-merge"],
@@ -42,6 +59,7 @@ export const registry = {
       "clsx",
       "motion",
       "tailwind-merge",
+      "motion/react",
     ],
     registryDependencies: [],
     source: "tabs.tsx",
