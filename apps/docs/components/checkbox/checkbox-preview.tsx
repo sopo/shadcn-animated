@@ -2,8 +2,8 @@ import { Checkbox } from "shadcn-animated/checkbox";
 import { Field, FieldGroup, FieldLabel } from "@/components/ui/field";
 
 const CheckboxPreview = () => {
+
   return (
-    <>
       <FieldGroup className="mx-auto w-55 flex flex-col items-center gap-2">
         <Field orientation="horizontal" className="flex items-center">
           <Checkbox
@@ -33,7 +33,6 @@ const CheckboxPreview = () => {
           </FieldLabel>
         </Field>
       </FieldGroup>
-    </>
   );
 };
 export default CheckboxPreview;
