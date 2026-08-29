@@ -63,6 +63,17 @@ export const registry = {
     registryDependencies: [],
     source: "tabs.tsx",
   },
+  accordion: {
+    dependencies: [
+      "@base-ui/react",
+      "class-variance-authority",
+      "clsx",
+      "motion",
+      "tailwind-merge",
+    ],
+    registryDependencies: [],
+    source: "accordion.tsx",
+  },
 } as const satisfies Record<string, RegistryItem>;
 
 export type ComponentName = keyof typeof registry;
