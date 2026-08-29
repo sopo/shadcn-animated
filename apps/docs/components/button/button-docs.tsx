@@ -42,7 +42,7 @@ const ButtonDocs = () => {
       <div className="flex flex-col gap-4">
         <h2 className="text-xl">Usage</h2>
         <div className="flex flex-col gap-4">
-          <Code code={`import { Button } from "shadcn-animated"`} />
+          <Code code={`import { Button } from "@/components/ui/button"`} />
           <Code code={`<Button>Button</Button>`} />
         </div>
       </div>
