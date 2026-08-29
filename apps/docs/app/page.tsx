@@ -1,3 +1,4 @@
+import AccordionPreview from "@/components/accordion/accordion-preview";
 import { ButtonProps } from "@/components/button/button";
 import ButtonPreview from "@/components/button/button-preview";
 import { CheckboxProps } from "@/components/checkbox/checkbox";
@@ -27,6 +28,16 @@ export default function HomePage() {
           <Shell props={RadioGroupProps}>
             <RadioGroupPreview />
           </Shell>
+
+          <div className="md:col-span-2">
+            <Shell props={RadioGroupProps}>
+              <div className="h-50 px-4 lg:px-0">
+              <div className="flex self-start overflow-y-auto">
+                <AccordionPreview />
+              </div>
+              </div>
+            </Shell>
+          </div>
         </section>
       </div>
     </div>
