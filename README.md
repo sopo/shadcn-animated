@@ -1,18 +1,15 @@
+![Preview](./apps/docs/public/og-image.png)
+
 # shadcn animated
 
 **Expanding collection of animated [shadcn/ui](https://ui.shadcn.com/) components, crafted by hand**
 
-## Installation
+## Documentation
 
-### Install dependencies
+Visit the [documentation](https://shadcn-animated.vercel.app) for examples, usage, and installation instructions.
 
-1. [Tailwind](https://tailwindcss.com/docs/installation/using-vite)
 
-2. [shadcn/ui](https://ui.shadcn.com/docs/installation)
-
-3. [motion](https://motion.dev/docs/quick-start) - optional; used by some components, as noted in their documentation.
-
-### Install shadcn animated
+## Install shadcn animated
 
 ```jsx
 npm i shadcn-animated
@@ -24,7 +21,7 @@ npm i shadcn-animated
 npx shadcn-animated add button
 ```
 
-## **Usage**
+## Usage
 
 Use the components just like you would use shadcn/ui components:
 
