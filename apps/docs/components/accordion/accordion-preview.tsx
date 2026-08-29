@@ -2,7 +2,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "sh
 
 const AccordionPreview = () => {
   return (
-  <Accordion defaultValue={["shipping"]} className="w-full max-w-lg rounded-2xl bg-white p-4 h-auto">
+  <Accordion defaultValue={["shipping"]} className="w-65 max-w-lg sm:w-lg rounded-2xl bg-white p-4 h-auto">
       <AccordionItem value="shipping"  className={``}>
         <AccordionTrigger>What are your shipping options?</AccordionTrigger>
         <AccordionContent>
