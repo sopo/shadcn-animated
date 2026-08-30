@@ -4,8 +4,104 @@ import NextSection from "@/components/next-section";
 import { LINKS } from "@/lib/links";
 import Bash from "@/components/bash";
 
+
 export const metadata: Metadata = {
-  title: "Installation",
+  title: "Installation | Animated shadcn/ui Components",
+  description:
+    "Install and set up animated shadcn/ui components for React with Motion and Tailwind CSS. Follow the quick setup guide to add animated components to your project.",
+
+  keywords: [
+    // Primary
+    "shadcn animated components installation",
+    "animated shadcn installation",
+    "shadcn/ui animation installation",
+    "shadcn animations installation",
+    "animated React components installation",
+    "React animation components installation",
+    "animated UI components installation",
+    "shadcn component library installation",
+
+    // Setup
+    "install animated shadcn components",
+    "install shadcn animated components",
+    "setup animated shadcn components",
+    "setup shadcn animations",
+    "shadcn animated components setup",
+    "shadcn/ui setup",
+    "shadcn components setup",
+    "React animation setup",
+    "animated React components setup",
+    "animated UI library setup",
+
+    // Motion
+    "install Motion React",
+    "Motion React installation",
+    "Motion installation React",
+    "Motion setup React",
+    "Motion animation setup",
+    "install Motion animations",
+    "Motion React components setup",
+    "shadcn Motion setup",
+    "shadcn Motion components",
+
+    // Tailwind / React
+    "Tailwind animated components installation",
+    "Tailwind CSS animation setup",
+    "Tailwind CSS animations React",
+    "React animated components setup",
+    "React UI animation setup",
+    "React component library setup",
+    "React UI components installation",
+
+    // Developer intent
+    "copy paste animated React components",
+    "copy paste shadcn components",
+    "copy paste animated components",
+    "install React components",
+    "add animated components to React",
+    "add animations to shadcn",
+    "add Motion to shadcn",
+    "shadcn components npm",
+    "animated React components npm",
+    "React animation library",
+    "React animation component library",
+  ],
+
+  metadataBase: new URL("https://shadcn-animated.vercel.app"),
+
+  alternates: {
+    canonical: "/installation",
+  },
+
+  openGraph: {
+    title: "Installation | Animated shadcn/ui Components",
+    description:
+      "Learn how to install animated shadcn/ui components with Motion and Tailwind CSS. Get your React project set up and start using animated components.",
+    siteName: "shadcn Animated",
+    type: "website",
+    url: "https://shadcn-animated.vercel.app/installation",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Installation | Animated shadcn/ui Components",
+    description:
+      "Quickly install and set up animated shadcn/ui components for React using Motion and Tailwind CSS.",
+    creator: "@sopocodes",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+    },
+  },
 };
 
 const InstallationPage = () => {
