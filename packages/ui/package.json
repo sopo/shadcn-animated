@@ -1,6 +1,7 @@
 {
   "name": "shadcn-animated",
   "version": "0.1.0",
+  "license": "MIT",
   "description": "A shadcn-style CLI for animated, copy-friendly UI components.",
   "keywords": [
     "shadcn",
