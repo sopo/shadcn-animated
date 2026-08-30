@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import TabsDocs from "./components/tabs-docs";
 
-
 export const metadata: Metadata = {
   title: "Animated Tabs for React | shadcn/ui + Motion",
   description:
@@ -83,8 +82,7 @@ export const metadata: Metadata = {
   ],
 
   alternates: {
-    canonical:
-      "https://shadcn-animated.vercel.app/tabs",
+    canonical: "https://shadcn-animated.vercel.app/tabs",
   },
 
   openGraph: {

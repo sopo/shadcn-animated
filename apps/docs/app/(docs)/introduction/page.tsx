@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import NextSection from "@/components/next-section";
 import { LINKS } from "@/lib/links";
 
-
 export const metadata: Metadata = {
   title: "Introduction | Animated shadcn/ui Components",
   description:
@@ -118,7 +117,6 @@ export const metadata: Metadata = {
     },
   },
 };
-
 
 const IntroductionPage = () => {
   return (

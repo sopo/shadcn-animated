@@ -1,7 +1,6 @@
 import RadioGroupDocs from "@/app/(docs)/radio-group/components/radio-group-docs";
 import type { Metadata } from "next";
 
-
 export const metadata: Metadata = {
   title: "Animated Radio Buttons for React | shadcn/ui + Motion",
   description:
@@ -73,8 +72,7 @@ export const metadata: Metadata = {
   ],
 
   alternates: {
-    canonical:
-      "https://shadcn-animated.vercel.app/radio-group",
+    canonical: "https://shadcn-animated.vercel.app/radio-group",
   },
 
   openGraph: {
@@ -107,7 +105,6 @@ export const metadata: Metadata = {
     },
   },
 };
-
 
 export default function RadioGroupPage() {
   return <RadioGroupDocs />;

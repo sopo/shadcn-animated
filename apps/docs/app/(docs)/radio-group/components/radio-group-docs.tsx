@@ -6,7 +6,6 @@ import Code from "../../../../components/code-block";
 import NextSection from "../../../../components/next-section";
 import RadioGroupPreview from "./radio-group-preview";
 
-
 const RadioGroupDocs = () => {
   return (
     <div className="flex flex-col gap-12">

@@ -13,15 +13,19 @@ Contributions of all kinds are welcome, including bug fixes, new animations, imp
 git clone https://github.com/YOUR_USERNAME/shadcn-animated.git
 cd shadcn-animated
 ```
+
 ### Install dependencies:
+
 ```bash
 npm install
 ```
 
 ### Create a new branch:
+
 ```bash
 git checkout -b feature/my-change
 ```
+
 Make your changes.
 Test your changes locally.
 Commit your changes and push your branch.

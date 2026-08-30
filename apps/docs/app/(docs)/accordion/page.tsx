@@ -35,8 +35,7 @@ export const metadata: Metadata = {
   ],
 
   alternates: {
-    canonical:
-      "https://shadcn-animated.vercel.app/accordion",
+    canonical: "https://shadcn-animated.vercel.app/accordion",
   },
 
   openGraph: {

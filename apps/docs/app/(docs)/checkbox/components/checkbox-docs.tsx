@@ -6,7 +6,6 @@ import Code from "../../../../components/code-block";
 import NextSection from "../../../../components/next-section";
 import CheckboxPreview from "./checkbox-preview";
 
-
 const CheckboxDocs = () => {
   return (
     <div className="flex flex-col gap-12">

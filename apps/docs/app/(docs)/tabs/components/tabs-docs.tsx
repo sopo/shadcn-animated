@@ -5,7 +5,6 @@ import DocsShell from "@/components/docs-shell";
 import Bash from "@/components/bash";
 import Code from "@/components/code-block";
 
-
 const TabsDocs = () => {
   return (
     <div className="flex flex-col gap-12">

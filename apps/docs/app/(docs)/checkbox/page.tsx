@@ -68,8 +68,7 @@ export const metadata: Metadata = {
   ],
 
   alternates: {
-    canonical:
-      "https://shadcn-animated.vercel.app/checkbox",
+    canonical: "https://shadcn-animated.vercel.app/checkbox",
   },
 
   openGraph: {

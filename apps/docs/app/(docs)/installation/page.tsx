@@ -4,7 +4,6 @@ import NextSection from "@/components/next-section";
 import { LINKS } from "@/lib/links";
 import Bash from "@/components/bash";
 
-
 export const metadata: Metadata = {
   title: "Installation | Animated shadcn/ui Components",
   description:

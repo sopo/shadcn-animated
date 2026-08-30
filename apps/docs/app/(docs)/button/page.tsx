@@ -62,8 +62,7 @@ export const metadata: Metadata = {
   ],
 
   alternates: {
-    canonical:
-      "https://shadcn-animated.vercel.app/button",
+    canonical: "https://shadcn-animated.vercel.app/button",
   },
 
   openGraph: {
@@ -96,7 +95,6 @@ export const metadata: Metadata = {
     },
   },
 };
-
 
 export default function ButtonPage() {
   return <ButtonDocs />;

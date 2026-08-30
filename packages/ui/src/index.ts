@@ -33,5 +33,8 @@ export {
 } from "./components/tabs";
 export { RadioGroup, RadioGroupItem } from "./components/radio-group";
 export {
-  Accordion, AccordionItem, AccordionTrigger, AccordionContent
-} from "./components/accordion"
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from "./components/accordion";
