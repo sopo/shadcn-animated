@@ -84,6 +84,7 @@
   "dependencies": {
     "@base-ui/react": "^1.7.0",
     "@clack/prompts": "^0.11.0",
+    "@vercel/analytics": "^2.0.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "commander": "^14.0.3",

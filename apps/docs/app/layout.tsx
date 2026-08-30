@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
+import { Analytics } from "@vercel/analytics/next";
 
 import Footer from "@/components/footer";
 import Header from "@/components/header";
@@ -44,9 +45,12 @@ export default function RootLayout({
         <main className="flex min-h-screen flex-col">
           <Header />
           <div className="flex-1">{children}</div>
+         
           <Footer />
         </main>
+         <Analytics />
       </body>
+
     </html>
   );
 }
