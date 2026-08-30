@@ -1,4 +1,4 @@
-import CheckboxDocs from "@/components/checkbox/checkbox-docs";
+import CheckboxDocs from "@/app/(docs)/checkbox/components/checkbox-docs";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {

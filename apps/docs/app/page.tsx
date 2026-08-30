@@ -1,8 +1,8 @@
 import AccordionPreview from "@/app/(docs)/accordion/components/accordion-preview";
 import { ButtonProps } from "@/app/(docs)/button/components/button";
 import ButtonPreview from "@/app/(docs)/button/components/button-preview";
-import { CheckboxProps } from "@/components/checkbox/checkbox";
-import CheckboxPreview from "@/components/checkbox/checkbox-preview";
+import { CheckboxProps } from "@/app/(docs)/checkbox/components/checkbox";
+import CheckboxPreview from "@/app/(docs)/checkbox/components/checkbox-preview";
 import Hero from "@/components/hero";
 import { RadioGroupProps } from "@/components/radio-group/radio";
 import RadioGroupPreview from "@/components/radio-group/radio-group-preview";

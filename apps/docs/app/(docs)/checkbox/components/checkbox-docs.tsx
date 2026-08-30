@@ -1,11 +1,11 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "shadcn-animated";
-import DocsSection from "../docs-section";
-import DocsShell from "../docs-shell";
-
-import Bash from "../bash";
-import Code from "../code-block";
-import NextSection from "../next-section";
+import DocsSection from "../../../../components/docs-section";
+import DocsShell from "../../../../components/docs-shell";
+import Bash from "../../../../components/bash";
+import Code from "../../../../components/code-block";
+import NextSection from "../../../../components/next-section";
 import CheckboxPreview from "./checkbox-preview";
+
 
 const CheckboxDocs = () => {
   return (
