@@ -1,4 +1,4 @@
-import RadioGroupDocs from "@/components/radio-group/radio-group-docs";
+import RadioGroupDocs from "@/app/(docs)/radio-group/components/radio-group-docs";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
