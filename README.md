@@ -8,7 +8,6 @@
 
 Visit the [documentation](https://shadcn-animated.vercel.app) for examples, usage, and installation instructions.
 
-
 ## Install shadcn animated
 
 ```jsx

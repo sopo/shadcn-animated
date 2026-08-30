@@ -139,9 +139,7 @@ describe("addComponents", () => {
 
     await expect(
       addComponents(["missing"], { cwd: project, install: false }),
-    ).rejects.toThrow(
-      /Available components:/,
-    );
+    ).rejects.toThrow(/Available components:/);
   });
 });
 

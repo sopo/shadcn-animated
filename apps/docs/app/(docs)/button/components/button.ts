@@ -1,4 +1,4 @@
-import type { ShellProps } from "../shell";
+import type { ShellProps } from "../../../../components/shell";
 
 export const ButtonProps: ShellProps = {
   link: "/button",

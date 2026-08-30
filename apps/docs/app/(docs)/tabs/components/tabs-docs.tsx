@@ -1,9 +1,9 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "shadcn-animated";
-import DocsSection from "../docs-section";
-import DocsShell from "../docs-shell";
-import Bash from "../bash";
-import Code from "../code-block";
 import TabsPreview from "./tabs-preview";
+import DocsSection from "@/components/docs-section";
+import DocsShell from "@/components/docs-shell";
+import Bash from "@/components/bash";
+import Code from "@/components/code-block";
 
 const TabsDocs = () => {
   return (
@@ -65,8 +65,6 @@ const TabsDocs = () => {
           />
         </div>
       </div>
-
-      {/* <NextSection title="Tabs" link="/tabs" /> */}
     </div>
   );
 };

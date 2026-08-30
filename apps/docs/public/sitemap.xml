@@ -1,24 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-    <loc>https://shadcn-animated-docs.vercel.app/</loc>
+    <loc>https://shadcn-animated.vercel.app/</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://shadcn-animated-docs.vercel.app/introduction</loc>
+    <loc>https://shadcn-animated.vercel.app/introduction</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://shadcn-animated-docs.vercel.app/installation</loc>
+    <loc>https://shadcn-animated.vercel.app/installation</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://shadcn-animated-docs.vercel.app/button</loc>
+    <loc>https://shadcn-animated.vercel.app/button</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://shadcn-animated-docs.vercel.app/tabs</loc>
+    <loc>https://shadcn-animated.vercel.app/tabs</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+    <url>
+    <loc>https://shadcn-animated.vercel.app/accordion</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+    <url>
+    <loc>https://shadcn-animated.vercel.app/checkbox</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+      <url>
+    <loc>https://shadcn-animated.vercel.app/radio-group</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
 </urlset>
