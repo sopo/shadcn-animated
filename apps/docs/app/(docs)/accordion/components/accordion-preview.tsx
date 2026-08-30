@@ -2,7 +2,9 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "sh
 
 const AccordionPreview = () => {
   return (
-  <Accordion defaultValue={["shipping"]} className="w-65 max-w-lg sm:w-lg rounded-2xl bg-white p-4 h-auto">
+    <div className="py-18 px-4">
+   
+  <Accordion defaultValue={["shipping"]} className="w-65 max-w-lg md:w-lg rounded-2xl bg-white p-4 h-auto">
       <AccordionItem value="shipping"  className={``}>
         <AccordionTrigger  className={`hover:no-underline text-lg font-medium **:data-[slot=accordion-trigger-icon]:size-5`}>What are your shipping options?</AccordionTrigger>
         <AccordionContent className={`text-secondary-foreground`}>
@@ -25,6 +27,8 @@ const AccordionPreview = () => {
         </AccordionContent>
       </AccordionItem>
     </Accordion>
+    </div>
+
   );
 };
 export default AccordionPreview;

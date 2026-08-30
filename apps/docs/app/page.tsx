@@ -32,7 +32,7 @@ export default function HomePage() {
 
           <div className="md:col-span-2">
             <Shell props={AccordionProps}>
-              <div className="h-50 px-4 lg:px-0">
+              <div className="min-h-50 ">
               <div className="flex self-start overflow-y-auto">
                 <AccordionPreview />
               </div>

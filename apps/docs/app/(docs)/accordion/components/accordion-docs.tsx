@@ -10,10 +10,20 @@ const AccordionDocs = () => {
   return (
     <div className="flex flex-col gap-12">
       <DocsSection>
+         
+     
+           
         <h1 className="text-3xl">Accordion</h1>
+
         <DocsShell>
+             <div className=" overflow-y-auto min-h-50">
+           <div className="flex self-start">
+
           <AccordionPreview />
+    </div>
+           </div>
         </DocsShell>
+       
       </DocsSection>
       <div className="flex flex-col gap-4">
         <h2 className="text-xl">Installation</h2>
