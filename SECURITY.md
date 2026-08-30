@@ -2,23 +2,26 @@
 
 ## Supported Versions
 
-All released versions of `shadcn-animated` are currently supported with security updates.
+We currently support all released versions of this project with security updates.
 
-| Version      | Supported          |
-| ------------ | ------------------ |
-| All versions | :white_check_mark: |
+| Version | Supported          |
+| ------- | ------------------ |
+| All released versions  | :white_check_mark: |
+
 
 ## Reporting a Vulnerability
 
-If you discover a security vulnerability, please open a GitHub issue in this repository.
+If you discover a security vulnerability, please do not open a public GitHub issue.
+Instead, report the vulnerability privately through the project's security reporting mechanism.
 
-Please include:
+When reporting a vulnerability, please include:
 
-- A description of the vulnerability
-- Steps to reproduce the issue
-- The affected version
-- Any relevant code, screenshots, or proof of concept
+A description of the vulnerability and its potential impact.
+Steps to reproduce the issue.
+A minimal proof of concept, if available.
+The affected version(s).
+Any suggested mitigation or fix, if available.
+We will acknowledge your report as soon as possible and will provide an update on its status after we have had an opportunity to investigate it.
+If the vulnerability is confirmed, we will work to release a fix and communicate the affected versions and recommended upgrade path.
 
-Please do not include sensitive information in the issue.
-
-We will review reported vulnerabilities and provide updates through the GitHub issue.
+Thank you for helping keep the project and its users secure.
