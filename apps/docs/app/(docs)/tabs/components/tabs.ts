@@ -1,4 +1,5 @@
-import type { ShellProps } from "../shell";
+import { ShellProps } from "@/components/shell";
+
 
 export const TabsProps: ShellProps = {
   link: "/tabs",

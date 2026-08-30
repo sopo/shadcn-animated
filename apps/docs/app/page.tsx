@@ -7,9 +7,10 @@ import Hero from "@/components/hero";
 import { RadioGroupProps } from "@/app/(docs)/radio-group/components/radio";
 import RadioGroupPreview from "@/app/(docs)/radio-group/components/radio-group-preview";
 import Shell from "@/components/shell";
-import { TabsProps } from "@/components/tabs/tabs";
-import TabsPreview from "@/components/tabs/tabs-preview";
+
 import { AccordionProps } from "./(docs)/accordion/components/accordion";
+import TabsPreview from "./(docs)/tabs/components/tabs-preview";
+import { TabsProps } from "./(docs)/tabs/components/tabs";
 
 export default function HomePage() {
   return (

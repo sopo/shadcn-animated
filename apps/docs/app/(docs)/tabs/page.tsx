@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
+import TabsDocs from "./components/tabs-docs";
 
-import TabsDocs from "@/components/tabs/tabs-docs";
 
 export const metadata: Metadata = {
   title: "Tabs",
