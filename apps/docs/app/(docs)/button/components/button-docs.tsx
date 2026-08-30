@@ -1,10 +1,10 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "shadcn-animated";
-import DocsSection from "../docs-section";
-import DocsShell from "../docs-shell";
+import DocsSection from "../../../../components/docs-section";
+import DocsShell from "../../../../components/docs-shell";
+import Bash from "../../../../components/bash";
+import Code from "../../../../components/code-block";
+import NextSection from "../../../../components/next-section";
 import ButtonPreview from "./button-preview";
-import Bash from "../bash";
-import Code from "../code-block";
-import NextSection from "../next-section";
 
 const ButtonDocs = () => {
   return (

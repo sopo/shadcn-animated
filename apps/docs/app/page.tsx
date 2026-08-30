@@ -1,6 +1,6 @@
 import AccordionPreview from "@/app/(docs)/accordion/components/accordion-preview";
-import { ButtonProps } from "@/components/button/button";
-import ButtonPreview from "@/components/button/button-preview";
+import { ButtonProps } from "@/app/(docs)/button/components/button";
+import ButtonPreview from "@/app/(docs)/button/components/button-preview";
 import { CheckboxProps } from "@/components/checkbox/checkbox";
 import CheckboxPreview from "@/components/checkbox/checkbox-preview";
 import Hero from "@/components/hero";

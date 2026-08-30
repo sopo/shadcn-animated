@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import ButtonDocs from "@/components/button/button-docs";
+import ButtonDocs from "@/app/(docs)/button/components/button-docs";
 
 export const metadata: Metadata = {
   title: "Button",
