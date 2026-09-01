@@ -138,7 +138,7 @@ const InstallationPage = () => {
               <span className="text-secondary-foreground">✦ </span>
               <a
                 target="_blank"
-                href="https://ui.shadcn.com/docs/installation"
+                href="https://motion.dev/docs/react#install"
                 rel="noreferrer"
                 className="underline text-foreground"
               >
