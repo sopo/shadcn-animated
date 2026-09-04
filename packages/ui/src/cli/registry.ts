@@ -52,6 +52,16 @@ export const registry = {
     registryDependencies: ["button"],
     source: "sheet.tsx",
   },
+  switch: {
+    dependencies: [
+      "@base-ui/react",
+      "class-variance-authority",
+      "clsx",
+      "tailwind-merge",
+    ],
+    registryDependencies: [],
+    source: "switch.tsx",
+  },
   tabs: {
     dependencies: [
       "@base-ui/react",

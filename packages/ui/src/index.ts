@@ -38,3 +38,6 @@ export {
   AccordionTrigger,
   AccordionContent,
 } from "./components/accordion";
+export {
+  Switch
+} from "./components/switch"
