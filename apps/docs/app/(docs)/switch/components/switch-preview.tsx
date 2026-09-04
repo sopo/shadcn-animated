@@ -1,4 +1,4 @@
-import { Switch } from "../../../../../../packages/ui/src/components/switch";
+import { Switch } from "shadcn-animated";
 
 const SwitchPreview = () => {
   return (
