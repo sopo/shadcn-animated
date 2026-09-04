@@ -71,7 +71,7 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"`}
         </div>
       </div>
 
-      <NextSection title="Tabs" link="/tabs" />
+      <NextSection title="Switch" link="/switch" />
     </div>
   );
 };

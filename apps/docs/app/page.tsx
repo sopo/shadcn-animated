@@ -11,6 +11,8 @@ import { AccordionProps } from "./(docs)/accordion/components/accordion";
 import TabsPreview from "./(docs)/tabs/components/tabs-preview";
 import { TabsProps } from "./(docs)/tabs/components/tabs";
 import type { Metadata } from "next";
+import SwitchPreview from "./(docs)/switch/components/switch-preview";
+import { SwitchProps } from "./(docs)/switch/components/switch";
 
 export const metadata: Metadata = {
   title: "Animated shadcn/ui Components for React | Motion",
@@ -155,6 +157,9 @@ export default function HomePage() {
               </div>
             </Shell>
           </div>
+                 <Shell props={SwitchProps}>
+            <SwitchPreview />
+          </Shell>
         </section>
       </div>
     </div>
