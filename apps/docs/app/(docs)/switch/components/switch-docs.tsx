@@ -31,7 +31,7 @@ const SwitchDocs = () => {
               </TabsTrigger>
             </TabsList>
             <TabsContent value="command" className="flex flex-col gap-4">
-              <Bash code="npm shadcn-animated add switch" />
+              <Bash code="npx shadcn-animated add switch" />
             </TabsContent>
             <TabsContent value="manual">
               <Code
