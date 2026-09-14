@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { Analytics } from "@vercel/analytics/next";
-
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 
@@ -33,7 +32,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-image.png",
+        url: "https://shadcn-animated.vercel.app/og-image.png",
         width: 1200,
         height: 630,
         alt: "shadcn animated",
@@ -46,7 +45,7 @@ export const metadata: Metadata = {
     title: "shadcn animated",
     description:
       "A growing collection of handcrafted animated shadcn/ui components.",
-    images: ["/og-image.png"],
+    images: ["https://shadcn-animated.vercel.app/twitter-image.jpg"],
   },
 };
 
