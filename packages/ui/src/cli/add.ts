@@ -124,9 +124,7 @@ export async function addComponents(
   if (accepted.length > 0 && options.install !== false) {
     const shadcnDependencies = [
       ...new Set(
-        accepted.flatMap(
-          (file) => registry[file.component].shadcnDependencies,
-        ),
+        accepted.flatMap((file) => registry[file.component].shadcnDependencies),
       ),
     ];
     shadcn = await (options.shadcnInstaller ?? installShadcnComponents)(

@@ -34,7 +34,7 @@ export const registry = {
     shadcnDependencies: [],
     source: "checkbox.tsx",
   },
-    collapsible: {
+  collapsible: {
     dependencies: [
       "@base-ui/react",
       "clsx",

@@ -6,7 +6,6 @@ import Code from "../../../../components/code-block";
 import NextSection from "../../../../components/next-section";
 import SwitchPreview from "./switch-preview";
 
-
 const SwitchDocs = () => {
   return (
     <div className="flex flex-col gap-12">
@@ -18,7 +17,6 @@ const SwitchDocs = () => {
       </DocsSection>
       <div className="flex flex-col gap-8">
         <h2 className="text-xl">Installation</h2>
-
 
         <div className="flex flex-col gap-2">
           <Tabs defaultValue="command" className="w-full gap-4">
@@ -129,4 +127,3 @@ function Switch({
 export { Switch };
 
 `;
-
