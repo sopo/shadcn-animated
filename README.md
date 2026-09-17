@@ -1,4 +1,4 @@
-![Preview](./apps/docs/public/og-image.png)
+![Preview](./apps/docs/app/opengraph-image.png)
 
 # shadcn animated
 
