@@ -35,20 +35,19 @@ const HoverCardPreview = () => {
 >
   <div className="relative h-52 w-full ">
 
-    {/* Right / Back card */}
-
+    {/* last card */}
     <motion.div
       initial={{
         opacity: 0,
         scale: 0.75,
         rotate: 0,
         x: -80,
-        y: 8,
+        y: 16,
       }}
       animate={{
         opacity: 1,
         scale: 1,
-        rotate: 7,
+        rotate: 14,
         x: 0,
         y: 0,
       }}
@@ -59,7 +58,48 @@ const HoverCardPreview = () => {
         mass: 0.8,
       }}
       className="
-        absolute left-32 bottom-8 z-0
+        absolute left-44 bottom-4 z-0
+        w-40
+        rounded-lg
+        bg-background p-2
+        shadow-[0_8px_25px_rgba(0,0,0,0.25)]
+      "
+    >
+      <img
+        src="https://images.unsplash.com/photo-1569865867048-34cfce8d58fe?w=900&auto=format&fit=crop&q=60"
+        alt="London"
+        className="h-40 w-full aspect-auto rounded object-cover"
+      />
+    </motion.div>
+
+
+
+
+    {/* Right / Back card */}
+
+    <motion.div
+      initial={{
+        opacity: 0,
+        scale: 0.75,
+        rotate: 0,
+        x: -40,
+        y: 8,
+      }}
+      animate={{
+        opacity: 1,
+        scale: 1,
+        rotate: 4,
+        x: 0,
+        y: 0,
+      }}
+      transition={{
+        type: "spring",
+        stiffness: 300,
+        damping: 20,
+        mass: 0.8,
+      }}
+      className="
+        absolute left-24 bottom-8 z-5
         w-40
       
         rounded-lg
@@ -68,7 +108,7 @@ const HoverCardPreview = () => {
       "
     >
       <img
-        src="https://images.unsplash.com/photo-1589658114750-80583aa8b517?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      src={`https://images.unsplash.com/photo-1534011640498-530cfd0e854a?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D`}
         alt="London trip"
         className="max-h-40 w-full rounded object-cover"
       />
@@ -111,6 +151,11 @@ const HoverCardPreview = () => {
         className="h-40 w-full aspect-auto rounded object-cover"
       />
     </motion.div>
+
+
+
+
+    
 
   </div>
 </HoverCardContent>
