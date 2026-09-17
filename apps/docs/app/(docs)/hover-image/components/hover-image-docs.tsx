@@ -54,7 +54,7 @@ const HoverImageDocs = () => {
   HoverCard,
   HoverCardTrigger,
   HoverImage,
-} from "shadcn-animated";
+} from "@/components/ui/hover-image";
                 
                 
                 `}

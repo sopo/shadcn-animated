@@ -49,8 +49,9 @@ function getCardLayout({
   return { left, bottom, rotation, startX };
 }
 
-export interface HoverImageProps
-  extends ComponentPropsWithoutRef<typeof HoverCardContent> {
+export interface HoverImageProps extends ComponentPropsWithoutRef<
+  typeof HoverCardContent
+> {
   children: ReactNode;
   /** Width of each individual card in pixels (default: 160) */
   cardWidth?: number;
@@ -93,7 +94,7 @@ const HoverImage = ({
       sideOffset={sideOffset}
       className={cn(
         "w-80 border-0 bg-transparent p-0 shadow-none ring-0",
-        className
+        className,
       )}
       style={{ width: containerWidth, ...style }}
       {...props}
@@ -155,7 +156,7 @@ const HoverImage = ({
               }}
               className={cn(
                 "absolute w-40 rounded-xl border border-border/40 bg-background p-2 shadow-[0_8px_25px_rgba(0,0,0,0.18)] transition-shadow hover:shadow-2xl dark:shadow-[0_8px_25px_rgba(0,0,0,0.6)]",
-                cardClassName
+                cardClassName,
               )}
             >
               {child}

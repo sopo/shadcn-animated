@@ -1,12 +1,12 @@
 # Security Policy
 
 ## Supported Versions
+
 All released versions are supported
 
 | Version | Supported          |
 | ------- | ------------------ |
-| All   | :white_check_mark: |
-
+| All     | :white_check_mark: |
 
 ## Reporting a Vulnerability
 
