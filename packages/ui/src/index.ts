@@ -38,7 +38,16 @@ export {
   AccordionTrigger,
   AccordionContent,
 } from "./components/accordion";
+export { Switch } from "./components/switch";
 export {
-  Switch
-} from "./components/switch";
-export { Collapsible, CollapsibleTrigger, CollapsibleContent } from "./components/collapsible"
+  Collapsible,
+  CollapsibleTrigger,
+  CollapsibleContent,
+} from "./components/collapsible";
+export {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "./components/hover-card";
+
+export {HoverImage} from "./components/hover-image"

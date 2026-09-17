@@ -85,7 +85,7 @@ import { ChevronDownIcon } from "lucide-react";`}
         </div>
       </div>
 
-      <NextSection title="Radio group" link="/radio-group" />
+      <NextSection title="Hover image" link="/hover-image" />
     </div>
   );
 };

@@ -15,6 +15,8 @@ import SwitchPreview from "./(docs)/switch/components/switch-preview";
 import { SwitchProps } from "./(docs)/switch/components/switch";
 import CollapsiblePreview from "./(docs)/collapsible/components/collapsible-preview";
 import { CollapsibleProps } from "./(docs)/collapsible/components/collapsible";
+import HoverImagePreview from "./(docs)/hover-image/components/hover-image-preview";
+import { HoverImageProps } from "./(docs)/hover-image/components/hover-image";
 
 export const metadata: Metadata = {
   title: "Animated shadcn/ui Components for React | Motion",
@@ -137,6 +139,13 @@ export default function HomePage() {
       <div className="max-w-4xl mx-auto flex flex-col gap-20">
         <Hero />
         <section className="grid grid-cols-1 gap-2 md:grid-cols-2">
+
+     <div className="md:col-span-2">
+             <Shell props={HoverImageProps}>
+            <HoverImagePreview />
+
+          </Shell>
+          </div>
           <Shell props={ButtonProps}>
             <ButtonPreview />
           </Shell>
@@ -159,12 +168,14 @@ export default function HomePage() {
               </div>
             </Shell>
           </div>
-                 <Shell props={SwitchProps}>
+          <Shell props={SwitchProps}>
             <SwitchPreview />
           </Shell>
-                   <Shell props={CollapsibleProps}>
+          <Shell props={CollapsibleProps}>
             <CollapsiblePreview />
           </Shell>
+
+       
         </section>
       </div>
     </div>
