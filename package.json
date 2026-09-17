@@ -30,6 +30,7 @@
     "typescript-eslint": "^8.65.0"
   },
   "dependencies": {
+    "motion": "^13.1.0",
     "prism-react-renderer": "^2.4.1",
     "react-code-block": "^1.1.3"
   }
