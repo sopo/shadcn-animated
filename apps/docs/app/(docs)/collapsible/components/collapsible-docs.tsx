@@ -57,7 +57,7 @@ const CollapsibleDocs = () => {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "shadcn-animated";
+} from @/components/ui/collapsible;
 import { ChevronDownIcon } from "lucide-react";`}
           />
           <Code
