@@ -82,6 +82,12 @@ async function main() {
           );
         }
 
+        if (result.shadcn.components.length > 0) {
+          log.success(
+            `Added ${result.shadcn.components.join(", ")} from shadcn`,
+          );
+        }
+
         outro(options.dryRun ? "No files were changed." : "Done.");
       },
     );

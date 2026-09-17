@@ -6,7 +6,6 @@ import Code from "../../../../components/code-block";
 import NextSection from "../../../../components/next-section";
 import HoverImagePreview from "./hover-image-preview";
 
-
 const HoverImageDocs = () => {
   return (
     <div className="flex flex-col gap-12">
@@ -18,37 +17,30 @@ const HoverImageDocs = () => {
       </DocsSection>
       <div className="flex flex-col gap-8">
         <h2 className="text-xl">Installation</h2>
-
-        <div className="flex flex-col gap-3">
-          <h2 className="font-medium">1. Install dependencies</h2>
-          <Bash code="npm install motion" />
+        <Tabs defaultValue="command" className="w-full gap-4">
+          <TabsList className="rounded-full" variant="line">
+            <TabsTrigger value="command" className="rounded-full">
+              Command
+            </TabsTrigger>
+            <TabsTrigger value="manual" className="rounded-full">
+              Manual
+            </TabsTrigger>
+          </TabsList>
+          <TabsContent value="command" className="flex flex-col gap-4">
+            <Bash code="npx shadcn-animated add hover-image" />
+          </TabsContent>
+          <TabsContent value="manual" className="flex flex-col gap-4">
+            <h2 className="font-medium">1. Install dependencies</h2>
+            <Bash code="npm install motion" />
             <Bash code="npx shadcn@latest add hover-card" />
-        </div>
-
-
-        <div className="flex flex-col gap-2">
-          <h2 className="font-medium">2. Install hover image</h2>
-          <Tabs defaultValue="command" className="w-full gap-4">
-            <TabsList className="rounded-full" variant="line">
-              <TabsTrigger value="command" className="rounded-full">
-                Command
-              </TabsTrigger>
-              <TabsTrigger value="manual" className="rounded-full">
-                Manual
-              </TabsTrigger>
-            </TabsList>
-            <TabsContent value="command" className="flex flex-col gap-4">
-              <Bash code="npx shadcn-animated add hover-image" />
-            </TabsContent>
-            <TabsContent value="manual">
-              <Code
-                code={manualCode}
-                expandable
-                filename="components/ui/hover-image.tsx"
-              />
-            </TabsContent>
-          </Tabs>
-        </div>
+            <h2 className="font-medium">2. Copy the component</h2>
+            <Code
+              code={manualCode}
+              expandable
+              filename="components/ui/hover-image.tsx"
+            />
+          </TabsContent>
+        </Tabs>
       </div>
 
       <div className="flex flex-col gap-4">
