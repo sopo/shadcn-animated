@@ -42,9 +42,9 @@ export const registry = {
     registryDependencies: [],
     source: "collapsible.tsx",
   },
-    "hover-image": {
-    dependencies: ["@base-ui/react", "clsx", "lucide-react", "tailwind-merge", "motion"],
-    registryDependencies: [],
+  "hover-image": {
+    dependencies: ["@base-ui/react", "clsx", "tailwind-merge", "motion"],
+    registryDependencies: ["hover-card"],
     source: "hover-image.tsx",
   },
   "radio-group": {

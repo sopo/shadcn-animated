@@ -121,49 +121,123 @@ const HoverImageDocs = () => {
 
 export default HoverImageDocs;
 
-const manualCode = `
-"use client";
+const manualCode = `"use client";
 
-import { HoverCardContent } from "shadcn-animated";
-import { motion } from "motion/react";
-import { Children, type ReactNode } from "react";
+import {
+  Children,
+  isValidElement,
+  type ComponentPropsWithoutRef,
+  type ReactNode,
+} from "react";
+import { motion, useReducedMotion } from "motion/react";
+import { HoverCardContent } from "./hover-card";
+import { cn } from "@/lib/utils";
 
-type HoverImageProps = {
+interface CardLayoutOptions {
+  index: number;
+  total: number;
+  cardWidth: number;
+  containerWidth: number;
+  maxRotation: number;
+  curveHeight: number;
+  prefersReducedMotion: boolean | null;
+}
+
+/**
+ * Calculates positioning, rotation angle, and entrance offsets for an individual
+ * card in the fanned deck layout. Single cards are centered horizontally, while
+ * multiple cards spread out along a subtle parabolic curve.
+ */
+function getCardLayout({
+  index,
+  total,
+  cardWidth,
+  containerWidth,
+  maxRotation,
+  curveHeight,
+  prefersReducedMotion,
+}: CardLayoutOptions) {
+  const maxSpread = Math.max(0, containerWidth - cardWidth - 16);
+  const centeredLeft = (containerWidth - cardWidth) / 2;
+
+  const progress = total <= 1 ? 0.5 : index / (total - 1);
+  const left = total <= 1 ? centeredLeft : 8 + progress * maxSpread;
+  const bottom = 4 + Math.sin(progress * Math.PI) * curveHeight;
+  const rotation =
+    total <= 1 || prefersReducedMotion
+      ? 0
+      : -maxRotation + progress * (maxRotation * 2);
+  const startX = prefersReducedMotion ? 0 : -progress * 40;
+
+  return { left, bottom, rotation, startX };
+}
+
+export interface HoverImageProps
+  extends ComponentPropsWithoutRef<typeof HoverCardContent> {
   children: ReactNode;
-};
+  cardWidth?: number;
+  containerWidth?: number;
+  containerHeight?: string;
+  maxRotation?: number;
+  curveHeight?: number;
+  stagger?: number;
+  cardClassName?: string;
+}
 
-const HoverImage = ({ children }: HoverImageProps) => {
+const HoverImage = ({
+  children,
+  cardWidth = 160,
+  containerWidth = 320,
+  containerHeight = "h-52",
+  maxRotation = 12,
+  curveHeight = 4,
+  stagger = 0.035,
+  cardClassName,
+  className,
+  side = "top",
+  sideOffset = 8,
+  style,
+  ...props
+}: HoverImageProps) => {
+  const prefersReducedMotion = useReducedMotion();
   const cards = Children.toArray(children);
   const total = cards.length;
 
-  const cardWidth = 160;
-  const containerWidth = 320;
-  const maxSpread = containerWidth - cardWidth - 8;
-
   return (
     <HoverCardContent
-      side="top"
-      className="w-80 border-0 bg-transparent p-0 shadow-none ring-0"
+      side={side}
+      sideOffset={sideOffset}
+      className={cn(
+        "w-80 border-0 bg-transparent p-0 shadow-none ring-0",
+        className
+      )}
+      style={{ width: containerWidth, ...style }}
+      {...props}
     >
-      <div className="relative h-52 w-full">
+      <div className={cn("relative w-full", containerHeight)}>
         {cards.map((child, index) => {
-          const progress = total <= 1 ? 0 : index / (total - 1);
-          const left = total <= 1 ? 8 : 8 + progress * maxSpread;
-          const bottom = 4 + Math.sin(progress * Math.PI) * 4;
-          const maxRotation = 12;
-          const rotation =
-            total <= 1 ? 0 : -maxRotation + progress * (maxRotation * 2);
-          const startX = -progress * 50;
+          const { left, bottom, rotation, startX } = getCardLayout({
+            index,
+            total,
+            cardWidth,
+            containerWidth,
+            maxRotation,
+            curveHeight,
+            prefersReducedMotion,
+          });
+
+          const key =
+            isValidElement(child) && child.key != null ? child.key : index;
 
           return (
             <motion.div
-              key={index}
+              key={key}
               initial={{
                 opacity: 0,
-                scale: 0.75,
+                scale: prefersReducedMotion ? 1 : 0.8,
                 rotate: 0,
                 x: startX,
-                y: 16,
+                y: prefersReducedMotion ? 0 : 16,
               }}
               animate={{
                 opacity: 1,
@@ -172,26 +246,33 @@ const HoverImage = ({ children }: HoverImageProps) => {
                 x: 0,
                 y: 0,
               }}
+              whileHover={
+                prefersReducedMotion
+                  ? { zIndex: 40 }
+                  : {
+                      scale: 1.06,
+                      rotate: 0,
+                      zIndex: 40,
+                      transition: { duration: 0.15 },
+                    }
+              }
               transition={{
                 type: "spring",
-                stiffness: 300,
-                damping: 20,
+                stiffness: 320,
+                damping: 22,
                 mass: 0.8,
+                delay: prefersReducedMotion ? 0 : index * stagger,
               }}
               style={{
                 left,
                 bottom,
-
+                width: cardWidth,
                 zIndex: total - index,
               }}
-              className="
-                absolute
-                w-40
-                rounded-lg
-                bg-background
-                p-2
-                shadow-[0_8px_25px_rgba(0,0,0,0.25)]
-              "
+              className={cn(
+                "absolute w-40 rounded-xl border border-border/40 bg-background p-2 shadow-[0_8px_25px_rgba(0,0,0,0.18)] transition-shadow hover:shadow-2xl dark:shadow-[0_8px_25px_rgba(0,0,0,0.6)]",
+                cardClassName
+              )}
             >
               {child}
             </motion.div>
@@ -202,6 +283,5 @@ const HoverImage = ({ children }: HoverImageProps) => {
   );
 };
 
-export { HoverImage };
-
+export { HoverImage, getCardLayout };
 `;
