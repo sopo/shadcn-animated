@@ -49,3 +49,5 @@ export {
   HoverCardContent,
   HoverCardTrigger,
 } from "./components/hover-card";
+
+export {HoverImage} from "./components/hover-image"
