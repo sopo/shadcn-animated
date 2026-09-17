@@ -77,6 +77,32 @@ describe("addComponents", () => {
     ).toContain('from "./button"');
   });
 
+  it("installs upstream shadcn dependencies for a component", async () => {
+    const project = await createProject();
+    let receivedComponents: string[] = [];
+
+    const result = await addComponents(["hover-image"], {
+      cwd: project,
+      dependencyInstaller: async () => ({ dependencies: [] }),
+      shadcnInstaller: async (_root, components) => {
+        receivedComponents = components;
+        return { components };
+      },
+    });
+
+    expect(receivedComponents).toEqual(["hover-card"]);
+    expect(result.shadcn.components).toEqual(["hover-card"]);
+    expect(result.files.map(({ component }) => component)).toEqual([
+      "hover-image",
+    ]);
+    expect(
+      await readFile(
+        path.join(project, "src", "components", "ui", "hover-image.tsx"),
+        "utf8",
+      ),
+    ).toContain('from "./hover-card"');
+  });
+
   it("supports package.json imports and JavaScript projects", async () => {
     const project = await createProject({
       aliases: { ui: "#components", utils: "#utils" },

@@ -2,7 +2,12 @@ import { access, mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 
 import { loadComponentsConfig, resolveComponentTarget } from "./config";
-import { installDependencies, type InstallResult } from "./installer";
+import {
+  installDependencies,
+  installShadcnComponents,
+  type InstallResult,
+  type ShadcnInstallResult,
+} from "./installer";
 import {
   loadComponentSource,
   registry,
@@ -21,6 +26,10 @@ export interface AddOptions {
     projectRoot: string,
     dependencies: string[],
   ) => Promise<InstallResult>;
+  shadcnInstaller?: (
+    projectRoot: string,
+    components: string[],
+  ) => Promise<ShadcnInstallResult>;
 }
 
 export interface FileResult {
@@ -34,6 +43,7 @@ export interface AddResult {
   configPath: string;
   files: FileResult[];
   install: InstallResult;
+  shadcn: ShadcnInstallResult;
 }
 
 interface PlannedFile {
@@ -75,6 +85,7 @@ export async function addComponents(
         path: file.path,
       })),
       install: { dependencies: [] },
+      shadcn: { components: [] },
     };
   }
 
@@ -108,8 +119,20 @@ export async function addComponents(
     ),
   ];
   let install: InstallResult = { dependencies: [] };
+  let shadcn: ShadcnInstallResult = { components: [] };
 
   if (accepted.length > 0 && options.install !== false) {
+    const shadcnDependencies = [
+      ...new Set(
+        accepted.flatMap(
+          (file) => registry[file.component].shadcnDependencies,
+        ),
+      ),
+    ];
+    shadcn = await (options.shadcnInstaller ?? installShadcnComponents)(
+      resolvedConfig.root,
+      shadcnDependencies,
+    );
     install = await (options.dependencyInstaller ?? installDependencies)(
       resolvedConfig.root,
       dependencies,
@@ -131,6 +154,7 @@ export async function addComponents(
     configPath: resolvedConfig.path,
     files: [...written, ...skipped],
     install,
+    shadcn,
   };
 }
 

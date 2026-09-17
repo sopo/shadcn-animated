@@ -6,6 +6,7 @@ import { transform } from "sucrase";
 export interface RegistryItem {
   dependencies: string[];
   registryDependencies: string[];
+  shadcnDependencies: string[];
   source: string;
 }
 
@@ -18,6 +19,7 @@ export const registry = {
       "tailwind-merge",
     ],
     registryDependencies: [],
+    shadcnDependencies: [],
     source: "button.tsx",
   },
   checkbox: {
@@ -29,6 +31,7 @@ export const registry = {
       "motion",
     ],
     registryDependencies: [],
+    shadcnDependencies: [],
     source: "checkbox.tsx",
   },
     collapsible: {
@@ -40,11 +43,13 @@ export const registry = {
       "motion",
     ],
     registryDependencies: [],
+    shadcnDependencies: [],
     source: "collapsible.tsx",
   },
   "hover-image": {
     dependencies: ["@base-ui/react", "clsx", "tailwind-merge", "motion"],
-    registryDependencies: ["hover-card"],
+    registryDependencies: [],
+    shadcnDependencies: ["hover-card"],
     source: "hover-image.tsx",
   },
   "radio-group": {
@@ -56,16 +61,19 @@ export const registry = {
       "motion",
     ],
     registryDependencies: [],
+    shadcnDependencies: [],
     source: "radio-group.tsx",
   },
   select: {
     dependencies: ["@base-ui/react", "clsx", "lucide-react", "tailwind-merge"],
     registryDependencies: [],
+    shadcnDependencies: [],
     source: "select.tsx",
   },
   sheet: {
     dependencies: ["@base-ui/react", "clsx", "lucide-react", "tailwind-merge"],
     registryDependencies: ["button"],
+    shadcnDependencies: [],
     source: "sheet.tsx",
   },
   switch: {
@@ -76,6 +84,7 @@ export const registry = {
       "tailwind-merge",
     ],
     registryDependencies: [],
+    shadcnDependencies: [],
     source: "switch.tsx",
   },
   tabs: {
@@ -87,6 +96,7 @@ export const registry = {
       "tailwind-merge",
     ],
     registryDependencies: [],
+    shadcnDependencies: [],
     source: "tabs.tsx",
   },
   accordion: {
@@ -98,6 +108,7 @@ export const registry = {
       "tailwind-merge",
     ],
     registryDependencies: [],
+    shadcnDependencies: [],
     source: "accordion.tsx",
   },
 } as const satisfies Record<string, RegistryItem>;

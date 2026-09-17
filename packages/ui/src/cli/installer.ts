@@ -8,6 +8,10 @@ export interface InstallResult {
   packageManager?: PackageManager;
 }
 
+export interface ShadcnInstallResult {
+  components: string[];
+}
+
 type PackageManager = "bun" | "npm" | "pnpm" | "yarn";
 
 export async function installDependencies(
@@ -53,6 +57,24 @@ export async function installDependencies(
 
   await run(packageManager, args, projectRoot);
   return { dependencies: missing, packageManager };
+}
+
+export async function installShadcnComponents(
+  projectRoot: string,
+  components: string[],
+): Promise<ShadcnInstallResult> {
+  const uniqueComponents = [...new Set(components)];
+  if (uniqueComponents.length === 0) return { components: [] };
+
+  const packageManager = await detectPackageManager(projectRoot);
+  const [command, ...args] = shadcnCommand(
+    packageManager,
+    projectRoot,
+    uniqueComponents,
+  );
+
+  await run(command, args, projectRoot);
+  return { components: uniqueComponents };
 }
 
 async function readOwnDependencyVersions(): Promise<Record<string, string>> {
@@ -124,6 +146,32 @@ function packageManagerArgs(
     case "yarn":
     case "bun":
       return ["add", ...dependencies];
+  }
+}
+
+function shadcnCommand(
+  packageManager: PackageManager,
+  projectRoot: string,
+  components: string[],
+): string[] {
+  const args = [
+    "shadcn@latest",
+    "add",
+    ...components,
+    "--cwd",
+    projectRoot,
+    "--yes",
+  ];
+
+  switch (packageManager) {
+    case "npm":
+      return ["npx", "--yes", ...args];
+    case "pnpm":
+      return ["pnpm", "dlx", ...args];
+    case "yarn":
+      return ["npx", "--yes", ...args];
+    case "bun":
+      return ["bunx", ...args];
   }
 }
 
