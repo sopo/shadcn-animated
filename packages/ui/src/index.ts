@@ -55,3 +55,6 @@ export {
   getCardLayout,
   type HoverImageProps,
 } from "./components/hover-image";
+export{
+  FloatingActionMenu
+}from "./components/floating-action-menu"
