@@ -15,11 +15,16 @@ const FABMenuContext = React.createContext<{
 });
 
 const menuItemVariants: Variants = {
-  hidden: {
+  hidden: (index: number) => ({
     opacity: 0,
-    y: 10,
+    y: 20,
     scale: 0.9,
-  },
+    transition: {
+      delay: index * 0.09,
+      duration: 0.18,
+      ease: "easeOut",
+    },
+  }),
   visible: (index: number) => ({
     opacity: 1,
     y: 0,
@@ -45,18 +50,12 @@ function FABMenu({
 
   return (
     <FABMenuContext.Provider value={{ open, setOpen }}>
-      <div className={cn("relative", className)}>
-        {children}
-      </div>
+      <div className={cn("relative", className)}>{children}</div>
     </FABMenuContext.Provider>
   );
 }
 
-function FABMenuTrigger({
-  children,
-}: {
-  children?: React.ReactNode;
-}) {
+function FABMenuTrigger({ children }: { children?: React.ReactNode }) {
   const { open, setOpen } = React.useContext(FABMenuContext);
 
   return (
@@ -82,11 +81,11 @@ function FABMenuTrigger({
 function FABMenuContent({
   children,
   className,
-  align="center"
+  align = "center",
 }: {
   children: React.ReactNode;
   className?: string;
-  align?: "left" | "center" | "right"
+  align?: "left" | "center" | "right";
 }) {
   const { open } = React.useContext(FABMenuContext);
 
@@ -95,21 +94,21 @@ function FABMenuContent({
   return (
     <div
       className={cn(
-         "absolute bottom-14",
-  align === "right" && "right-0",
-  align === "left" && "left-0",
-  align === "center" && "left-1/2 -translate-x-1/2",
+        "absolute bottom-14",
+        align === "right" && "right-0",
+        align === "left" && "left-0",
+        align === "center" && "left-1/2 -translate-x-1/2",
         !open && "pointer-events-none",
         className,
       )}
     >
       <motion.div
-      className={cn(
-  "flex flex-col gap-2",
-  align === "right" && "items-end",
-  align === "left" && "items-start",
-  align === "center" && "items-center",
-)}
+        className={cn(
+          "flex flex-col gap-2",
+          align === "right" && "items-end",
+          align === "left" && "items-start",
+          align === "center" && "items-center",
+        )}
         initial={false}
         animate={open ? "visible" : "hidden"}
       >
@@ -146,9 +145,4 @@ function FABMenuItem({
   );
 }
 
-export {
-  FABMenu,
-  FABMenuTrigger,
-  FABMenuContent,
-  FABMenuItem,
-};
+export { FABMenu, FABMenuTrigger, FABMenuContent, FABMenuItem };
