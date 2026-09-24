@@ -1,5 +1,5 @@
 import { FloatingActionMenu } from "shadcn-animated";
-import { FloatingActionMenuContent, FloatingActionMenuItem, FloatingActionMenuTrigger } from "../../../../../packages/ui/src/components/floating-action-menu";
+import { FloatingActionMenuContent, FloatingActionMenuItem, FloatingActionMenuTrigger } from "shadcn-animated";
 import { Bell, Mail, MessageSquare } from "lucide-react";
 
 

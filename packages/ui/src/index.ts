@@ -56,5 +56,8 @@ export {
   type HoverImageProps,
 } from "./components/hover-image";
 export{
-  FloatingActionMenu
+    FloatingActionMenu,
+  FloatingActionMenuTrigger,
+  FloatingActionMenuContent,
+  FloatingActionMenuItem,
 }from "./components/floating-action-menu"
