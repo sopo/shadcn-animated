@@ -63,6 +63,7 @@ function FloatingActionMenuTrigger({
     <button
       type="button"
       onClick={() => setOpen((value) => !value)}
+      className="cursor-pointer"
     >
       {children ?? (
         <div className="inline-flex rounded-full bg-black p-2 shadow-lg">
@@ -92,7 +93,7 @@ function FloatingActionMenuContent({
   return (
     <div
       className={cn(
-        "absolute bottom-14 left-1/2 -translate-x-1/2",
+        "absolute bottom-14 right-0",
         !open && "pointer-events-none",
         className,
       )}

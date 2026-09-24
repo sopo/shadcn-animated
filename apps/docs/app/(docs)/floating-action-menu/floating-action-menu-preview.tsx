@@ -5,26 +5,30 @@ import { Bell, Mail, MessageSquare } from "lucide-react";
 
 const FloatingActionMenuPreview = () => {
   return (
+  
      <FloatingActionMenu>
       <FloatingActionMenuTrigger />
 
-      <FloatingActionMenuContent>
+      <FloatingActionMenuContent className="">
         <FloatingActionMenuItem>
           <Mail />
-          Send an email
+        📧  Send an email
         </FloatingActionMenuItem>
 
         <FloatingActionMenuItem>
           <Bell />
-          Make reminder
+         ☀️ Make a reminder
         </FloatingActionMenuItem>
 
         <FloatingActionMenuItem>
           <MessageSquare />
           Send a message
         </FloatingActionMenuItem>
+
+        
       </FloatingActionMenuContent>
     </FloatingActionMenu>
+
   );
 };
 export default FloatingActionMenuPreview;
