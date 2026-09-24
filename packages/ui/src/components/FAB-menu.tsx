@@ -65,10 +65,10 @@ function FABMenuTrigger({ children }: { children?: React.ReactNode }) {
       className="cursor-pointer"
     >
       {children ?? (
-        <div className="inline-flex rounded-full bg-black p-2 shadow-lg">
+        <div className="inline-flex rounded-full bg-foreground p-2 shadow-lg">
           <Plus
             className={cn(
-              "size-6 text-white transition-transform duration-200",
+              "size-6 text-background transition-transform duration-200",
               open && "rotate-45",
             )}
           />

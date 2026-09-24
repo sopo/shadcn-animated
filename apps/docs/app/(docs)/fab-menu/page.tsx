@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import FABMenuDocs from "./components/FAB-menu-docs";
 
 
+
 export const metadata: Metadata = {
   title: "Animated Collapsible for React | shadcn/ui + Motion",
   description:

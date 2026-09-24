@@ -1,11 +1,20 @@
 import DocsSection from "@/components/docs-section";
 import DocsShell from "@/components/docs-shell";
-import FABMenuPreview from "./FAB-menu-preview";
+
 import Bash from "@/components/bash";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "shadcn-animated";
+import {
+  FABMenu,
+  FABMenuContent,
+  FABMenuItem,
+  FABMenuTrigger,
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from "shadcn-animated";
 import Code from "@/components/code-block";
 import NextSection from "@/components/next-section";
-
+import FABMenuPreview from "./FAB-menu-preview";
 
 const FABMenuDocs = () => {
   return (
@@ -25,7 +34,7 @@ const FABMenuDocs = () => {
         </div>
 
         <div className="flex flex-col gap-2">
-          <h2 className="font-medium">2. Install collapsible</h2>
+          <h2 className="font-medium">2. Install FAB menu</h2>
           <Tabs defaultValue="command" className="w-full gap-4">
             <TabsList className="rounded-full" variant="line">
               <TabsTrigger value="command" className="rounded-full">
@@ -36,52 +45,152 @@ const FABMenuDocs = () => {
               </TabsTrigger>
             </TabsList>
             <TabsContent value="command" className="flex flex-col gap-4">
-              <Bash code="npx shadcn-animated add collapsible" />
+              <Bash code="npx shadcn-animated add FAB-menu" />
             </TabsContent>
             <TabsContent value="manual">
               <Code
                 code={manualCode}
                 expandable
-                filename="components/ui/collapsible.tsx"
+                filename="components/ui/FAB-menu.tsx"
               />
             </TabsContent>
           </Tabs>
         </div>
       </div>
 
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-4 ">
         <h2 className="text-xl">Usage</h2>
         <div className="flex flex-col gap-4">
           <Code
-            code={`import {
-  Button,
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from @/components/ui/collapsible;
-import { ChevronDownIcon } from "lucide-react";`}
+            code={`
+              import { FABMenu, FABMenuContent, FABMenuItem, FABMenuTrigger } from "@/components/ui/FAB-menu";
+              `}
           />
           <Code
-            code={`  <div className="mx-auto w-xs h-50">
-      <Collapsible className="max-w-md w-xs p-4 rounded-2xl  h-auto">
-        <CollapsibleTrigger
-          render={
-            <Button variant="ghost" className="w-full text-lg">
-              Product details
-              <ChevronDownIcon className="ml-auto group-data-panel-open/button:rotate-180" />
-            </Button>
-          }
-        />
+            code={`
+<FABMenu>
+  <FABMenuTrigger />
+    <FABMenuContent align="center">
+        <FABMenuItem>📧 Send an email</FABMenuItem>
+        <FABMenuItem>💬 Send a message</FABMenuItem>
+        <FABMenuItem>☀️ Make a reminder</FABMenuItem>
+    </FABMenuContent>
+</FABMenu>
+              `}
+          />
+        </div>
+      </div>
 
-        <CollapsibleContent className="flex flex-col items-start gap-2 p-2.5 text-sm">
-          <div className="text-[16px] text-secondary-foreground">
-            This panel can be expanded or collapsed to reveal additional
-            content.
-          </div>
-          <Button size="lg">Learn More</Button>
-        </CollapsibleContent>
-      </Collapsible>
-    </div>`}
+      <div className="flex flex-col gap-4 ">
+        <h2 className="text-xl">Add custom trigger</h2>
+
+        <div className="flex flex-col gap-4">
+          <DocsShell>
+            <FABMenu>
+              <FABMenuTrigger>Custom trigger</FABMenuTrigger>
+              <FABMenuContent>
+                <FABMenuItem>📧 Send an email</FABMenuItem>
+                <FABMenuItem>💬 Send a message</FABMenuItem>
+                <FABMenuItem>☀️ Make a reminder</FABMenuItem>
+              </FABMenuContent>
+            </FABMenu>
+          </DocsShell>
+
+          <Code
+            code={`
+<FABMenu>
+  <FABMenuTrigger>Custom trigger</FABMenuTrigger>
+    <FABMenuContent>
+      <FABMenuItem>📧 Send an email</FABMenuItem>
+      <FABMenuItem>💬 Send a message</FABMenuItem>
+      <FABMenuItem>☀️ Make a reminder</FABMenuItem>
+    </FABMenuContent>
+</FABMenu>
+              `}
+          />
+        </div>
+      </div>
+
+        <div className="flex flex-col gap-4 ">
+        <h2 className="text-xl">Change alignment</h2>
+
+        <div className="flex flex-col gap-4">
+          <DocsShell>
+            <div className="flex items-center gap-20">
+            <div className="flex flex-col gap-4 items-center">
+            <FABMenu>
+              <FABMenuTrigger />
+              <FABMenuContent align="left">
+                <FABMenuItem>📧 Send an email</FABMenuItem>
+                <FABMenuItem>💬 Send a message</FABMenuItem>
+                <FABMenuItem>☀️ Make a reminder</FABMenuItem>
+              </FABMenuContent>
+            </FABMenu>
+            <span className="text-[16px] font-medium text-secondary-foreground">Left</span>
+            </div>
+               <div className="flex flex-col gap-4 items-center">
+            <FABMenu>
+              <FABMenuTrigger />
+              <FABMenuContent align="center">
+                <FABMenuItem>📧 Send an email</FABMenuItem>
+                <FABMenuItem>💬 Send a message</FABMenuItem>
+                <FABMenuItem>☀️ Make a reminder</FABMenuItem>
+              </FABMenuContent>
+            </FABMenu>
+            <span className="text-[16px] font-medium text-secondary-foreground">Center</span>
+            </div>
+
+                     <div className="flex flex-col gap-4 items-center">
+            <FABMenu>
+              <FABMenuTrigger />
+              <FABMenuContent align="right">
+                <FABMenuItem>📧 Send an email</FABMenuItem>
+                <FABMenuItem>💬 Send a message</FABMenuItem>
+                <FABMenuItem>☀️ Make a reminder</FABMenuItem>
+</FABMenuContent>
+            </FABMenu>
+            <span className="text-[16px] font-medium text-secondary-foreground">Right</span>
+            </div>
+            </div>
+          </DocsShell>
+
+          <Code
+            code={`
+<FABMenu>
+  <FABMenuTrigger>Custom trigger</FABMenuTrigger>
+    <FABMenuContent align="left">
+      <FABMenuItem>📧 Send an email</FABMenuItem>
+      <FABMenuItem>💬 Send a message</FABMenuItem>
+      <FABMenuItem>☀️ Make a reminder</FABMenuItem>
+    </FABMenuContent>
+</FABMenu>
+              `}
+          />
+
+               <Code
+            code={`
+<FABMenu>
+  <FABMenuTrigger>Custom trigger</FABMenuTrigger>
+    <FABMenuContent align="center">
+      <FABMenuItem>📧 Send an email</FABMenuItem>
+      <FABMenuItem>💬 Send a message</FABMenuItem>
+      <FABMenuItem>☀️ Make a reminder</FABMenuItem>
+    </FABMenuContent>
+</FABMenu>
+              `}
+          />
+
+                       <Code
+            code={`
+<FABMenu>
+  <FABMenuTrigger>Custom trigger</FABMenuTrigger>
+    <FABMenuContent align="right">
+      <FABMenuItem>📧 Send an email</FABMenuItem>
+      <FABMenuItem>💬 Send a message</FABMenuItem>
+      <FABMenuItem>☀️ Make a reminder</FABMenuItem>
+    </FABMenuContent>
+</FABMenu>
+              `}
           />
         </div>
       </div>
@@ -96,79 +205,151 @@ export default FABMenuDocs;
 const manualCode = `
 "use client";
 
-import { Collapsible as CollapsiblePrimitive } from "@base-ui/react/collapsible";
-import { motion } from "motion/react";
+import * as React from "react";
+import { motion, type Variants } from "motion/react";
+import { Plus } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Button } from "./button";
 
-function Collapsible({ className, ...props }: CollapsiblePrimitive.Root.Props) {
+const FABMenuContext = React.createContext<{
+  open: boolean;
+  setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}>({
+  open: false,
+  setOpen: () => {},
+});
+
+const menuItemVariants: Variants = {
+  hidden: (index: number) => ({
+    opacity: 0,
+    y: 20,
+    scale: 0.9,
+    transition: {
+      delay: index * 0.05,
+      duration: 0.18,
+      ease: "easeOut",
+    },
+  }),
+  visible: (index: number) => ({
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      delay: index * 0.03,
+      type: "spring",
+      stiffness: 600,
+      damping: 18,
+      mass: 0.6,
+    },
+  }),
+};
+
+function FABMenu({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
+  const [open, setOpen] = React.useState(false);
+
   return (
-    <CollapsiblePrimitive.Root
-      data-slot="collapsible"
-      className={cn("bg-background", className)}
-      {...props}
-    />
+    <FABMenuContext.Provider value={{ open, setOpen }}>
+      <div className={cn("relative", className)}>{children}</div>
+    </FABMenuContext.Provider>
   );
 }
 
-function CollapsibleTrigger({
+function FABMenuTrigger({ children }: { children?: React.ReactNode }) {
+  const { open, setOpen } = React.useContext(FABMenuContext);
+
+  return (
+    <button
+      type="button"
+      onClick={() => setOpen((value) => !value)}
+      className="cursor-pointer"
+    >
+      {children ?? (
+        <div className="inline-flex rounded-full bg-foreground p-2 shadow-lg">
+          <Plus
+            className={cn(
+              "size-6 text-background transition-transform duration-200",
+              open && "rotate-45",
+            )}
+          />
+        </div>
+      )}
+    </button>
+  );
+}
+
+function FABMenuContent({
+  children,
+  className,
+  align = "center",
+}: {
+  children: React.ReactNode;
+  className?: string;
+  align?: "left" | "center" | "right";
+}) {
+  const { open } = React.useContext(FABMenuContext);
+
+  const items = React.Children.toArray(children);
+
+  return (
+    <div
+      className={cn(
+        "absolute bottom-14",
+        align === "right" && "right-0",
+        align === "left" && "left-0",
+        align === "center" && "left-1/2 -translate-x-1/2",
+        !open && "pointer-events-none",
+        className,
+      )}
+    >
+      <motion.div
+        className={cn(
+          "flex flex-col gap-2",
+          align === "right" && "items-end",
+          align === "left" && "items-start",
+          align === "center" && "items-center",
+        )}
+        initial={false}
+        animate={open ? "visible" : "hidden"}
+      >
+        {items.map((child, index) => (
+          <motion.div
+            key={index}
+            custom={items.length - 1 - index}
+            variants={menuItemVariants}
+          >
+            {child}
+          </motion.div>
+        ))}
+      </motion.div>
+    </div>
+  );
+}
+
+function FABMenuItem({
+  children,
   className,
   ...props
-}: CollapsiblePrimitive.Trigger.Props) {
+}: React.ComponentProps<typeof Button>) {
   return (
-    <CollapsiblePrimitive.Trigger
-      data-slot="collapsible-trigger"
+    <Button
+      variant="secondary"
       className={cn(
-        "active:scale-none w-full bg-background hover:bg-background focus-visible:bg-background data-panel-open:bg-background",
+        "h-12 rounded-full bg-foreground/70 px-4 text-lg text-background backdrop-blur-lg hover:bg-foreground",
         className,
       )}
       {...props}
-    />
+    >
+      {children}
+    </Button>
   );
 }
 
-function CollapsibleContent({
-  className,
-  children,
-  ...props
-}: CollapsiblePrimitive.Panel.Props) {
-  return (
-    <CollapsiblePrimitive.Panel
-      data-slot="collapsible-content"
-      keepMounted
-      className="overflow-hidden"
-      {...props}
-      render={(panelProps, state) => (
-        <motion.div
-          initial={false}
-          animate={{
-            height: state.open ? "auto" : 0,
-            opacity: state.open ? 1 : 0,
-            y: state.open ? 0 : 10,
-          }}
-          transition={{
-            height: {
-              ease: "easeOut",
-              duration: 0.18,
-            },
-            opacity: {
-              duration: 0.18,
-              ease: "easeIn",
-            },
-            y: {
-              ease: "easeOut",
-              duration: 0.25,
-            },
-          }}
-        >
-          <div {...panelProps} className={cn(className)}>
-            {children}
-          </div>
-        </motion.div>
-      )}
-    />
-  );
-}
-
-export { Collapsible, CollapsibleTrigger, CollapsibleContent };
+export { FABMenu, FABMenuTrigger, FABMenuContent, FABMenuItem };
 
 `;
