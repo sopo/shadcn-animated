@@ -111,46 +111,52 @@ const FABMenuDocs = () => {
         </div>
       </div>
 
-        <div className="flex flex-col gap-4 ">
+      <div className="flex flex-col gap-4 ">
         <h2 className="text-xl">Change alignment</h2>
 
         <div className="flex flex-col gap-4">
           <DocsShell>
-            <div className="flex items-center gap-20">
-            <div className="flex flex-col gap-4 items-center">
-            <FABMenu>
-              <FABMenuTrigger />
-              <FABMenuContent align="left">
-                <FABMenuItem>📧 Send an email</FABMenuItem>
-                <FABMenuItem>💬 Send a message</FABMenuItem>
-                <FABMenuItem>☀️ Make a reminder</FABMenuItem>
-              </FABMenuContent>
-            </FABMenu>
-            <span className="text-[16px] font-medium text-secondary-foreground">Left</span>
-            </div>
-               <div className="flex flex-col gap-4 items-center">
-            <FABMenu>
-              <FABMenuTrigger />
-              <FABMenuContent align="center">
-                <FABMenuItem>📧 Send an email</FABMenuItem>
-                <FABMenuItem>💬 Send a message</FABMenuItem>
-                <FABMenuItem>☀️ Make a reminder</FABMenuItem>
-              </FABMenuContent>
-            </FABMenu>
-            <span className="text-[16px] font-medium text-secondary-foreground">Center</span>
-            </div>
+            <div className="flex items-center gap-8 sm:gap-20">
+              <div className="flex flex-col gap-4 items-center">
+                <FABMenu>
+                  <FABMenuTrigger />
+                  <FABMenuContent align="left">
+                    <FABMenuItem>📧 Send an email</FABMenuItem>
+                    <FABMenuItem>💬 Send a message</FABMenuItem>
+                    <FABMenuItem>☀️ Make a reminder</FABMenuItem>
+                  </FABMenuContent>
+                </FABMenu>
+                <span className="text-[16px] font-medium text-secondary-foreground">
+                  Left
+                </span>
+              </div>
+              <div className="flex flex-col gap-4 items-center">
+                <FABMenu>
+                  <FABMenuTrigger />
+                  <FABMenuContent align="center">
+                    <FABMenuItem>📧 Send an email</FABMenuItem>
+                    <FABMenuItem>💬 Send a message</FABMenuItem>
+                    <FABMenuItem>☀️ Make a reminder</FABMenuItem>
+                  </FABMenuContent>
+                </FABMenu>
+                <span className="text-[16px] font-medium text-secondary-foreground">
+                  Center
+                </span>
+              </div>
 
-                     <div className="flex flex-col gap-4 items-center">
-            <FABMenu>
-              <FABMenuTrigger />
-              <FABMenuContent align="right">
-                <FABMenuItem>📧 Send an email</FABMenuItem>
-                <FABMenuItem>💬 Send a message</FABMenuItem>
-                <FABMenuItem>☀️ Make a reminder</FABMenuItem>
-</FABMenuContent>
-            </FABMenu>
-            <span className="text-[16px] font-medium text-secondary-foreground">Right</span>
-            </div>
+              <div className="flex flex-col gap-4 items-center">
+                <FABMenu>
+                  <FABMenuTrigger />
+                  <FABMenuContent align="right">
+                    <FABMenuItem>📧 Send an email</FABMenuItem>
+                    <FABMenuItem>💬 Send a message</FABMenuItem>
+                    <FABMenuItem>☀️ Make a reminder</FABMenuItem>
+                  </FABMenuContent>
+                </FABMenu>
+                <span className="text-[16px] font-medium text-secondary-foreground">
+                  Right
+                </span>
+              </div>
             </div>
           </DocsShell>
 
@@ -167,7 +173,7 @@ const FABMenuDocs = () => {
               `}
           />
 
-               <Code
+          <Code
             code={`
 <FABMenu>
   <FABMenuTrigger>Custom trigger</FABMenuTrigger>
@@ -180,7 +186,7 @@ const FABMenuDocs = () => {
               `}
           />
 
-                       <Code
+          <Code
             code={`
 <FABMenu>
   <FABMenuTrigger>Custom trigger</FABMenuTrigger>
