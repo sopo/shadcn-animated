@@ -31,6 +31,8 @@ export default function App() {
   return <Button>Button</Button>;
 }
 ```
+## 💬 Have a question or idea?
+[Start a discussion →](https://github.com/sopo/shadcn-animated/discussions)
 
 ## Issues
 
