@@ -18,6 +18,7 @@ export const sections = [
       { href: "/button", label: "Button" },
       { href: "/checkbox", label: "Checkbox" },
       { href: "/collapsible", label: "Collapsible" },
+       { href: "/fab-menu", label: "FAB menu" },
       { href: "/hover-image", label: "Hover image" },
       { href: "/radio-group", label: "Radio group" },
       { href: "/switch", label: "Switch" },

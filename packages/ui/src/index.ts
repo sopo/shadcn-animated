@@ -55,3 +55,9 @@ export {
   getCardLayout,
   type HoverImageProps,
 } from "./components/hover-image";
+export{
+    FABMenu,
+  FABMenuTrigger,
+  FABMenuContent,
+  FABMenuItem,
+}from "./components/FAB-menu"
