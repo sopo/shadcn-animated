@@ -20,7 +20,7 @@ const menuItemVariants: Variants = {
     y: 20,
     scale: 0.9,
     transition: {
-      delay: index * 0.09,
+      delay: index * 0.05,
       duration: 0.18,
       ease: "easeOut",
     },

@@ -1,34 +1,18 @@
 import { FABMenu } from "shadcn-animated";
 import { FABMenuContent, FABMenuItem, FABMenuTrigger } from "shadcn-animated";
-import { Bell, Mail, MessageSquare } from "lucide-react";
-
 
 const FABMenuPreview = () => {
   return (
-  
-     <FABMenu>
+    <FABMenu>
       <FABMenuTrigger />
 
       <FABMenuContent align="center">
-        <FABMenuItem>
-          <Mail />
-        📧  Send an email
-        </FABMenuItem>
+        <FABMenuItem>📧 Send an email</FABMenuItem>
 
-        <FABMenuItem>
-          <Bell />
-         ☀️ Make a reminder
-        </FABMenuItem>
-
-        <FABMenuItem>
-          <MessageSquare />
-          Send a message
-        </FABMenuItem>
-
-        
+        <FABMenuItem>💬 Send a message</FABMenuItem>
+        <FABMenuItem>☀️ Make a reminder</FABMenuItem>
       </FABMenuContent>
     </FABMenu>
-
   );
 };
 export default FABMenuPreview;
