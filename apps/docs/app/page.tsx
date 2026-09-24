@@ -163,9 +163,7 @@ export default function HomePage() {
           <Shell props={CheckboxProps}>
             <CheckboxPreview />
           </Shell>
-          <Shell props={RadioGroupProps}>
-            <RadioGroupPreview />
-          </Shell>
+         
 
           <div className="md:col-span-2">
             <Shell props={AccordionProps}>
@@ -181,6 +179,10 @@ export default function HomePage() {
           </Shell>
           <Shell props={CollapsibleProps}>
             <CollapsiblePreview />
+          </Shell>
+
+           <Shell props={RadioGroupProps}>
+            <RadioGroupPreview />
           </Shell>
         </section>
       </div>
