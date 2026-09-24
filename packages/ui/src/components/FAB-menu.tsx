@@ -6,7 +6,7 @@ import { Plus } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "./button";
 
-const FloatingActionMenuContext = React.createContext<{
+const FABMenuContext = React.createContext<{
   open: boolean;
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }>({
@@ -34,7 +34,7 @@ const menuItemVariants: Variants = {
   }),
 };
 
-function FloatingActionMenu({
+function FABMenu({
   children,
   className,
 }: {
@@ -44,20 +44,20 @@ function FloatingActionMenu({
   const [open, setOpen] = React.useState(false);
 
   return (
-    <FloatingActionMenuContext.Provider value={{ open, setOpen }}>
+    <FABMenuContext.Provider value={{ open, setOpen }}>
       <div className={cn("relative", className)}>
         {children}
       </div>
-    </FloatingActionMenuContext.Provider>
+    </FABMenuContext.Provider>
   );
 }
 
-function FloatingActionMenuTrigger({
+function FABMenuTrigger({
   children,
 }: {
   children?: React.ReactNode;
 }) {
-  const { open, setOpen } = React.useContext(FloatingActionMenuContext);
+  const { open, setOpen } = React.useContext(FABMenuContext);
 
   return (
     <button
@@ -79,7 +79,7 @@ function FloatingActionMenuTrigger({
   );
 }
 
-function FloatingActionMenuContent({
+function FABMenuContent({
   children,
   className,
   align="center"
@@ -88,7 +88,7 @@ function FloatingActionMenuContent({
   className?: string;
   align?: "left" | "center" | "right"
 }) {
-  const { open } = React.useContext(FloatingActionMenuContext);
+  const { open } = React.useContext(FABMenuContext);
 
   const items = React.Children.toArray(children);
 
@@ -127,7 +127,7 @@ function FloatingActionMenuContent({
   );
 }
 
-function FloatingActionMenuItem({
+function FABMenuItem({
   children,
   className,
   ...props
@@ -147,8 +147,8 @@ function FloatingActionMenuItem({
 }
 
 export {
-  FloatingActionMenu,
-  FloatingActionMenuTrigger,
-  FloatingActionMenuContent,
-  FloatingActionMenuItem,
+  FABMenu,
+  FABMenuTrigger,
+  FABMenuContent,
+  FABMenuItem,
 };

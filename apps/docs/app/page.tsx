@@ -17,7 +17,7 @@ import CollapsiblePreview from "./(docs)/collapsible/components/collapsible-prev
 import { CollapsibleProps } from "./(docs)/collapsible/components/collapsible";
 import HoverImagePreview from "./(docs)/hover-image/components/hover-image-preview";
 import { HoverImageProps } from "./(docs)/hover-image/components/hover-image";
-import FloatingActionMenuPreview from "./(docs)/floating-action-menu/floating-action-menu-preview";
+import FABMenuPreview from "./(docs)/FAB-menu/FAB-menu-preview";
 
 export const metadata: Metadata = {
   title: "Animated shadcn/ui Components for React | Motion",
@@ -151,7 +151,7 @@ export default function HomePage() {
 
 
            <Shell props={ButtonProps}>
-            <FloatingActionMenuPreview />
+            <FABMenuPreview />
           </Shell>
 
           <Shell props={TabsProps}>
