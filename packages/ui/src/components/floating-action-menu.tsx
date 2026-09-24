@@ -82,9 +82,11 @@ function FloatingActionMenuTrigger({
 function FloatingActionMenuContent({
   children,
   className,
+  align="center"
 }: {
   children: React.ReactNode;
   className?: string;
+  align?: "left" | "center" | "right"
 }) {
   const { open } = React.useContext(FloatingActionMenuContext);
 
@@ -93,13 +95,21 @@ function FloatingActionMenuContent({
   return (
     <div
       className={cn(
-        "absolute bottom-14 right-0",
+         "absolute bottom-14",
+  align === "right" && "right-0",
+  align === "left" && "left-0",
+  align === "center" && "left-1/2 -translate-x-1/2",
         !open && "pointer-events-none",
         className,
       )}
     >
       <motion.div
-        className="flex flex-col items-end gap-2"
+      className={cn(
+  "flex flex-col gap-2",
+  align === "right" && "items-end",
+  align === "left" && "items-start",
+  align === "center" && "items-center",
+)}
         initial={false}
         animate={open ? "visible" : "hidden"}
       >

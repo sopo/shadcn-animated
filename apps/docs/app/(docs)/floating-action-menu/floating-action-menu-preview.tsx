@@ -9,7 +9,7 @@ const FloatingActionMenuPreview = () => {
      <FloatingActionMenu>
       <FloatingActionMenuTrigger />
 
-      <FloatingActionMenuContent className="">
+      <FloatingActionMenuContent align="center">
         <FloatingActionMenuItem>
           <Mail />
         📧  Send an email
