@@ -27,6 +27,8 @@ export const metadata: Metadata = {
 
   keywords: [
     // Primary
+    "animated shadcn components free",
+     "free animated components",
     "animated shadcn components",
     "shadcn animated components",
     "animated shadcn/ui",

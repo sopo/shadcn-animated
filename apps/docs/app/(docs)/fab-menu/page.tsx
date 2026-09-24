@@ -1,64 +1,69 @@
 import type { Metadata } from "next";
 import FABMenuDocs from "./components/FAB-menu-docs";
 
-
-
 export const metadata: Metadata = {
-  title: "Animated Collapsible for React | shadcn/ui + Motion",
+  title: "Animated FAB Menu for React | shadcn/ui + Motion",
   description:
-    "A smooth animated Collapsible component for React and shadcn/ui, powered by Motion. Add fluid height, opacity, slide, and state transition animations to your UI.",
+    "A smooth animated Floating Action Button (FAB) Menu for React and shadcn/ui, powered by Motion. Free and open-source with fluid spring animations and interactive menu transitions.",
 
   keywords: [
     // Core
-    "animated collapsible",
-    "animated collapsible react",
-    "react animated collapsible",
-    "react collapsible animation",
-    "shadcn animated collapsible",
-    "shadcn collapsible animation",
-    "shadcn/ui collapsible",
-    "animated shadcn components",
-    "shadcn animated components",
-    "shadcn animations",
+    "animated FAB menu",
+    "FAB menu React",
+    "React FAB menu",
+    "floating action button React",
+    "animated floating action button",
+    "animated floating menu",
+    "shadcn FAB menu",
+    "shadcn animated FAB",
+    "shadcn/ui FAB menu",
+    "free React FAB menu",
+    "open source FAB menu",
+    "free shadcn components",
+     "free animated components",
+    "free animated React components",
 
-    // Collapsible animations
-    "collapsible animation",
-    "collapsible transition",
-    "collapsible open animation",
-    "collapsible close animation",
-    "collapsible expand animation",
-    "collapsible collapse animation",
-    "expand collapse animation",
-    "accordion animation",
-    "smooth collapsible animation",
-    "animated expand collapse",
-    "animated content reveal",
-    "animated content transition",
-    "height animation react",
-    "height transition react",
+    // FAB / menu animations
+    "FAB animation",
+    "FAB menu animation",
+    "floating action button animation",
+    "floating menu animation",
+    "animated action menu",
+    "animated menu React",
+    "menu open animation",
+    "menu close animation",
+    "menu expand animation",
+    "menu collapse animation",
+    "smooth menu animation",
+    "spring menu animation",
+    "animated menu transition",
+    "menu micro interaction",
+    "floating menu transition",
 
     // Motion
-    "Motion React collapsible",
-    "Motion collapsible animation",
-    "Motion React animation",
+    "Motion React FAB",
+    "Motion FAB menu",
+    "Motion React menu animation",
     "Motion spring animation",
     "Motion UI components",
     "Motion React components",
     "React Motion animations",
-    "spring collapsible animation",
+    "spring FAB animation",
     "smooth spring animation",
 
     // UI / interaction
     "animated UI components",
-    "interactive collapsible",
+    "interactive FAB menu",
     "interactive UI components",
     "UI micro interactions",
-    "collapsible micro interaction",
+    "FAB micro interaction",
     "micro interactions React",
     "animated components React",
     "React UI animations",
     "React animation components",
     "smooth UI animations",
+    "floating action menu",
+    "floating action button menu",
 
     // Component library
     "animated React components",
@@ -68,28 +73,29 @@ export const metadata: Metadata = {
     "shadcn motion components",
     "Tailwind animated components",
     "Tailwind CSS animations",
-    "React collapsible component",
-    "React expandable component",
+    "React menu component",
+    "React action menu",
+    "React floating menu",
   ],
 
   alternates: {
-    canonical: "https://shadcn-animated.vercel.app/collapsible",
+    canonical: "https://shadcn-animated.vercel.app/fab-menu",
   },
 
   openGraph: {
-    title: "Animated Collapsible for React | shadcn/ui + Motion",
+    title: "Animated FAB Menu for React | shadcn/ui + Motion",
     description:
-      "Create smooth animated collapsibles with shadcn/ui and Motion. Explore height, opacity, slide, spring, and state transition animations for React.",
+      "Build smooth animated Floating Action Button menus with React, shadcn/ui, and Motion. Free and open-source with fluid spring and menu transition animations.",
     siteName: "shadcn Animated",
     type: "website",
-    url: "https://shadcn-animated.vercel.app/collapsible",
+    url: "https://shadcn-animated.vercel.app/fab-menu",
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Animated Collapsible for React | shadcn/ui + Motion",
+    title: "Animated FAB Menu for React | shadcn/ui + Motion",
     description:
-      "A smooth animated Collapsible for React and shadcn/ui, powered by Motion with fluid height, opacity, slide, and state transitions.",
+      "A free and open-source animated FAB Menu for React and shadcn/ui, powered by Motion with smooth spring and menu transitions.",
     creator: "@sopocodes",
   },
 
