@@ -1,14 +1,18 @@
 "use client";
 
-import { useState } from "react";
+import * as React from "react";
 import { motion, type Variants } from "motion/react";
+import { Plus } from "lucide-react";
+import { cn } from "@/lib/utils";
 import { Button } from "./button";
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "./collapsible";
-import { Grid2X2, Plus } from "lucide-react";
+
+const FloatingActionMenuContext = React.createContext<{
+  open: boolean;
+  setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}>({
+  open: false,
+  setOpen: () => {},
+});
 
 const menuItemVariants: Variants = {
   hidden: {
@@ -30,74 +34,110 @@ const menuItemVariants: Variants = {
   }),
 };
 
-
-function FloatingActionMenu() {
-  const [open, setOpen] = useState(false);
+function FloatingActionMenu({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
+  const [open, setOpen] = React.useState(false);
 
   return (
-    <Collapsible open={open} onOpenChange={setOpen}>
-      <CollapsibleTrigger>
-        <div className="inline-flex rounded-full bg-black shadow-lg">
-          <Plus
-            className={`size-6 text-white transition-transform duration-200 ${
-              open ? "rotate-45" : ""
-            }`}
-          />
-        </div>
-      </CollapsibleTrigger>
-
-      <div className="relative flex items-center justify-center">
-        <CollapsibleContent className="absolute bottom-14 left-1/2 -translate-x-1/2">
-   
-          <motion.div
-            className="flex flex-col items-end gap-2"
-            initial="hidden"
-            animate={open ? "visible" : "hidden"}
-          >
-            <motion.div
-              variants={menuItemVariants}
-              custom={2}
-            >
-              <Button
-                variant="secondary"
-                className="h-12 rounded-full bg-foreground/70 px-4 text-lg text-background backdrop-blur-lg hover:bg-foreground"
-              >
-                <Grid2X2 />
-                Send an email
-              </Button>
-            </motion.div>
-
-            <motion.div
-              variants={menuItemVariants}
-              custom={1}
-            >
-              <Button
-                variant="secondary"
-                className="h-12 rounded-full bg-foreground/70 px-4 text-lg text-background backdrop-blur-lg hover:bg-foreground"
-              >
-                <Grid2X2 />
-                Make reminder
-              </Button>
-            </motion.div>
-
-            <motion.div
-              variants={menuItemVariants}
-              custom={0}
-            >
-              <Button
-                variant="secondary"
-                className="h-12 rounded-full bg-foreground/70 px-4 text-lg text-background backdrop-blur-lg hover:bg-foreground"
-              >
-                <Grid2X2 />
-                Send a message
-              </Button>
-            </motion.div>
-          </motion.div>
-    
-        </CollapsibleContent>
+    <FloatingActionMenuContext.Provider value={{ open, setOpen }}>
+      <div className={cn("relative", className)}>
+        {children}
       </div>
-    </Collapsible>
+    </FloatingActionMenuContext.Provider>
   );
 }
 
-export { FloatingActionMenu };
+function FloatingActionMenuTrigger({
+  children,
+}: {
+  children?: React.ReactNode;
+}) {
+  const { open, setOpen } = React.useContext(FloatingActionMenuContext);
+
+  return (
+    <button
+      type="button"
+      onClick={() => setOpen((value) => !value)}
+    >
+      {children ?? (
+        <div className="inline-flex rounded-full bg-black p-2 shadow-lg">
+          <Plus
+            className={cn(
+              "size-6 text-white transition-transform duration-200",
+              open && "rotate-45",
+            )}
+          />
+        </div>
+      )}
+    </button>
+  );
+}
+
+function FloatingActionMenuContent({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
+  const { open } = React.useContext(FloatingActionMenuContext);
+
+  const items = React.Children.toArray(children);
+
+  return (
+    <div
+      className={cn(
+        "absolute bottom-14 left-1/2 -translate-x-1/2",
+        !open && "pointer-events-none",
+        className,
+      )}
+    >
+      <motion.div
+        className="flex flex-col items-end gap-2"
+        initial={false}
+        animate={open ? "visible" : "hidden"}
+      >
+        {items.map((child, index) => (
+          <motion.div
+            key={index}
+            custom={items.length - 1 - index}
+            variants={menuItemVariants}
+          >
+            {child}
+          </motion.div>
+        ))}
+      </motion.div>
+    </div>
+  );
+}
+
+function FloatingActionMenuItem({
+  children,
+  className,
+  ...props
+}: React.ComponentProps<typeof Button>) {
+  return (
+    <Button
+      variant="secondary"
+      className={cn(
+        "h-12 rounded-full bg-foreground/70 px-4 text-lg text-background backdrop-blur-lg hover:bg-foreground",
+        className,
+      )}
+      {...props}
+    >
+      {children}
+    </Button>
+  );
+}
+
+export {
+  FloatingActionMenu,
+  FloatingActionMenuTrigger,
+  FloatingActionMenuContent,
+  FloatingActionMenuItem,
+};
