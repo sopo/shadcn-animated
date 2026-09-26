@@ -19,6 +19,7 @@ import HoverImagePreview from "./(docs)/hover-image/components/hover-image-previ
 import { HoverImageProps } from "./(docs)/hover-image/components/hover-image";
 import FABMenuPreview from "./(docs)/fab-menu/components/FAB-menu-preview";
 import { FABProps } from "./(docs)/fab-menu/components/FAB-menu";
+import TransitionButtonPreview from "./(docs)/icon-toggle-preview";
 
 export const metadata: Metadata = {
   title: "Animated shadcn/ui Components for React | Motion",
@@ -148,6 +149,10 @@ export default function HomePage() {
               <HoverImagePreview />
             </Shell>
           </div>
+              <Shell props={ButtonProps}>
+            <TransitionButtonPreview />
+          </Shell>
+
           <Shell props={ButtonProps}>
             <ButtonPreview />
           </Shell>
