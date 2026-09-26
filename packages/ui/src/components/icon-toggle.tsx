@@ -44,24 +44,25 @@ function IconToggle({
       className={`relative ${className ?? ""}`}
     >
       <span
-        className={`absolute transition-all duration-300 ${
+        className={`absolute transition-all duration-300 ease-out will-change-[transform,opacity,filter] ${
           active
-            ? "scale-[40%] opacity-0"
-            : "scale-100 opacity-100"
+            ? "scale-[40%] opacity-0 blur-[0.2px]"
+            : "scale-100 opacity-100 blur-0"
         }`}
       >
         {start}
       </span>
 
       <span
-        className={`absolute transition-all duration-300 ${
+        className={`absolute transition-all duration-300 ease-out will-change-[transform,opacity,filter] ${
           active
-            ? "scale-100 opacity-100"
-            : "scale-[40%] opacity-0"
+            ? "scale-100 opacity-100 blur-0"
+            : "scale-[40%] opacity-0 blur-[0.2px]"
         }`}
       >
         {end}
       </span>
+    
     </Button>
   );
 }

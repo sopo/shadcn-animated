@@ -7,7 +7,7 @@ const IconTogglePreview = () => {
 
   return (
   <IconToggle
-  autoReset
+
   start={<Copy />}
   end={<Check />}
 />
