@@ -5,15 +5,15 @@ import { Button } from "shadcn-animated";
 import type { ComponentProps } from "react";
 
 type IconToggleProps = {
-  start: React.ReactNode;
-  end: React.ReactNode;
+  from: React.ReactNode;
+  to: React.ReactNode;
   autoReset?: boolean;
   resetDelay?: number;
 } & Pick<ComponentProps<typeof Button>, "variant" | "size" | "className">;
 
 function IconToggle({
-  start,
-  end,
+  from,
+  to,
   autoReset = false,
   resetDelay = 3000,
   variant = "outline",
@@ -50,7 +50,7 @@ function IconToggle({
             : "scale-100 opacity-100 blur-0"
         }`}
       >
-        {start}
+        {from}
       </span>
 
       <span
@@ -60,9 +60,8 @@ function IconToggle({
             : "scale-[40%] opacity-0 blur-[0.2px]"
         }`}
       >
-        {end}
+        {to}
       </span>
-    
     </Button>
   );
 }

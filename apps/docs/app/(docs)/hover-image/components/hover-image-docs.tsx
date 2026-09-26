@@ -106,7 +106,7 @@ const HoverImageDocs = () => {
         </div>
       </div>
 
-      <NextSection title="Radio group" link="/radio-group" />
+      <NextSection title="Icon toggle" link="/icon-toggle" />
     </div>
   );
 };

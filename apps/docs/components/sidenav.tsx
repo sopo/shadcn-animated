@@ -20,6 +20,7 @@ export const sections = [
       { href: "/collapsible", label: "Collapsible" },
        { href: "/fab-menu", label: "FAB menu" },
       { href: "/hover-image", label: "Hover image" },
+        { href: "/icon-toggle", label: "Icon toggle" },
       { href: "/radio-group", label: "Radio group" },
       { href: "/switch", label: "Switch" },
       { href: "/tabs", label: "Tabs" },

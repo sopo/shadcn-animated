@@ -1,13 +1,12 @@
-import { Check, Copy } from "lucide-react";
 import { IconToggle } from "shadcn-animated";
+import { Sun, Moon } from "lucide-react";
 
 const IconTogglePreview = () => {
   return (
     <IconToggle
-    variant="ghost"
       className={`p-8 rounded-full hover:bg-backgound`}
-      start={<Copy className="size-6" />}
-      end={<Check className="size-6" />}
+      from={<Sun  className="size-6" />}
+      to={<Moon className="size-6" />}
     />
   );
 };
