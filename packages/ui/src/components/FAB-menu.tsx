@@ -6,7 +6,7 @@ import { Plus } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "./button";
 
-const FABMenuContext = React.createContext<{
+const FabMenuContext = React.createContext<{
   open: boolean;
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }>({
@@ -39,7 +39,7 @@ const menuItemVariants: Variants = {
   }),
 };
 
-function FABMenu({
+function FabMenu({
   children,
   className,
 }: {
@@ -49,14 +49,14 @@ function FABMenu({
   const [open, setOpen] = React.useState(false);
 
   return (
-    <FABMenuContext.Provider value={{ open, setOpen }}>
+    <FabMenuContext.Provider value={{ open, setOpen }}>
       <div className={cn("relative", className)}>{children}</div>
-    </FABMenuContext.Provider>
+    </FabMenuContext.Provider>
   );
 }
 
-function FABMenuTrigger({ children }: { children?: React.ReactNode }) {
-  const { open, setOpen } = React.useContext(FABMenuContext);
+function FabMenuTrigger({ children }: { children?: React.ReactNode }) {
+  const { open, setOpen } = React.useContext(FabMenuContext);
 
   return (
     <button
@@ -78,7 +78,7 @@ function FABMenuTrigger({ children }: { children?: React.ReactNode }) {
   );
 }
 
-function FABMenuContent({
+function FabMenuContent({
   children,
   className,
   align = "center",
@@ -87,7 +87,7 @@ function FABMenuContent({
   className?: string;
   align?: "left" | "center" | "right";
 }) {
-  const { open } = React.useContext(FABMenuContext);
+  const { open } = React.useContext(FabMenuContext);
 
   const items = React.Children.toArray(children);
 
@@ -126,7 +126,7 @@ function FABMenuContent({
   );
 }
 
-function FABMenuItem({
+function FabMenuItem({
   children,
   className,
   ...props
@@ -145,4 +145,4 @@ function FABMenuItem({
   );
 }
 
-export { FABMenu, FABMenuTrigger, FABMenuContent, FABMenuItem };
+export { FabMenu, FabMenuTrigger, FabMenuContent, FabMenuItem };

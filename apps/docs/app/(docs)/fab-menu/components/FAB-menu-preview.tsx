@@ -1,20 +1,20 @@
 import {
-  FABMenu,
-  FABMenuContent,
-  FABMenuItem,
-  FABMenuTrigger,
+  FabMenu,
+  FabMenuContent,
+  FabMenuItem,
+  FabMenuTrigger,
 } from "shadcn-animated";
 
-const FABMenuPreview = () => {
+const FabMenuPreview = () => {
   return (
-    <FABMenu>
-      <FABMenuTrigger />
-      <FABMenuContent align="center">
-        <FABMenuItem>📧 Send an email</FABMenuItem>
-        <FABMenuItem>💬 Send a message</FABMenuItem>
-        <FABMenuItem>☀️ Make a reminder</FABMenuItem>
-      </FABMenuContent>
-    </FABMenu>
+    <FabMenu>
+      <FabMenuTrigger />
+      <FabMenuContent align="center">
+        <FabMenuItem>📧 Send an email</FabMenuItem>
+        <FabMenuItem>💬 Send a message</FabMenuItem>
+        <FabMenuItem>☀️ Make a reminder</FabMenuItem>
+      </FabMenuContent>
+    </FabMenu>
   );
 };
-export default FABMenuPreview;
+export default FabMenuPreview;

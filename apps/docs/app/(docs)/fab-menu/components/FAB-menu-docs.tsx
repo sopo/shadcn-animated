@@ -3,10 +3,10 @@ import DocsShell from "@/components/docs-shell";
 
 import Bash from "@/components/bash";
 import {
-  FABMenu,
-  FABMenuContent,
-  FABMenuItem,
-  FABMenuTrigger,
+  FabMenu,
+  FabMenuContent,
+  FabMenuItem,
+  FabMenuTrigger,
   Tabs,
   TabsContent,
   TabsList,
@@ -14,15 +14,15 @@ import {
 } from "shadcn-animated";
 import Code from "@/components/code-block";
 import NextSection from "@/components/next-section";
-import FABMenuPreview from "./FAB-menu-preview";
+import FabMenuPreview from "./fab-menu-preview";
 
-const FABMenuDocs = () => {
+const FabMenuDocs = () => {
   return (
     <div className="flex flex-col gap-12">
       <DocsSection>
-        <h1 className="text-3xl">FAB menu</h1>
+        <h1 className="text-3xl">Fab menu</h1>
         <DocsShell>
-          <FABMenuPreview />
+          <FabMenuPreview />
         </DocsShell>
       </DocsSection>
       <div className="flex flex-col gap-8">
@@ -34,7 +34,7 @@ const FABMenuDocs = () => {
         </div>
 
         <div className="flex flex-col gap-2">
-          <h2 className="text-xl">2. Install FAB menu</h2>
+          <h2 className="text-xl">2. Install fab menu</h2>
           <Tabs defaultValue="command" className="w-full gap-4">
             <TabsList className="rounded-full" variant="line">
               <TabsTrigger value="command" className="rounded-full">
@@ -45,13 +45,13 @@ const FABMenuDocs = () => {
               </TabsTrigger>
             </TabsList>
             <TabsContent value="command" className="flex flex-col gap-4">
-              <Bash code="npx shadcn-animated add FAB-menu" />
+              <Bash code="npx shadcn-animated add fab-menu" />
             </TabsContent>
             <TabsContent value="manual">
               <Code
                 code={manualCode}
                 expandable
-                filename="components/ui/FAB-menu.tsx"
+                filename="components/ui/fab-menu.tsx"
               />
             </TabsContent>
           </Tabs>
@@ -63,19 +63,19 @@ const FABMenuDocs = () => {
         <div className="flex flex-col gap-4">
           <Code
             code={`
-              import { FABMenu, FABMenuContent, FABMenuItem, FABMenuTrigger } from "@/components/ui/FAB-menu";
+              import { FabMenu, FabMenuContent, FabMenuItem, FabMenuTrigger } from "@/components/ui/fab-menu";
               `}
           />
           <Code
             code={`
-<FABMenu>
-  <FABMenuTrigger />
-    <FABMenuContent align="center">
-        <FABMenuItem>📧 Send an email</FABMenuItem>
-        <FABMenuItem>💬 Send a message</FABMenuItem>
-        <FABMenuItem>☀️ Make a reminder</FABMenuItem>
-    </FABMenuContent>
-</FABMenu>
+<FabMenu>
+  <FabMenuTrigger />
+    <FabMenuContent align="center">
+        <FabMenuItem>📧 Send an email</FabMenuItem>
+        <FabMenuItem>💬 Send a message</FabMenuItem>
+        <FabMenuItem>☀️ Make a reminder</FabMenuItem>
+    </FabMenuContent>
+</FabMenu>
               `}
           />
         </div>
@@ -86,26 +86,26 @@ const FABMenuDocs = () => {
 
         <div className="flex flex-col gap-4">
           <DocsShell>
-            <FABMenu>
-              <FABMenuTrigger>Custom trigger</FABMenuTrigger>
-              <FABMenuContent>
-                <FABMenuItem>📧 Send an email</FABMenuItem>
-                <FABMenuItem>💬 Send a message</FABMenuItem>
-                <FABMenuItem>☀️ Make a reminder</FABMenuItem>
-              </FABMenuContent>
-            </FABMenu>
+            <FabMenu>
+              <FabMenuTrigger>Custom trigger</FabMenuTrigger>
+              <FabMenuContent>
+                <FabMenuItem>📧 Send an email</FabMenuItem>
+                <FabMenuItem>💬 Send a message</FabMenuItem>
+                <FabMenuItem>☀️ Make a reminder</FabMenuItem>
+              </FabMenuContent>
+            </FabMenu>
           </DocsShell>
 
           <Code
             code={`
-<FABMenu>
-  <FABMenuTrigger>Custom trigger</FABMenuTrigger>
-    <FABMenuContent>
-      <FABMenuItem>📧 Send an email</FABMenuItem>
-      <FABMenuItem>💬 Send a message</FABMenuItem>
-      <FABMenuItem>☀️ Make a reminder</FABMenuItem>
-    </FABMenuContent>
-</FABMenu>
+<FabMenu>
+  <FabMenuTrigger>Custom trigger</FabMenuTrigger>
+    <FabMenuContent>
+      <FabMenuItem>📧 Send an email</FabMenuItem>
+      <FabMenuItem>💬 Send a message</FabMenuItem>
+      <FabMenuItem>☀️ Make a reminder</FabMenuItem>
+    </FabMenuContent>
+</FabMenu>
               `}
           />
         </div>
@@ -118,41 +118,41 @@ const FABMenuDocs = () => {
           <DocsShell>
             <div className="flex items-center gap-8 sm:gap-20">
               <div className="flex flex-col gap-4 items-center">
-                <FABMenu>
-                  <FABMenuTrigger />
-                  <FABMenuContent align="left">
-                    <FABMenuItem>📧 Send an email</FABMenuItem>
-                    <FABMenuItem>💬 Send a message</FABMenuItem>
-                    <FABMenuItem>☀️ Make a reminder</FABMenuItem>
-                  </FABMenuContent>
-                </FABMenu>
+                <FabMenu>
+                  <FabMenuTrigger />
+                  <FabMenuContent align="left">
+                    <FabMenuItem>📧 Send an email</FabMenuItem>
+                    <FabMenuItem>💬 Send a message</FabMenuItem>
+                    <FabMenuItem>☀️ Make a reminder</FabMenuItem>
+                  </FabMenuContent>
+                </FabMenu>
                 <span className="text-[16px] font-medium text-secondary-foreground">
                   Left
                 </span>
               </div>
               <div className="flex flex-col gap-4 items-center">
-                <FABMenu>
-                  <FABMenuTrigger />
-                  <FABMenuContent align="center">
-                    <FABMenuItem>📧 Send an email</FABMenuItem>
-                    <FABMenuItem>💬 Send a message</FABMenuItem>
-                    <FABMenuItem>☀️ Make a reminder</FABMenuItem>
-                  </FABMenuContent>
-                </FABMenu>
+                <FabMenu>
+                  <FabMenuTrigger />
+                  <FabMenuContent align="center">
+                    <FabMenuItem>📧 Send an email</FabMenuItem>
+                    <FabMenuItem>💬 Send a message</FabMenuItem>
+                    <FabMenuItem>☀️ Make a reminder</FabMenuItem>
+                  </FabMenuContent>
+                </FabMenu>
                 <span className="text-[16px] font-medium text-secondary-foreground">
                   Center
                 </span>
               </div>
 
               <div className="flex flex-col gap-4 items-center">
-                <FABMenu>
-                  <FABMenuTrigger />
-                  <FABMenuContent align="right">
-                    <FABMenuItem>📧 Send an email</FABMenuItem>
-                    <FABMenuItem>💬 Send a message</FABMenuItem>
-                    <FABMenuItem>☀️ Make a reminder</FABMenuItem>
-                  </FABMenuContent>
-                </FABMenu>
+                <FabMenu>
+                  <FabMenuTrigger />
+                  <FabMenuContent align="right">
+                    <FabMenuItem>📧 Send an email</FabMenuItem>
+                    <FabMenuItem>💬 Send a message</FabMenuItem>
+                    <FabMenuItem>☀️ Make a reminder</FabMenuItem>
+                  </FabMenuContent>
+                </FabMenu>
                 <span className="text-[16px] font-medium text-secondary-foreground">
                   Right
                 </span>
@@ -162,40 +162,40 @@ const FABMenuDocs = () => {
 
           <Code
             code={`
-<FABMenu>
-  <FABMenuTrigger>Custom trigger</FABMenuTrigger>
-    <FABMenuContent align="left">
-      <FABMenuItem>📧 Send an email</FABMenuItem>
-      <FABMenuItem>💬 Send a message</FABMenuItem>
-      <FABMenuItem>☀️ Make a reminder</FABMenuItem>
-    </FABMenuContent>
-</FABMenu>
+<FabMenu>
+  <FabMenuTrigger>Custom trigger</FabMenuTrigger>
+    <FabMenuContent align="left">
+      <FabMenuItem>📧 Send an email</FabMenuItem>
+      <FabMenuItem>💬 Send a message</FabMenuItem>
+      <FabMenuItem>☀️ Make a reminder</FabMenuItem>
+    </FabMenuContent>
+</FabMenu>
               `}
           />
 
           <Code
             code={`
-<FABMenu>
-  <FABMenuTrigger>Custom trigger</FABMenuTrigger>
-    <FABMenuContent align="center">
-      <FABMenuItem>📧 Send an email</FABMenuItem>
-      <FABMenuItem>💬 Send a message</FABMenuItem>
-      <FABMenuItem>☀️ Make a reminder</FABMenuItem>
-    </FABMenuContent>
-</FABMenu>
+<FabMenu>
+  <FabMenuTrigger>Custom trigger</FabMenuTrigger>
+    <FabMenuContent align="center">
+      <FabMenuItem>📧 Send an email</FabMenuItem>
+      <FabMenuItem>💬 Send a message</FabMenuItem>
+      <FabMenuItem>☀️ Make a reminder</FabMenuItem>
+    </FabMenuContent>
+</FabMenu>
               `}
           />
 
           <Code
             code={`
-<FABMenu>
-  <FABMenuTrigger>Custom trigger</FABMenuTrigger>
-    <FABMenuContent align="right">
-      <FABMenuItem>📧 Send an email</FABMenuItem>
-      <FABMenuItem>💬 Send a message</FABMenuItem>
-      <FABMenuItem>☀️ Make a reminder</FABMenuItem>
-    </FABMenuContent>
-</FABMenu>
+<FabMenu>
+  <FabMenuTrigger>Custom trigger</FabMenuTrigger>
+    <FabMenuContent align="right">
+      <FabMenuItem>📧 Send an email</FabMenuItem>
+      <FabMenuItem>💬 Send a message</FabMenuItem>
+      <FabMenuItem>☀️ Make a reminder</FabMenuItem>
+    </FabMenuContent>
+</FabMenu>
               `}
           />
         </div>
@@ -206,7 +206,7 @@ const FABMenuDocs = () => {
   );
 };
 
-export default FABMenuDocs;
+export default FabMenuDocs;
 
 const manualCode = `
 "use client";
@@ -217,7 +217,7 @@ import { Plus } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "./button";
 
-const FABMenuContext = React.createContext<{
+const FabMenuContext = React.createContext<{
   open: boolean;
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }>({
@@ -250,7 +250,7 @@ const menuItemVariants: Variants = {
   }),
 };
 
-function FABMenu({
+function FabMenu({
   children,
   className,
 }: {
@@ -260,14 +260,14 @@ function FABMenu({
   const [open, setOpen] = React.useState(false);
 
   return (
-    <FABMenuContext.Provider value={{ open, setOpen }}>
+    <FabMenuContext.Provider value={{ open, setOpen }}>
       <div className={cn("relative", className)}>{children}</div>
-    </FABMenuContext.Provider>
+    </FabMenuContext.Provider>
   );
 }
 
-function FABMenuTrigger({ children }: { children?: React.ReactNode }) {
-  const { open, setOpen } = React.useContext(FABMenuContext);
+function FabMenuTrigger({ children }: { children?: React.ReactNode }) {
+  const { open, setOpen } = React.useContext(FabMenuContext);
 
   return (
     <button
@@ -289,7 +289,7 @@ function FABMenuTrigger({ children }: { children?: React.ReactNode }) {
   );
 }
 
-function FABMenuContent({
+function FabMenuContent({
   children,
   className,
   align = "center",
@@ -298,7 +298,7 @@ function FABMenuContent({
   className?: string;
   align?: "left" | "center" | "right";
 }) {
-  const { open } = React.useContext(FABMenuContext);
+  const { open } = React.useContext(FabMenuContext);
 
   const items = React.Children.toArray(children);
 
@@ -337,7 +337,7 @@ function FABMenuContent({
   );
 }
 
-function FABMenuItem({
+function FabMenuItem({
   children,
   className,
   ...props
@@ -356,6 +356,6 @@ function FABMenuItem({
   );
 }
 
-export { FABMenu, FABMenuTrigger, FABMenuContent, FABMenuItem };
+export { FabMenu, FabMenuTrigger, FabMenuContent, FabMenuItem };
 
 `;

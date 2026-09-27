@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import FABMenuDocs from "./components/FAB-menu-docs";
+import FabMenuDocs from "./components/fab-menu-docs";
+
+
 
 export const metadata: Metadata = {
   title: "Animated FAB Menu for React | shadcn/ui + Motion",
@@ -113,6 +115,6 @@ export const metadata: Metadata = {
   },
 };
 
-export default function FABMenuPage() {
-  return <FABMenuDocs />;
+export default function FabMenuPage() {
+  return <FabMenuDocs />;
 }

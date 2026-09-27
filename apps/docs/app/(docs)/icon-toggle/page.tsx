@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import HoverImageDocs from "./components/hover-image-docs";
 import IconToggleDocs from "./components/icon-toggle-docs";
 
 export const metadata: Metadata = {

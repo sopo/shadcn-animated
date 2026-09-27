@@ -46,11 +46,11 @@ export const registry = {
     shadcnDependencies: [],
     source: "collapsible.tsx",
   },
-   "FAB-menu": {
+   "fab-menu": {
     dependencies: ["@base-ui/react", "clsx", "tailwind-merge", "motion"],
     registryDependencies: [],
     shadcnDependencies: ["collapsible"],
-    source: "FAB-menu.tsx",
+    source: "fab-menu.tsx",
   },
   "hover-image": {
     dependencies: ["@base-ui/react", "clsx", "tailwind-merge", "motion"],
