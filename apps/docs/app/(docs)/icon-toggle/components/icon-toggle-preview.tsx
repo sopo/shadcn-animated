@@ -5,7 +5,7 @@ const IconTogglePreview = () => {
   return (
     <IconToggle
       className={`p-8 rounded-full hover:bg-backgound`}
-      from={<Sun  className="size-6" />}
+      from={<Sun className="size-6" />}
       to={<Moon className="size-6" />}
     />
   );

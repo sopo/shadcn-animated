@@ -34,12 +34,14 @@ const IconToggleDocs = () => {
             </TabsTrigger>
           </TabsList>
           <TabsContent value="command" className="flex flex-col gap-4">
+                 <h2 className="text-xl">Install dependencies</h2>
+            <Bash code="npx shadcn-animated add button" />
             <Bash code="npx shadcn-animated add icon-toggle" />
           </TabsContent>
           <TabsContent value="manual" className="flex flex-col gap-4">
-            <h2 className="font-medium">1. Install dependencies</h2>
+            <h2 className="text-xl">1. Install dependencies</h2>
             <Bash code="npx shadcn-animated add button" />
-            <h2 className="font-medium">2. Copy the component</h2>
+            <h2 className="text-xl">2. Copy the component</h2>
             <Code
               code={manualCode}
               expandable
@@ -50,6 +52,10 @@ const IconToggleDocs = () => {
       </div>
 
       <div className="flex flex-col gap-8">
+
+
+
+
         <h2 className="text-xl">Usage</h2>
         <div className="flex flex-col gap-4">
           <Code
@@ -71,7 +77,8 @@ import { Sun, Moon } from "lucide-react";
           <div className="flex flex-col">
             <h2 className="text-xl">Auto reset</h2>
             <p className="text-muted-foreground">
-              Automatically switches back to the initial icon after 3 seconds. Is
+              Automatically switches back to the initial icon after 3 seconds.
+              Is
             </p>
           </div>
 
@@ -116,12 +123,12 @@ import { Sun, Moon } from "lucide-react";
           />
         </section>
 
-
         <section className="flex flex-col gap-6">
           <div className="flex flex-col">
-           <h2 className="text-xl">Specify variant, size, or className</h2> 
+            <h2 className="text-xl">Specify variant, size, or className</h2>
             <p className="text-muted-foreground">
-              Customize the button using the same variant, size, and className options as shadcn/ui.
+              Customize the button using the same variant, size, and className
+              options as shadcn/ui.
             </p>
           </div>
 

@@ -58,6 +58,17 @@ export const registry = {
     shadcnDependencies: ["hover-card"],
     source: "hover-image.tsx",
   },
+    "icon-toggle": {
+    dependencies: [
+      "@base-ui/react",
+      "clsx",
+      "lucide-react",
+      "tailwind-merge",
+    ],
+    registryDependencies: [],
+    shadcnDependencies: [],
+    source: "icon-toggle.tsx",
+  },
   "radio-group": {
     dependencies: [
       "@base-ui/react",
