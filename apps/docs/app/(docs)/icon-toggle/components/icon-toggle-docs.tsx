@@ -22,8 +22,15 @@ const IconToggleDocs = () => {
           <IconTogglePreview />
         </DocsShell>
       </DocsSection>
+
       <div className="flex flex-col gap-8">
+     
         <h2 className="text-xl">Installation</h2>
+           <div className="flex flex-col gap-4">
+            <h2 className="text-xl">1. Install dependencies</h2>
+            <Bash code="npx shadcn-animated add button" />
+        </div>
+        <h2 className="text-xl">2. Install icon toggle</h2>
         <Tabs defaultValue="command" className="w-full gap-4">
           <TabsList className="rounded-full" variant="line">
             <TabsTrigger value="command" className="rounded-full">
@@ -34,14 +41,10 @@ const IconToggleDocs = () => {
             </TabsTrigger>
           </TabsList>
           <TabsContent value="command" className="flex flex-col gap-4">
-                 <h2 className="text-xl">Install dependencies</h2>
-            <Bash code="npx shadcn-animated add button" />
             <Bash code="npx shadcn-animated add icon-toggle" />
           </TabsContent>
           <TabsContent value="manual" className="flex flex-col gap-4">
-            <h2 className="text-xl">1. Install dependencies</h2>
-            <Bash code="npx shadcn-animated add button" />
-            <h2 className="text-xl">2. Copy the component</h2>
+
             <Code
               code={manualCode}
               expandable
@@ -60,7 +63,7 @@ const IconToggleDocs = () => {
         <div className="flex flex-col gap-4">
           <Code
             code={`    
-import { IconToggle } from "shadcn-animated";
+import { IconToggle } from "@/components/ui/icon-toggle";
 import { Sun, Moon } from "lucide-react";         
                 `}
           />
@@ -78,7 +81,6 @@ import { Sun, Moon } from "lucide-react";
             <h2 className="text-xl">Auto reset</h2>
             <p className="text-muted-foreground">
               Automatically switches back to the initial icon after 3 seconds.
-              Is
             </p>
           </div>
 
