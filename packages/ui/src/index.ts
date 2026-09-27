@@ -60,7 +60,7 @@ export{
   FabMenuTrigger,
   FabMenuContent,
   FabMenuItem,
-}from "./components/fab-menu";
+}from "./components/fab-menu"
 export{
 IconToggle
 }from './components/icon-toggle'
