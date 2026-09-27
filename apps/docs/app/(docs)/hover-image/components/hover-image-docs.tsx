@@ -17,6 +17,11 @@ const HoverImageDocs = () => {
       </DocsSection>
       <div className="flex flex-col gap-8">
         <h2 className="text-xl">Installation</h2>
+
+        <h2 className="text-xl">1. Install dependencies</h2>
+        <Bash code="npm install motion" />
+        <Bash code="npx shadcn@latest add hover-card" />
+        <h2 className="text-xl">2. Install hover image</h2>
         <Tabs defaultValue="command" className="w-full gap-4">
           <TabsList className="rounded-full" variant="line">
             <TabsTrigger value="command" className="rounded-full">
@@ -30,10 +35,6 @@ const HoverImageDocs = () => {
             <Bash code="npx shadcn-animated add hover-image" />
           </TabsContent>
           <TabsContent value="manual" className="flex flex-col gap-4">
-            <h2 className="font-medium">1. Install dependencies</h2>
-            <Bash code="npm install motion" />
-            <Bash code="npx shadcn@latest add hover-card" />
-            <h2 className="font-medium">2. Copy the component</h2>
             <Code
               code={manualCode}
               expandable
@@ -106,7 +107,7 @@ const HoverImageDocs = () => {
         </div>
       </div>
 
-      <NextSection title="Radio group" link="/radio-group" />
+      <NextSection title="Icon toggle" link="/icon-toggle" />
     </div>
   );
 };

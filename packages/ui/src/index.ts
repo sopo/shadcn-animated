@@ -56,8 +56,11 @@ export {
   type HoverImageProps,
 } from "./components/hover-image";
 export{
-    FABMenu,
-  FABMenuTrigger,
-  FABMenuContent,
-  FABMenuItem,
-}from "./components/FAB-menu"
+    FabMenu,
+  FabMenuTrigger,
+  FabMenuContent,
+  FabMenuItem,
+}from "./components/fab-menu"
+export{
+IconToggle
+}from './components/icon-toggle'
