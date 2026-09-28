@@ -1,6 +1,5 @@
 import { ShellProps } from "@/components/shell";
 
-
 export const IconToggleProps: ShellProps = {
   link: "/icon-toggle",
   title: "Icon toggle",

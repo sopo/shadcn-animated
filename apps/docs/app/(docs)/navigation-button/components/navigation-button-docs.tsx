@@ -23,11 +23,10 @@ const NavigationButtonDocs = () => {
       </DocsSection>
 
       <div className="flex flex-col gap-8">
-     
         <h2 className="text-xl">Installation</h2>
-           <div className="flex flex-col gap-4">
-            <h2 className="text-xl">1. Install dependencies</h2>
-            <Bash code="npx shadcn-animated add button" />
+        <div className="flex flex-col gap-4">
+          <h2 className="text-xl">1. Install dependencies</h2>
+          <Bash code="npx shadcn-animated add button" />
         </div>
         <h2 className="text-xl">2. Install navigation button</h2>
         <Tabs defaultValue="command" className="w-full gap-4">
@@ -43,7 +42,6 @@ const NavigationButtonDocs = () => {
             <Bash code="npx shadcn-animated add navigation-button" />
           </TabsContent>
           <TabsContent value="manual" className="flex flex-col gap-4">
-
             <Code
               code={manualCode}
               expandable
@@ -54,10 +52,6 @@ const NavigationButtonDocs = () => {
       </div>
 
       <div className="flex flex-col gap-8">
-
-
-
-
         <h2 className="text-xl">Usage</h2>
         <div className="flex flex-col gap-4">
           <Code
@@ -79,13 +73,13 @@ import { NavigationButton } from "@/components/ui/navigation-button";
           </div>
 
           <DocsShell>
-    <NavigationButton
-        variant="default"
-        iconVariant="before"
-        className="rounded-full h-10 px-6 hover:bg-primary "
-      >
-        Hover me
-      </NavigationButton>
+            <NavigationButton
+              variant="default"
+              iconVariant="before"
+              className="rounded-full h-10 px-6 hover:bg-primary "
+            >
+              Hover me
+            </NavigationButton>
           </DocsShell>
 
           <Code
@@ -96,9 +90,8 @@ import { NavigationButton } from "@/components/ui/navigation-button";
     Hover me
 </NavigationButton>
     `}
-/>
+          />
         </section>
-
 
         <section className="flex flex-col gap-6">
           <div className="flex flex-col">
@@ -163,4 +156,3 @@ function NavigationButton({
 
 export { NavigationButton };
 `;
-

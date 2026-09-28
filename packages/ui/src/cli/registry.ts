@@ -46,7 +46,7 @@ export const registry = {
     shadcnDependencies: [],
     source: "collapsible.tsx",
   },
-   "fab-menu": {
+  "fab-menu": {
     dependencies: ["@base-ui/react", "clsx", "tailwind-merge", "motion"],
     registryDependencies: [],
     shadcnDependencies: ["collapsible"],
@@ -58,24 +58,14 @@ export const registry = {
     shadcnDependencies: ["hover-card"],
     source: "hover-image.tsx",
   },
-    "icon-toggle": {
-    dependencies: [
-      "@base-ui/react",
-      "clsx",
-      "lucide-react",
-      "tailwind-merge",
-    ],
+  "icon-toggle": {
+    dependencies: ["@base-ui/react", "clsx", "lucide-react", "tailwind-merge"],
     registryDependencies: [],
     shadcnDependencies: [],
     source: "icon-toggle.tsx",
   },
-      "navigation-button": {
-    dependencies: [
-      "@base-ui/react",
-      "clsx",
-      "lucide-react",
-      "tailwind-merge",
-    ],
+  "navigation-button": {
+    dependencies: ["@base-ui/react", "clsx", "lucide-react", "tailwind-merge"],
     registryDependencies: [],
     shadcnDependencies: [],
     source: "navigation-button.tsx",

@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   keywords: [
     // Primary
     "animated shadcn components free",
-     "free animated components",
+    "free animated components",
     "animated shadcn components",
     "shadcn animated components",
     "animated shadcn/ui",
@@ -152,7 +152,7 @@ export default function HomePage() {
               <HoverImagePreview />
             </Shell>
           </div>
-              <Shell props={IconToggleProps}>
+          <Shell props={IconToggleProps}>
             <IconTogglePreview />
           </Shell>
 
@@ -160,8 +160,7 @@ export default function HomePage() {
             <ButtonPreview />
           </Shell>
 
-
-           <Shell props={FabProps}>
+          <Shell props={FabProps}>
             <FabMenuPreview />
           </Shell>
 
@@ -171,10 +170,9 @@ export default function HomePage() {
           <Shell props={CheckboxProps}>
             <CheckboxPreview />
           </Shell>
-              <Shell props={NavigationButtonProps}>
+          <Shell props={NavigationButtonProps}>
             <NavigationButtonPreview />
           </Shell>
-         
 
           <div className="md:col-span-2">
             <Shell props={AccordionProps}>
@@ -192,7 +190,7 @@ export default function HomePage() {
             <CollapsiblePreview />
           </Shell>
 
-           <Shell props={RadioGroupProps}>
+          <Shell props={RadioGroupProps}>
             <RadioGroupPreview />
           </Shell>
         </section>
