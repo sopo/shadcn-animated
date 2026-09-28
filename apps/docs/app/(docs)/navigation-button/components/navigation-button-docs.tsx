@@ -1,5 +1,4 @@
 import {
-  IconToggle,
   NavigationButton,
   Tabs,
   TabsContent,
@@ -11,8 +10,6 @@ import DocsShell from "../../../../components/docs-shell";
 import Bash from "../../../../components/bash";
 import Code from "../../../../components/code-block";
 import NextSection from "../../../../components/next-section";
-
-import { Check, Copy } from "lucide-react";
 import NavigationButtonPreview from "./navigation-button-preview";
 
 const NavigationButtonDocs = () => {
