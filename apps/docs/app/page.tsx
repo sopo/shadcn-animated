@@ -21,6 +21,7 @@ import { FabProps } from "./(docs)/fab-menu/components/fab-menu";
 import IconTogglePreview from "./(docs)/icon-toggle/components/icon-toggle-preview";
 import { IconToggleProps } from "./(docs)/icon-toggle/components/icon-toggle";
 import FabMenuPreview from "./(docs)/fab-menu/components/fab-menu-preview";
+import NavigationButtonPreview from "./(docs)/navigation-button/components/navigation-button-preview";
 
 export const metadata: Metadata = {
   title: "Animated shadcn/ui Components for React | Motion",
@@ -168,6 +169,9 @@ export default function HomePage() {
           </Shell>
           <Shell props={CheckboxProps}>
             <CheckboxPreview />
+          </Shell>
+              <Shell props={CheckboxProps}>
+            <NavigationButtonPreview />
           </Shell>
          
 
