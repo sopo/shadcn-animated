@@ -69,6 +69,17 @@ export const registry = {
     shadcnDependencies: [],
     source: "icon-toggle.tsx",
   },
+      "navigation-button": {
+    dependencies: [
+      "@base-ui/react",
+      "clsx",
+      "lucide-react",
+      "tailwind-merge",
+    ],
+    registryDependencies: [],
+    shadcnDependencies: [],
+    source: "navigation-button.tsx",
+  },
   "radio-group": {
     dependencies: [
       "@base-ui/react",
