@@ -6,7 +6,8 @@ import { LINKS } from "@/lib/links";
 const Footer = () => {
   return (
     <footer className=" w-full border-t border-neutral-200 mt-20">
-      <nav className="flex items-start gap-6 text-xs px-4 lg:px-0 max-w-4xl py-8 mx-auto ">
+      <nav className="flex justify-between items-start gap-6 text-xs px-4 lg:px-0 max-w-4xl py-8 mx-auto ">
+        <div className="flex gap-6">
         <Link
           href="/"
           className="hidden sm:block text-secondary-foreground text-sm hover:text-primary hover:underline"
@@ -43,7 +44,15 @@ const Footer = () => {
           Issues
           <ArrowUpRight size={16} />
         </a>
+    </div>
+         <a
+         target="_blank"
+          href={LINKS.X}
+          rel="noreferrer"
+          className="text-secondary-foreground text-sm hover:text-primary hover:underline flex items-center"
+         >Created by @sopocodes</a>
       </nav>
+     
     </footer>
   );
 };
