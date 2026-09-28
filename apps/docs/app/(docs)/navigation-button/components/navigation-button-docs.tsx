@@ -133,73 +133,37 @@ import { NavigationButton } from "@/components/ui/navigation-button";
 export default NavigationButtonDocs;
 
 const manualCode = String.raw`
-"use client";
-
-import { useState } from "react";
-import { Button } from "shadcn-animated";
+import { ArrowLeft, ArrowRight } from "lucide-react";
+import { Button } from "./button";
 import type { ComponentProps } from "react";
 
-type IconToggleProps = {
-  from: React.ReactNode;
-  to: React.ReactNode;
-  autoReset?: boolean;
-  resetDelay?: number;
-} & Pick<ComponentProps<typeof Button>, "variant" | "size" | "className">;
+type NavigationButtonProps = ComponentProps<typeof Button> & {
+  iconVariant?: "after" | "before";
+};
 
-function IconToggle({
-  from,
-  to,
-  autoReset = false,
-  resetDelay = 3000,
-  variant = "outline",
-  size = "icon",
+function NavigationButton({
+  children,
   className,
+  iconVariant = "after",
   ...props
-}: IconToggleProps) {
-  const [active, setActive] = useState(false);
+}: NavigationButtonProps) {
+  const iconForward = (
+    <ArrowRight className="transition-transform duration-380 ease-out group-hover:translate-x-1" />
+  );
 
-  const handleClick = () => {
-    if (autoReset) {
-      setActive(true);
-
-      setTimeout(() => {
-        setActive(false);
-      }, resetDelay);
-    } else {
-      setActive((prev) => !prev);
-    }
-  };
+  const iconBack = (
+    <ArrowLeft className="transition-transform duration-380 ease-out group-hover:-translate-x-1" />
+  );
 
   return (
-    <Button
-      {...props}
-      size={size}
-      variant={variant}
-      onClick={handleClick}
-      className={\`relative \${className ?? ""}\`}
-    >
-      <span
-        className={\`absolute transition-all duration-300 ease-out will-change-[transform,opacity,filter] \${
-          active
-            ? "scale-[40%] opacity-0 blur-[0.2px]"
-            : "scale-100 opacity-100 blur-0"
-        }\`}
-      >
-        {from}
-      </span>
-
-      <span
-        className={\`absolute transition-all duration-300 ease-out will-change-[transform,opacity,filter] \${
-          active
-            ? "scale-100 opacity-100 blur-0"
-            : "scale-[40%] opacity-0 blur-[0.2px]"
-        }\`}
-      >
-        {to}
-      </span>
+    <Button className={\`group \${className ?? ""}\`} {...props}>
+      {iconVariant === "before" && iconBack}
+      {children}
+      {iconVariant === "after" && iconForward}
     </Button>
   );
 }
 
-export { IconToggle };
+export { NavigationButton };
 `;
+
