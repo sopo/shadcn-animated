@@ -4,4 +4,5 @@ export const LINKS = {
   COMPONENTS: "/button",
   DOCS: "/introduction",
   INSTALLATION: "/installation",
+  X: "https://x.com/sopocodes"
 } as const;
