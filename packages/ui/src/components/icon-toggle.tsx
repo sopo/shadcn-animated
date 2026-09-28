@@ -25,7 +25,7 @@ function IconToggle({
   autoReset = false,
   resetDelay = 3000,
   variant = "outline",
-  size = "icon",
+  size = "icon-lg",
   className,
   ...props
 }: IconToggleProps) {
