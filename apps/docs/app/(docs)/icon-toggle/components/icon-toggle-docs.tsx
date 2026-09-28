@@ -24,11 +24,10 @@ const IconToggleDocs = () => {
       </DocsSection>
 
       <div className="flex flex-col gap-8">
-     
         <h2 className="text-xl">Installation</h2>
-           <div className="flex flex-col gap-4">
-            <h2 className="text-xl">1. Install dependencies</h2>
-            <Bash code="npx shadcn-animated add button" />
+        <div className="flex flex-col gap-4">
+          <h2 className="text-xl">1. Install dependencies</h2>
+          <Bash code="npx shadcn-animated add button" />
         </div>
         <h2 className="text-xl">2. Install icon toggle</h2>
         <Tabs defaultValue="command" className="w-full gap-4">
@@ -44,7 +43,6 @@ const IconToggleDocs = () => {
             <Bash code="npx shadcn-animated add icon-toggle" />
           </TabsContent>
           <TabsContent value="manual" className="flex flex-col gap-4">
-
             <Code
               code={manualCode}
               expandable
@@ -55,10 +53,6 @@ const IconToggleDocs = () => {
       </div>
 
       <div className="flex flex-col gap-8">
-
-
-
-
         <h2 className="text-xl">Usage</h2>
         <div className="flex flex-col gap-4">
           <Code
@@ -147,7 +141,7 @@ import { Sun, Moon } from "lucide-react";
         </section>
       </div>
 
-      <NextSection title="Radio group" link="/radio-group" />
+      <NextSection title="Navigation button" link="/navigation-button" />
     </div>
   );
 };

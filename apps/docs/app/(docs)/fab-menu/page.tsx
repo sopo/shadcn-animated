@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import FabMenuDocs from "./components/fab-menu-docs";
 
-
-
 export const metadata: Metadata = {
   title: "Animated FAB Menu for React | shadcn/ui + Motion",
   description:
@@ -22,7 +20,7 @@ export const metadata: Metadata = {
     "free React FAB menu",
     "open source FAB menu",
     "free shadcn components",
-     "free animated components",
+    "free animated components",
     "free animated React components",
 
     // FAB / menu animations

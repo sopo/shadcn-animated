@@ -55,12 +55,11 @@ export {
   getCardLayout,
   type HoverImageProps,
 } from "./components/hover-image";
-export{
-    FabMenu,
+export {
+  FabMenu,
   FabMenuTrigger,
   FabMenuContent,
   FabMenuItem,
-}from "./components/fab-menu"
-export{
-IconToggle
-}from './components/icon-toggle'
+} from "./components/fab-menu";
+export { IconToggle } from "./components/icon-toggle";
+export { NavigationButton } from "./components/navigation-button";

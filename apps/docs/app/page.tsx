@@ -21,6 +21,8 @@ import { FabProps } from "./(docs)/fab-menu/components/fab-menu";
 import IconTogglePreview from "./(docs)/icon-toggle/components/icon-toggle-preview";
 import { IconToggleProps } from "./(docs)/icon-toggle/components/icon-toggle";
 import FabMenuPreview from "./(docs)/fab-menu/components/fab-menu-preview";
+import NavigationButtonPreview from "./(docs)/navigation-button/components/navigation-button-preview";
+import { NavigationButtonProps } from "./(docs)/navigation-button/components/navigation-button";
 
 export const metadata: Metadata = {
   title: "Animated shadcn/ui Components for React | Motion",
@@ -30,7 +32,7 @@ export const metadata: Metadata = {
   keywords: [
     // Primary
     "animated shadcn components free",
-     "free animated components",
+    "free animated components",
     "animated shadcn components",
     "shadcn animated components",
     "animated shadcn/ui",
@@ -150,7 +152,7 @@ export default function HomePage() {
               <HoverImagePreview />
             </Shell>
           </div>
-              <Shell props={IconToggleProps}>
+          <Shell props={IconToggleProps}>
             <IconTogglePreview />
           </Shell>
 
@@ -158,8 +160,7 @@ export default function HomePage() {
             <ButtonPreview />
           </Shell>
 
-
-           <Shell props={FabProps}>
+          <Shell props={FabProps}>
             <FabMenuPreview />
           </Shell>
 
@@ -169,7 +170,9 @@ export default function HomePage() {
           <Shell props={CheckboxProps}>
             <CheckboxPreview />
           </Shell>
-         
+          <Shell props={NavigationButtonProps}>
+            <NavigationButtonPreview />
+          </Shell>
 
           <div className="md:col-span-2">
             <Shell props={AccordionProps}>
@@ -187,7 +190,7 @@ export default function HomePage() {
             <CollapsiblePreview />
           </Shell>
 
-           <Shell props={RadioGroupProps}>
+          <Shell props={RadioGroupProps}>
             <RadioGroupPreview />
           </Shell>
         </section>
