@@ -1,23 +1,31 @@
 "use client";
 
 import { useState } from "react";
-import { Button } from "shadcn-animated";
-import type { ComponentProps } from "react";
 
-type IconToggleProps = {
+import type { ComponentProps } from "react";
+import { Button } from "./button";
+
+type ButtonProps = ComponentProps<typeof Button>;
+
+type IconToggleProps = Omit<
+  ButtonProps,
+  "variant" | "size" | "className" | "onClick"
+> & {
   from: React.ReactNode;
   to: React.ReactNode;
   autoReset?: boolean;
   resetDelay?: number;
-} & Pick<ComponentProps<typeof Button>, "variant" | "size" | "className">;
-
+  variant?: ButtonProps["variant"];
+  size?: ButtonProps["size"];
+  className?: string;
+};
 function IconToggle({
   from,
   to,
   autoReset = false,
   resetDelay = 3000,
   variant = "outline",
-  size = "icon",
+  size = "icon-lg",
   className,
   ...props
 }: IconToggleProps) {
