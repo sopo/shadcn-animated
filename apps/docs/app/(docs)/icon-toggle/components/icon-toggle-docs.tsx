@@ -147,7 +147,7 @@ import { Sun, Moon } from "lucide-react";
         </section>
       </div>
 
-      <NextSection title="Radio group" link="/radio-group" />
+      <NextSection title="Navigation button" link="/navigation-button" />
     </div>
   );
 };

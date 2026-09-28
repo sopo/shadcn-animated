@@ -21,6 +21,7 @@ export const sections = [
        { href: "/fab-menu", label: "Fab menu" },
       { href: "/hover-image", label: "Hover image" },
         { href: "/icon-toggle", label: "Icon toggle" },
+         { href: "/navigation-button", label: "Navigation button" },
       { href: "/radio-group", label: "Radio group" },
       { href: "/switch", label: "Switch" },
       { href: "/tabs", label: "Tabs" },
