@@ -1,29 +1,34 @@
-import { ArrowRight } from "lucide-react"
+import { ArrowLeft, ArrowRight } from "lucide-react"
 import { Button } from "./button"
 import type { ComponentProps } from "react"
 
 type NavigationButtonProps = ComponentProps<typeof Button> & {
-  iconVariant?: "icon-after" | "icon-before"
+  iconVariant?: "after" | "before"
 }
 
 function NavigationButton({
   children,
   className,
-  iconVariant = "icon-after",
+  iconVariant = "after",
   ...props
 }: NavigationButtonProps) {
-  const icon = (
+  const iconForward = (
     <ArrowRight className="transition-transform duration-380 ease-out group-hover:translate-x-1" />
   )
+    const iconBack = (
+    <ArrowLeft  className="transition-transform duration-380 ease-out group-hover:-translate-x-1" />
+  )
+
+
 
   return (
     <Button
-      className={`group ${iconVariant === "icon-before" ? "gap-2" : "gap-1"} ${className ?? ""}`}
+      className={`group ${className ?? ""}`}
       {...props}
     >
-      {iconVariant === "icon-before" && icon}
+      {iconVariant === "before" && iconBack}
       {children}
-      {iconVariant === "icon-after" && icon}
+      {iconVariant === "after" && iconForward}
     </Button>
   )
 }
