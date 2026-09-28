@@ -1,5 +1,6 @@
 import {
   IconToggle,
+  NavigationButton,
   Tabs,
   TabsContent,
   TabsList,
@@ -64,67 +65,43 @@ const NavigationButtonDocs = () => {
         <div className="flex flex-col gap-4">
           <Code
             code={`    
-import { IconToggle } from "@/components/ui/icon-toggle";
-import { Sun, Moon } from "lucide-react";         
+import { NavigationButton } from "@/components/ui/navigation-button";        
                 `}
           />
           <Code
             code={`
-<IconToggle
-    from={<Sun />}
-    to={<Moon />}
-/>
+<NavigationButton>
+    Hover me
+</NavigationButton>
  `}
           />
         </div>
         <section className="flex flex-col gap-6">
           <div className="flex flex-col">
-            <h2 className="text-xl">Auto reset</h2>
-            <p className="text-muted-foreground">
-              Automatically switches back to the initial icon after 3 seconds.
-            </p>
+            <h2 className="text-xl">Back icon</h2>
           </div>
 
           <DocsShell>
-            <IconToggle
-              className={`p-8 rounded-full hover:bg-backgound`}
-              autoReset
-              from={<Copy className="size-6" />}
-              to={<Check className="size-6" />}
-            />
+    <NavigationButton
+        variant="default"
+        iconVariant="before"
+        className="rounded-full h-10 px-6 hover:bg-primary "
+      >
+        Hover me
+      </NavigationButton>
           </DocsShell>
 
           <Code
             code={`
-    <IconToggle
-      autoReset
-      from={<Copy className="size-6" />}
-      to={<Check className="size-6" />}
-    />
+<NavigationButton
+    iconVariant="before"
+>
+    Hover me
+</NavigationButton>
     `}
-          />
-        </section>
-
-        <section className="flex flex-col gap-6">
-          <div className="flex flex-col">
-            <h2 className="text-xl">Specify delay</h2>
-            <p className="text-muted-foreground">
-              Set how long to wait before automatically switching back to the
-              initial icon.
-            </p>
-          </div>
-
-          <Code
-            code={`
-<IconToggle
-    autoReset
-    resetDelay={4000}
-    from={<Copy className="size-6" />}
-    to={<Check className="size-6" />}
 />
-    `}
-          />
         </section>
+
 
         <section className="flex flex-col gap-6">
           <div className="flex flex-col">
@@ -137,12 +114,12 @@ import { Sun, Moon } from "lucide-react";
 
           <Code
             code={`
-<IconToggle
-    variant="secondary"
-    className="p-8 rounded-full hover:bg-backgound"
-    from={<Copy className="size-6" />}
-    to={<Check className="size-6" />}
-/>
+<NavigationButton
+    variant="default"
+    className="rounded-full h-10 px-6 hover:bg-primary "
+>
+ Hover me
+</NavigationButton>
     `}
           />
         </section>
