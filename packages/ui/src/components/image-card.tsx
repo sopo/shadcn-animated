@@ -1,7 +1,7 @@
 import * as React from "react"
 import { cn } from "cn"
 
-function Card({
+function ImageCard({
   className,
   children,
   size = "default",
@@ -200,7 +200,7 @@ function CardFooter({
 }
 
 export {
-  Card,
+  ImageCard,
   ImageArea,
   FrontImage,
   BackImage,

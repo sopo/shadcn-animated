@@ -148,11 +148,13 @@ export default function HomePage() {
       <div className="max-w-4xl mx-auto flex flex-col gap-20">
         <Hero />
         <section className="grid grid-cols-1 gap-2 md:grid-cols-2">
-          <div className="md:col-span-2">
+        
+      <div className="md:col-span-2">
             <Shell props={HoverImageProps}>
-              <HoverImagePreview />
+              <ImageCardPreview />
             </Shell>
           </div>
+
           <Shell props={IconToggleProps}>
             <IconTogglePreview />
           </Shell>
@@ -160,11 +162,14 @@ export default function HomePage() {
           <Shell props={ButtonProps}>
             <ButtonPreview />
           </Shell>
-            <div className="md:col-span-2">
+
+
+  <div className="md:col-span-2">
             <Shell props={HoverImageProps}>
-              <ImageCardPreview />
+              <HoverImagePreview />
             </Shell>
           </div>
+      
 
           <Shell props={FabProps}>
             <FabMenuPreview />
