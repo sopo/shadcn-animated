@@ -23,6 +23,8 @@ import { IconToggleProps } from "./(docs)/icon-toggle/components/icon-toggle";
 import FabMenuPreview from "./(docs)/fab-menu/components/fab-menu-preview";
 import NavigationButtonPreview from "./(docs)/navigation-button/components/navigation-button-preview";
 import { NavigationButtonProps } from "./(docs)/navigation-button/components/navigation-button";
+import ImageCardPreview from "./(docs)/image-card/components/image-card-preview";
+import { ImageCardProps } from "./(docs)/image-card/components/image-card";
 
 export const metadata: Metadata = {
   title: "Animated shadcn/ui Components for React | Motion",
@@ -147,11 +149,13 @@ export default function HomePage() {
       <div className="max-w-4xl mx-auto flex flex-col gap-20">
         <Hero />
         <section className="grid grid-cols-1 gap-2 md:grid-cols-2">
-          <div className="md:col-span-2">
-            <Shell props={HoverImageProps}>
-              <HoverImagePreview />
+        
+      <div className="md:col-span-2">
+            <Shell props={ImageCardProps}>
+              <ImageCardPreview />
             </Shell>
           </div>
+
           <Shell props={IconToggleProps}>
             <IconTogglePreview />
           </Shell>
@@ -159,6 +163,14 @@ export default function HomePage() {
           <Shell props={ButtonProps}>
             <ButtonPreview />
           </Shell>
+
+
+  <div className="md:col-span-2">
+            <Shell props={HoverImageProps}>
+              <HoverImagePreview />
+            </Shell>
+          </div>
+      
 
           <Shell props={FabProps}>
             <FabMenuPreview />

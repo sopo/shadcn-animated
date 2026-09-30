@@ -141,7 +141,7 @@ import { Sun, Moon } from "lucide-react";
         </section>
       </div>
 
-      <NextSection title="Navigation button" link="/navigation-button" />
+      <NextSection title="Image card" link="/image-card" />
     </div>
   );
 };
