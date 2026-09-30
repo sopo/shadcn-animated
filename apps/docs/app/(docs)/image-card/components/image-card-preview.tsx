@@ -1,5 +1,5 @@
 import {
-  ImageCard,
+ Card ,
   CardAction,
   CardContent,
   CardDescription,
@@ -7,40 +7,83 @@ import {
   CardHeader,
   CardTitle,
 } from "shadcn-animated"
-import { BackImage, FrontImage } from "../../../../../../packages/ui/src/components/image-card"
 
-const ImageCardPreview=()=>{
-    return(
-        <ImageCard className="w-xl">
-               <BackImage>
-                {/* <img 
-                className="object-cover"
-                src="https://plus.unsplash.com/premium_photo-1789990372226-2b073696f52b?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw2fHx8ZW58MHx8fHx8" /> */}
-            </BackImage>
+const ImageCardPreview = () => {
+  return (
+    <Card className="relative overflow-visible pt-0 group">
 
-            {/* <FrontImage>
-                <img 
-                className="w-30"
-                src="https://plus.unsplash.com/premium_photo-1786868126588-39f864726bd9?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyfHx8ZW58MHx8fHx8" />
-            </FrontImage> */}
+      {/* Image area */}
+     
+        
+        {/* First image */}
+        <img
+          src="https://plus.unsplash.com/premium_photo-1786868126588-39f864726bd9?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyfHx8ZW58MHx8fHx8"
+          alt="Event cover"
+          className="
+            absolute
+            left-1/2
+            top-4
+            z-20
+            w-[80%]
+            -translate-x-1/2
+            aspect-video
+            object-cover
+            -rotate-2
+            transition-transform
+            duration-300
+            ease-out
+            group-hover:-translate-x-[calc(50%+2rem)]
+            group-hover:-rotate-6
+          "
+        />
 
-         
-      <CardHeader>
-        <CardTitle>Login to your account</CardTitle>
-        <CardDescription>
-          Enter your email below to login to your account
-        </CardDescription>
-        <CardAction>
-          action
-        </CardAction>
-      </CardHeader>
-      <CardContent>
-        contenet
+        {/* Second image */}
+        <img
+          src="https://plus.unsplash.com/premium_photo-1789990372226-2b073696f52b?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWVkfHx8ZW58MHx8fHx8"
+          alt="Event cover"
+          className="
+            absolute
+            left-1/2
+            top-4
+            z-30
+            w-[80%]
+            -translate-x-1/2
+            aspect-video
+            object-cover
+            rotate-2
+            transition-transform
+            duration-300
+            ease-out
+            group-hover:translate-x-[calc(-50%+2rem)]
+            group-hover:rotate-6
+          "
+        />
+  
+
+      {/* Card content */}
+      <CardContent >
+        <CardHeader>
+          <CardAction>
+            badge
+          </CardAction>
+
+          <CardTitle>
+            Design systems meetup
+          </CardTitle>
+
+          <CardDescription>
+            A practical talk on component APIs, accessibility, and shipping
+            faster.
+          </CardDescription>
+        </CardHeader>
       </CardContent>
-      <CardFooter className="flex-col gap-2">
-       footer
+
+      <CardFooter>
+        butt
       </CardFooter>
-    </ImageCard>
-    )
+
+    </Card>
+  )
 }
+
 export default ImageCardPreview
