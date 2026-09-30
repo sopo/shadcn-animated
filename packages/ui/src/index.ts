@@ -63,3 +63,12 @@ export {
 } from "./components/fab-menu";
 export { IconToggle } from "./components/icon-toggle";
 export { NavigationButton } from "./components/navigation-button";
+export {
+  ImageCard,
+  CardHeader,
+  CardFooter,
+  CardTitle,
+  CardAction,
+  CardDescription,
+  CardContent,
+}from "./components/image-card"
