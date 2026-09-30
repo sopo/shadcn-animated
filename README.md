@@ -7,12 +7,20 @@
 → Visit the [documentation](https://shadcn-animated.vercel.app) for examples, usage, and installation instructions.
 
 ## Components
+
+### Image card
+```bash
+npx shadcn-animated add image-card
+```
+
+<video src="https://github.com/user-attachments/assets/e7482896-f906-47eb-9954-2d8ac1cf104d" controls></video>
+
+
 ### Button
 
 ```bash
 npx shadcn-animated add button
 ```
-
 <video src="https://github.com/user-attachments/assets/f48c60d8-cdf5-449c-89a0-ad35a9371c59" controls></video>
 
 ### Icon toggle
