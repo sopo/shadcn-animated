@@ -1,3 +1,108 @@
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "shadcn-animated";
+import DocsSection from "../../../../components/docs-section";
+import DocsShell from "../../../../components/docs-shell";
+import Bash from "../../../../components/bash";
+import Code from "../../../../components/code-block";
+import NextSection from "../../../../components/next-section";
+import ImageCardPreview from "./image-card-preview";
+
+const ImageCardDocs = () => {
+  return (
+    <div className="flex flex-col gap-12">
+      <DocsSection>
+        <h1 className="text-3xl">Image card</h1>
+        <DocsShell>
+          <ImageCardPreview />
+        </DocsShell>
+      </DocsSection>
+
+      <div className="flex flex-col gap-8">
+        <h2 className="text-xl">Installation</h2>
+
+        <Tabs defaultValue="command" className="w-full gap-4">
+          <TabsList className="rounded-full" variant="line">
+            <TabsTrigger value="command" className="rounded-full">
+              Command
+            </TabsTrigger>
+            <TabsTrigger value="manual" className="rounded-full">
+              Manual
+            </TabsTrigger>
+          </TabsList>
+          <TabsContent value="command" className="flex flex-col gap-4">
+            <Bash code="npx shadcn-animated add image-card" />
+          </TabsContent>
+          <TabsContent value="manual" className="flex flex-col gap-4">
+            <Code
+              code={manualCode}
+              expandable
+              filename="components/ui/image-card.tsx"
+            />
+          </TabsContent>
+        </Tabs>
+      </div>
+
+      <div className="flex flex-col gap-8">
+        <h2 className="text-xl">Usage</h2>
+        <div className="flex flex-col gap-4">
+          <Code
+            code={` 
+               import {
+  BackImage,
+  ImageCard,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+  FrontImage,
+  ImageArea,
+} from "@/components/ui/image-card"; 
+                
+                `}
+          />
+          <Code
+            code={`
+<ImageCard className="max-w-md">
+    <ImageArea>
+        <BackImage>
+            <img
+              className="rounded-2xl shadow-xl"
+              src="https://plus.unsplash.com/premium_photo-1786868126588-39f864726bd9?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyfHx8ZW58MHx8fHx8"
+            />
+        </BackImage>
+        <FrontImage>
+            <img
+              className="rounded-2xl shadow-xl"
+              src="https://plus.unsplash.com/premium_photo-1789990372226-2b073696f52b?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw2fHx8ZW58MHx8fHx8"
+            />
+        </FrontImage>
+    </ImageArea>
+    <CardContent>
+        <CardHeader className="text-center">
+            <CardTitle className="text-2xl">
+              Half-Day Trip from the city
+            </CardTitle>
+            <CardDescription className="text-xl">
+              Learn about Impressionism with your guide, explore the village and
+              the artist’s tomb, and enjoy free time to wander his iconic house
+              and colorful gardens.
+            </CardDescription>
+        </CardHeader>
+    </CardContent>
+</ImageCard>
+/>
+ `}
+          />
+        </div>
+      </div>
+
+      <NextSection title="Navigation button" link="/navigation-button" />
+    </div>
+  );
+};
+
+export default ImageCardDocs;
+
+const manualCode = String.raw`
 import * as React from "react";
 import { cn } from "cn";
 
@@ -173,3 +278,5 @@ export {
   CardDescription,
   CardContent,
 };
+
+`;
