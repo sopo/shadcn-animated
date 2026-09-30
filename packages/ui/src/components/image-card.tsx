@@ -1,6 +1,7 @@
 import * as React from "react"
 import { cn } from "cn"
 
+
 function Card({
   className,
   children,
@@ -12,7 +13,7 @@ function Card({
       data-slot="card"
       data-size={size}
       className={cn(
-        "group/card w-xl flex flex-col gap-(--card-spacing) overflow-hidden rounded-xl py-(--card-spacing) text-sm text-card-foreground  [--card-spacing:--spacing(4)] has-data-[slot=card-footer]:pb-0 has-[>img:first-child]:pt-0 data-[size=sm]:[--card-spacing:--spacing(3)] data-[size=sm]:has-data-[slot=card-footer]:pb-0 *:[img:first-child]:rounded-t-xl *:[img:last-child]:rounded-b-xl",
+        "group/card relative overflow-visible group w-xl cursor-pointer flex flex-col gap-(--card-spacing) rounded-xl py-(--card-spacing) text-sm text-card-foreground  [--card-spacing:--spacing(4)] has-data-[slot=card-footer]:pb-0 has-[>img:first-child]:pt-0 data-[size=sm]:[--card-spacing:--spacing(3)] data-[size=sm]:has-data-[slot=card-footer]:pb-0 *:[img:first-child]:rounded-t-xl *:[img:last-child]:rounded-b-xl",
         className
       )}
       {...props}
@@ -20,6 +21,53 @@ function Card({
        <div className="relative h-60 overflow-visible w-full" ></div>
 {children}
        </div>
+  )
+}
+type ImageWrapperProps = {
+  children: React.ReactNode
+  className?: string
+}
+
+function BackImage({
+  children,
+  className,
+}: ImageWrapperProps) {
+  return (
+    <div
+      className={cn(
+        "absolute left-1/2 top-4 z-20",
+        "w-[75%] -translate-x-1/2",
+        "-rotate-2",
+        "transition-transform duration-300 ease-out",
+        "group-hover:-translate-x-[calc(50%+2rem)]",
+        "group-hover:-rotate-6",
+        className
+      )}
+    >
+      {children}
+    </div>
+  )
+}
+
+function FrontImage({
+  children,
+  className,
+}: ImageWrapperProps) {
+  return (
+    <div
+      className={cn(
+        "absolute left-1/2 top-4 z-30",
+        "shadow-xl",
+        "w-[75%] -translate-x-1/2",
+        "rotate-2",
+        "transition-transform duration-300 ease-out",
+        "group-hover:translate-x-[calc(-50%+2rem)]",
+        "group-hover:rotate-6",
+        className
+      )}
+    >
+      {children}
+    </div>
   )
 }
 
@@ -97,6 +145,8 @@ function CardFooter({ className, ...props }: React.ComponentProps<"div">) {
 
 export {
   Card,
+  FrontImage,
+  BackImage,
   CardHeader,
   CardFooter,
   CardTitle,

@@ -65,6 +65,8 @@ export { IconToggle } from "./components/icon-toggle";
 export { NavigationButton } from "./components/navigation-button";
 export {
   Card,
+  FrontImage,
+  BackImage,
   CardHeader,
   CardFooter,
   CardTitle,
