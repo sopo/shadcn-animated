@@ -67,6 +67,7 @@ export {
   Card,
   FrontImage,
   BackImage,
+  ImageArea,
   CardHeader,
   CardFooter,
   CardTitle,

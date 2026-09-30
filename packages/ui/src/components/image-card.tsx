@@ -1,31 +1,58 @@
 import * as React from "react"
 import { cn } from "cn"
 
-
 function Card({
   className,
   children,
   size = "default",
   ...props
-}: React.ComponentProps<"div"> & { size?: "default" | "sm" }) {
+}: React.ComponentProps<"div"> & {
+  size?: "default" | "sm"
+}) {
   return (
     <div
       data-slot="card"
       data-size={size}
       className={cn(
-        "group/card relative overflow-visible group w-xl cursor-pointer flex flex-col gap-(--card-spacing) rounded-xl py-(--card-spacing) text-sm text-card-foreground  [--card-spacing:--spacing(4)] has-data-[slot=card-footer]:pb-0 has-[>img:first-child]:pt-0 data-[size=sm]:[--card-spacing:--spacing(3)] data-[size=sm]:has-data-[slot=card-footer]:pb-0 *:[img:first-child]:rounded-t-xl *:[img:last-child]:rounded-b-xl",
+        "group/card group relative flex w-full cursor-pointer flex-col",
+        "gap-(--card-spacing)",
+        "rounded-xl",
+        "py-(--card-spacing)",
+        "text-sm text-card-foreground",
+        "[--card-spacing:--spacing(4)]",
+        "overflow-visible",
+        "data-[size=sm]:[--card-spacing:--spacing(3)]",
         className
       )}
       {...props}
     >
-       <div className="relative h-60 overflow-visible w-full" ></div>
-{children}
-       </div>
+      {children}
+    </div>
   )
 }
+
 type ImageWrapperProps = {
   children: React.ReactNode
   className?: string
+}
+
+function ImageArea({
+  children,
+  className,
+}: {
+  children: React.ReactNode
+  className?: string
+}) {
+  return (
+    <div
+      className={cn(
+        "relative grid w-full overflow-visible",
+        className
+      )}
+    >
+      {children}
+    </div>
+  )
 }
 
 function BackImage({
@@ -35,11 +62,11 @@ function BackImage({
   return (
     <div
       className={cn(
-        "absolute left-1/2 top-4 z-20",
-        "w-[75%] -translate-x-1/2",
+        "col-start-1 row-start-1",
+        "w-full self-start",
         "-rotate-2",
         "transition-transform duration-300 ease-out",
-        "group-hover:-translate-x-[calc(50%+2rem)]",
+        "group-hover:-translate-x-8",
         "group-hover:-rotate-6",
         className
       )}
@@ -56,12 +83,11 @@ function FrontImage({
   return (
     <div
       className={cn(
-        "absolute left-1/2 top-4 z-30",
-        "shadow-xl",
-        "w-[75%] -translate-x-1/2",
+        "col-start-1 row-start-1",
+        "w-full self-start",
         "rotate-2",
         "transition-transform duration-300 ease-out",
-        "group-hover:translate-x-[calc(-50%+2rem)]",
+        "group-hover:translate-x-8",
         "group-hover:rotate-6",
         className
       )}
@@ -71,12 +97,19 @@ function FrontImage({
   )
 }
 
-function CardHeader({ className, ...props }: React.ComponentProps<"div">) {
+function CardHeader({
+  className,
+  ...props
+}: React.ComponentProps<"div">) {
   return (
     <div
       data-slot="card-header"
       className={cn(
-        "group/card-header @container/card-header grid auto-rows-min items-start gap-1 rounded-t-xl px-(--card-spacing) has-data-[slot=card-action]:grid-cols-[1fr_auto] has-data-[slot=card-description]:grid-rows-[auto_auto] ",
+        "group/card-header @container/card-header grid",
+        "auto-rows-min items-start gap-1",
+        "rounded-t-xl px-(--card-spacing)",
+        "has-data-[slot=card-action]:grid-cols-[1fr_auto]",
+        "has-data-[slot=card-description]:grid-rows-[auto_auto]",
         className
       )}
       {...props}
@@ -84,12 +117,16 @@ function CardHeader({ className, ...props }: React.ComponentProps<"div">) {
   )
 }
 
-function CardTitle({ className, ...props }: React.ComponentProps<"div">) {
+function CardTitle({
+  className,
+  ...props
+}: React.ComponentProps<"div">) {
   return (
     <div
       data-slot="card-title"
       className={cn(
-        "cn-font-heading text-base leading-snug font-medium group-data-[size=sm]/card:text-sm",
+        "cn-font-heading text-base leading-snug font-medium",
+        "group-data-[size=sm]/card:text-sm",
         className
       )}
       {...props}
@@ -97,22 +134,32 @@ function CardTitle({ className, ...props }: React.ComponentProps<"div">) {
   )
 }
 
-function CardDescription({ className, ...props }: React.ComponentProps<"div">) {
+function CardDescription({
+  className,
+  ...props
+}: React.ComponentProps<"div">) {
   return (
     <div
       data-slot="card-description"
-      className={cn("text-sm text-muted-foreground", className)}
+      className={cn(
+        "text-sm text-muted-foreground",
+        className
+      )}
       {...props}
     />
   )
 }
 
-function CardAction({ className, ...props }: React.ComponentProps<"div">) {
+function CardAction({
+  className,
+  ...props
+}: React.ComponentProps<"div">) {
   return (
     <div
       data-slot="card-action"
       className={cn(
-        "col-start-2 row-span-2 row-start-1 self-start justify-self-end",
+        "col-start-2 row-span-2 row-start-1",
+        "self-start justify-self-end",
         className
       )}
       {...props}
@@ -120,22 +167,31 @@ function CardAction({ className, ...props }: React.ComponentProps<"div">) {
   )
 }
 
-function CardContent({ className, ...props }: React.ComponentProps<"div">) {
+function CardContent({
+  className,
+  ...props
+}: React.ComponentProps<"div">) {
   return (
     <div
       data-slot="card-content"
-      className={cn("p-12 pb-4", className)}
+      className={cn(
+        "p-(--card-spacing)",
+        className
+      )}
       {...props}
     />
   )
 }
 
-function CardFooter({ className, ...props }: React.ComponentProps<"div">) {
+function CardFooter({
+  className,
+  ...props
+}: React.ComponentProps<"div">) {
   return (
     <div
       data-slot="card-footer"
       className={cn(
-        "flex items-center py-(--card-spacing) px-16",
+        "flex items-center p-(--card-spacing)",
         className
       )}
       {...props}
@@ -145,6 +201,7 @@ function CardFooter({ className, ...props }: React.ComponentProps<"div">) {
 
 export {
   Card,
+  ImageArea,
   FrontImage,
   BackImage,
   CardHeader,
